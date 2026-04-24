@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1933914286",
+    "Type": "User",
+    "GUID": "{C5F4FD2A-AAEF-41EE-B451-A8A49591BAC5}",
+    "Language": "SFX",
+    "Hash": "{B501DAAC-CF84-1043-8E69-DBAE4BA2D2A7}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\TO26",
+    "ShortName": "TO26",
+    "Path": "TO26.bnk",
+    "Events": [
+     {
+      "Id": "3157003241",
+      "Name": "Test",
+      "ObjectPath": "\\Events\\Default Work Unit\\Test",
+      "GUID": "{B5F032B7-BF21-432C-9DBD-24FCF98892B9}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{20612F1E-D8ED-9EDC-5AE8-1C7803E9B1ED}"
+ }
+}
