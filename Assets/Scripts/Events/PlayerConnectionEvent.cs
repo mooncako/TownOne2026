@@ -3,21 +3,21 @@ using UnityEngine;
 
 public struct PlayerConnectionEvent
 {
-    public PlayerInfo PlayerInfo;
+    public PlayerId PlayerId;
     public Faction Faction;
     public ConnectionType ConnectionType;
 
-    public PlayerConnectionEvent(PlayerInfo playerInfo, Faction faction, ConnectionType connectionType)
+    public PlayerConnectionEvent(PlayerId playerId, Faction faction, ConnectionType connectionType)
     {
-        PlayerInfo = playerInfo;
+        PlayerId = playerId;
         Faction = faction;
         ConnectionType = connectionType;
     }
 
     public static PlayerConnectionEvent e;
-    public static void Trigger(PlayerInfo playerInfo, Faction faction, ConnectionType connectionType)
+    public static void Trigger(PlayerId playerId, Faction faction, ConnectionType connectionType)
     {
-        e.PlayerInfo = playerInfo;
+        e.PlayerId = playerId;
         e.Faction = faction;
         e.ConnectionType = connectionType;
         MMEventManager.TriggerEvent(e);

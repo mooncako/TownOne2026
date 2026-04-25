@@ -13,7 +13,9 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [SerializeField, BoxGroup("Debug")] public GameState GameState = GameState.Preparation;
     [SerializeField, BoxGroup("Debug")] public int CurrentRound = 0;
     [SerializeField, BoxGroup("Debug")] public PlayerInfo HeavenPlayerInfo;
+    [SerializeField, BoxGroup("Debug")] public PlayerId HeavenPlayerId;
     [SerializeField, BoxGroup("Debug")] public PlayerInfo HellPlayerInfo;
+    [SerializeField, BoxGroup("Debug")] public PlayerId HellPlayerId;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
 
 
@@ -95,23 +97,32 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             if (e.Faction == Faction.Heaven)
             {
-                HeavenPlayerInfo = e.PlayerInfo;
+                HeavenPlayerId = e.PlayerId;
             }
             else if (e.Faction == Faction.Hell)
             {
-                HellPlayerInfo = e.PlayerInfo;
+                HellPlayerId = e.PlayerId;
             }
         }
         else if (e.ConnectionType == ConnectionType.Disconnect)
         {
             if (e.Faction == Faction.Heaven)
             {
-                HeavenPlayerInfo = null;
+                HeavenPlayerId = PlayerId.None;
             }
             else if (e.Faction == Faction.Hell)
             {
-                HellPlayerInfo = null;
+                HellPlayerId = PlayerId.None;
             }
+        }
+
+        if(HeavenPlayerId != PlayerId.None && HellPlayerId != PlayerId.None)
+        {
+            FactionChangedEvent.Trigger(true);
+        }
+        else
+        {
+            FactionChangedEvent.Trigger(false);
         }
     }
 }
