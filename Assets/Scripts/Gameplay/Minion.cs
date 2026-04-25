@@ -1,9 +1,10 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Minion : MonoBehaviour
 {
-    private float health;
-    private MinionData data;
+    [SerializeField, BoxGroup("Stats")] private float health;
+    [SerializeField, BoxGroup("Stats")] private MinionData data;
     public float MaxHealth => data.Value;
     public string Name => data.Name;
 

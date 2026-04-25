@@ -10,6 +10,16 @@ public class PlayerInfo : MonoBehaviour
 
     public event Action<ReadyState> OnReadyStateChanged;
 
+    void OnEnable()
+    {
+        Score.OnScoreChanged += OnScoreChanged;
+    }
+
+    void OnDisable()
+    {
+        Score.OnScoreChanged -= OnScoreChanged;
+    }
+
     public void InitializeScore(float value)
     {
         Score.Value = value;
@@ -24,6 +34,11 @@ public class PlayerInfo : MonoBehaviour
     {
         ReadyState = state;
         OnReadyStateChanged?.Invoke(ReadyState);
+    }
+
+    private void OnScoreChanged(float value)
+    {
+        ScoreChangeEvent.Trigger(value, this);
     }
 
 
