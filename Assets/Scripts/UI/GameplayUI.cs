@@ -28,6 +28,11 @@ public class GameplayUI : MonoBehaviour,
         this.MMEventStopListening<ScoreChangeEvent>();
     }
 
+    private void Update()
+    {
+        GameStateManager.Instance.RoundManager
+    }
+
     public void OnMMEvent(ScoreChangeEvent e)
     {
         
