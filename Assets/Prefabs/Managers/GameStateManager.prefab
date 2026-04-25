@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7036494043797651601}
   - component: {fileID: 9151773086961034879}
   - component: {fileID: 4397962489820782125}
+  - component: {fileID: 8389520870944027245}
   m_Layer: 0
   m_Name: GameStateManager
   m_TagString: Untagged
@@ -50,10 +51,12 @@ MonoBehaviour:
   GameState: 0
   CurrentRound: 1
   HeavenPlayerInfo: {fileID: 0}
+  HeavenPlayerId: 0
   HellPlayerInfo: {fileID: 0}
+  HellPlayerId: 0
   _gameSettings:
     TotalRounds: 0
-    RoundDurationSeconds: 0
+    RoundDuration: 0
     StartingScore: 0
 --- !u!114 &4397962489820782125
 MonoBehaviour:
@@ -71,3 +74,16 @@ MonoBehaviour:
   - {}
   - {}
   - {}
+  _roundTimer: {fileID: 8389520870944027245}
+--- !u!114 &8389520870944027245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550435148555638184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d246748789ee439419cf7b400dc71421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer

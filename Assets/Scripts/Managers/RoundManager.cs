@@ -6,11 +6,19 @@ using UnityEngine;
 public class RoundManager : MonoBehaviour
 {
     [field:SerializeField, BoxGroup("Result")] public RoundResult[] RoundResults = new RoundResult[3];
+    [SerializeField, BoxGroup("References")] private Timer _roundTimer;
     public event Action OnRoundStarted;
     public event Action OnRoundEnd;
 
-    public void StartRound()
+    void OnValidate()
     {
+        if(_roundTimer == null) _roundTimer = GetComponent<Timer>();
+    }
+
+    public void StartRound(float roundDuration)
+    {
+        _roundTimer.StartTimer(roundDuration);
+        _roundTimer.OnTimerComplete += EndRound;
         // Timer starts here
         OnRoundStarted.Invoke();
         RoundStateChangeEvent.Trigger(RoundState.Started);

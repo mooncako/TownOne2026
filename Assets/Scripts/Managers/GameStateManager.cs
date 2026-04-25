@@ -61,10 +61,10 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     public void NewRound()
     {
         CurrentRound++;
-        _roundManager.StartRound();
         HeavenPlayerInfo.Initialize();
         HellPlayerInfo.Initialize();
         _gameSettings.Reset(_gameSettingsSO);
+        _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
     private void OnRoundStarted()
