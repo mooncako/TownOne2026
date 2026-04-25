@@ -107,6 +107,15 @@ public class GameOverScreen : MonoBehaviour
     {
         float combinedTotal = heavenTotal + hellTotal;
 
+        if (combinedTotal == 0f)
+        {
+            _heavenDisplay.fillAmount = 0.5f;
+            _hellDisplay.fillAmount = 0.5f;
+            _heavenLabel.text = "0";
+            _hellLabel.text = "0";
+            return;
+        }
+
         // Fill
         _heavenDisplay.fillAmount = heavenTotal / combinedTotal;
         _hellDisplay.fillAmount = hellTotal / combinedTotal;
