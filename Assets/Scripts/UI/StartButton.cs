@@ -14,6 +14,12 @@ public class StartButton : MonoBehaviour,
 
     [SerializeField, BoxGroup("Settings")] private string _gameSceneName = "GameScene";
 
+    void Awake()
+    {
+        EnsureReferences();
+        ApplyVisibility(false);
+    }
+
     void OnValidate()
     {
         if(_button == null) _button = GetComponent<Button>();
@@ -28,8 +34,10 @@ public class StartButton : MonoBehaviour,
 
     void OnEnable()
     {
+        EnsureReferences();
         _button.onClick.AddListener(StartGame);
         this.MMEventStartListening<FactionChangedEvent>();
+        ApplyVisibility(AreBothPlayersConnected());
     }
 
     void OnDisable()
@@ -45,17 +53,26 @@ public class StartButton : MonoBehaviour,
 
     public void OnMMEvent(FactionChangedEvent e)
     {
-        if(e.IsBothPlayersConnected)
-        {
-            _canvasGroup.alpha = 1;
-            _canvasGroup.interactable = true;
-            _canvasGroup.blocksRaycasts = true;
-        }
-        else
-        {
-            _canvasGroup.alpha = 0;
-            _canvasGroup.interactable = false;
-            _canvasGroup.blocksRaycasts = false;
-        }
+        ApplyVisibility(e.IsBothPlayersConnected);
+    }
+
+    private void EnsureReferences()
+    {
+        if(_button == null) _button = GetComponent<Button>();
+        if(_canvasGroup == null) _canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void ApplyVisibility(bool isVisible)
+    {
+        _canvasGroup.alpha = isVisible ? 1f : 0f;
+        _canvasGroup.interactable = isVisible;
+        _canvasGroup.blocksRaycasts = isVisible;
+    }
+
+    private bool AreBothPlayersConnected()
+    {
+        if(GameStateManager.Instance == null) return false;
+        return GameStateManager.Instance.HeavenPlayerId != PlayerId.None
+            && GameStateManager.Instance.HellPlayerId != PlayerId.None;
     }
 }

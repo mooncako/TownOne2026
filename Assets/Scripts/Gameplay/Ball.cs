@@ -28,7 +28,7 @@ public class Ball : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.eKey.isPressed)
+        if (Keyboard.current.f10Key.isPressed)
             ResetBall();
     }
 

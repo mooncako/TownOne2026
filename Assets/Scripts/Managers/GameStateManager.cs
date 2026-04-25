@@ -2,6 +2,7 @@ using System;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
     MMEventListener<PlayerConnectionEvent>
@@ -16,6 +17,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [SerializeField, BoxGroup("Debug")] public PlayerId HeavenPlayerId;
     [SerializeField, BoxGroup("Debug")] public PlayerInfo HellPlayerInfo;
     [SerializeField, BoxGroup("Debug")] public PlayerId HellPlayerId;
+    [ShowInInspector, BoxGroup("Debug")] public InputDevice PlayerOneDevice;
+    [ShowInInspector, BoxGroup("Debug")] public InputDevice PlayerTwoDevice;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
 
 
@@ -61,10 +64,10 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     public void NewRound()
     {
         CurrentRound++;
-        _roundManager.StartRound();
         HeavenPlayerInfo.Initialize();
         HellPlayerInfo.Initialize();
         _gameSettings.Reset(_gameSettingsSO);
+        _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
     private void OnRoundStarted()
@@ -108,11 +111,17 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             if (e.Faction == Faction.Heaven)
             {
-                HeavenPlayerId = PlayerId.None;
+                if(HeavenPlayerId == e.PlayerId)
+                {
+                    HeavenPlayerId = PlayerId.None;
+                }
             }
             else if (e.Faction == Faction.Hell)
             {
-                HellPlayerId = PlayerId.None;
+                if(HellPlayerId == e.PlayerId)
+                {
+                    HellPlayerId = PlayerId.None;
+                }
             }
         }
 
@@ -124,5 +133,10 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             FactionChangedEvent.Trigger(false);
         }
+    }
+
+    public RoundManager GetRoundManager()
+    {
+        return _roundManager;
     }
 }
