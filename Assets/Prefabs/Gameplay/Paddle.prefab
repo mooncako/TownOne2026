@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2593790416447811280}
   - component: {fileID: 2193246248327955067}
+  - component: {fileID: 3923639540536917477}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -172,3 +173,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3923639540536917477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039027344825826949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501533323316c3c4e91ad934bf02030a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleController
+  moveSpeed: 10
+  minX: -1
+  maxX: 1
+  flipSpeed: 10
+  flipAngle: 15
