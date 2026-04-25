@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class GameplayInputManager : MonoBehaviour
 {
-    [SerializeField, BoxGroup("References")] private PlayerController _hellPlayer;
-    [SerializeField, BoxGroup("References")] private PlayerController _heavenPlayer;
-    [SerializeField, BoxGroup("References")] private PlayerInputManager _playerInputManager;
+    [SerializeField, BoxGroup("References")] private GameObject _playerPrefab;
+    [SerializeField, BoxGroup("References")] private Transform _heavenSpawnPoint;
+    [SerializeField, BoxGroup("References")] private Transform _hellSpawnPoint;
     [SerializeField, BoxGroup("Settings")] private bool _disablePlayerInputManager = true;
 
     void Start()
@@ -23,31 +23,14 @@ public class GameplayInputManager : MonoBehaviour
             return;
         }
 
+        gameState.EndSceneTransition();
+
         gameState.NormalizeDeviceAssignments();
-        Debug.Log($"Gameplay assign: P1=[{FormatIds(gameState.PlayerOneDeviceIds)}], P2=[{FormatIds(gameState.PlayerTwoDeviceIds)}]");
 
-        if (_disablePlayerInputManager)
-        {
-            if (_playerInputManager == null)
-            {
-                _playerInputManager = PlayerInputManager.instance;
-            }
-
-            if (_playerInputManager != null)
-            {
-                _playerInputManager.enabled = false;
-            }
-        }
-
-        if (_heavenPlayer != null)
-        {
-            _heavenPlayer.AssignDevicesFromGameState(gameState.HeavenPlayerId);
-        }
-
-        if (_hellPlayer != null)
-        {
-            _hellPlayer.AssignDevicesFromGameState(gameState.HellPlayerId);
-        }
+        PlayerController heavenController = Instantiate(_playerPrefab, _heavenSpawnPoint.position, _heavenSpawnPoint.rotation).GetComponent<PlayerController>();
+        heavenController.AssignDevicesFromGameState(GameStateManager.Instance.HeavenPlayerId);
+        PlayerController hellController = Instantiate(_playerPrefab, _hellSpawnPoint.position, _hellSpawnPoint.rotation).GetComponent<PlayerController>();
+        hellController.AssignDevicesFromGameState(GameStateManager.Instance.HellPlayerId);
     }
 
     private static string FormatIds(List<int> ids)

@@ -48,6 +48,11 @@ public class StartButton : MonoBehaviour,
 
     private void StartGame()
     {
+        if (GameStateManager.Instance != null)
+        {
+            GameStateManager.Instance.BeginSceneTransition();
+        }
+
         SceneManager.LoadScene(_gameSceneName);
     }
 

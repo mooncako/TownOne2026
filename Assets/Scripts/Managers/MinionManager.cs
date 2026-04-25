@@ -5,12 +5,17 @@ using UnityEngine.InputSystem;
 public class MinionManager : MonoBehaviour
 {
     [SerializeField] private MinionData[] minionTypes;
-    [SerializeField] private MinionSpawnPoint[] minionSpawns;
+    private MinionSpawnPoint[] minionSpawns;
 
     [SerializeField] private Minion minionPrefab;
 
     int minionSpawnIndex = 0;
     int minionTypeIndex = 0;
+
+    private void Awake()
+    {
+        minionSpawns = GetComponentsInChildren<MinionSpawnPoint>();
+    }
 
     private void Update()
     {

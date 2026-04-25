@@ -22,6 +22,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerOneDeviceIds = new List<int>();
     [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerTwoDeviceIds = new List<int>();
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
+    [ShowInInspector, BoxGroup("Debug"), ReadOnly] public bool IsSceneTransitioning { get; private set; } = false;
 
 
     private void Awake()
@@ -33,6 +34,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         _instance = this;
+        Debug.Log("GameStateManager Awake: instance set and persisted");
         DontDestroyOnLoad(gameObject);
     }
 
@@ -147,6 +149,16 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         return _roundManager;
     }
 
+    public void BeginSceneTransition()
+    {
+        IsSceneTransitioning = true;
+    }
+
+    public void EndSceneTransition()
+    {
+        IsSceneTransitioning = false;
+    }
+
     public void SetPlayerDeviceIds(PlayerId playerId, IReadOnlyList<InputDevice> devices)
     {
         var targetList = GetDeviceIdList(playerId);
@@ -171,6 +183,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
                 otherList.Remove(deviceId);
             }
         }
+
+        Debug.Log($"SetPlayerDeviceIds: {playerId} -> [{string.Join(", ", targetList)}]");
     }
 
     public void ClearPlayerDeviceIds(PlayerId playerId)
@@ -182,6 +196,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         targetList.Clear();
+        Debug.Log($"ClearPlayerDeviceIds: {playerId}");
     }
 
     public void NormalizeDeviceAssignments()

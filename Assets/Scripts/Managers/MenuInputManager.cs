@@ -57,8 +57,14 @@ public class MenuInputManager : MonoBehaviour
             return;
         }
 
+        if (GameStateManager.Instance != null && GameStateManager.Instance.IsSceneTransitioning)
+        {
+            return;
+        }
+
         if (player.TryGetComponent(out MenuPlayer menuPlayer))
         {
+            Debug.Log($"Menu leave: {menuPlayer.Id}");
             switch (menuPlayer.Id)
             {
                 case PlayerId.PlayerOne:
