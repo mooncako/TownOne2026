@@ -5,7 +5,7 @@ public class PaddleController : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float minX, maxX;
+    [SerializeField] private float rangeX = 1f;
 
     [Header("Flip")]
     [SerializeField] private float flipSpeed = 10f;
@@ -55,7 +55,7 @@ public class PaddleController : MonoBehaviour
     void FixedUpdate()
     {
         // Movement
-        float targetX = Mathf.Clamp(rb.position.x + inputAxis * moveSpeed * Time.fixedDeltaTime, minX, maxX);
+        float targetX = Mathf.Clamp(rb.position.x + inputAxis * moveSpeed * Time.fixedDeltaTime, -rangeX, rangeX);
         rb.MovePosition(new Vector3(targetX, rb.position.y, rb.position.z));
 
         // Flip
