@@ -765,22 +765,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
-      propertyPath: minionData
-      value: 
-      objectReference: {fileID: 11400000, guid: b8489642cf7f9da44a880a85dd97f27a, type: 2}
-    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
-      propertyPath: position.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
-      propertyPath: position.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
-      propertyPath: minionPrefab
-      value: 
-      objectReference: {fileID: 9078444588451094508, guid: bed660c34db576340ae5a356880b02fb, type: 3}
     - target: {fileID: 6308171017389418947, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
       propertyPath: m_Name
       value: MinionManager

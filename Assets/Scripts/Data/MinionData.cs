@@ -4,11 +4,14 @@ using UnityEngine;
 public class MinionData : ScriptableObject
 {
     [SerializeField]
-    private int value;
+    private int mValue;
 
     [SerializeField]
-    private string minionName;
+    private string mName;
 
-    public int Value => value;
-    public string MinionName => minionName;
+    private MinionSpawnPoint mSpawnPoint;
+
+    public int Value => mValue;
+    public string Name => mName;
+    public MinionSpawnPoint MinionSpawnPoint => mSpawnPoint;
 }

@@ -5,7 +5,8 @@ public class Minion : MonoBehaviour
     private float health;
     private MinionData data;
     public float MaxHealth => data.Value;
-    public string Name => data.MinionName;
+    public string Name => data.Name;
+
     private void Start()
     {
         health = MaxHealth;
@@ -28,6 +29,7 @@ public class Minion : MonoBehaviour
     private void DestroyMinion()
     {
         Debug.Log("Destroyed");
+        data.MinionSpawnPoint.IsOccupied = false;
         gameObject.SetActive(false);
     }
 }
