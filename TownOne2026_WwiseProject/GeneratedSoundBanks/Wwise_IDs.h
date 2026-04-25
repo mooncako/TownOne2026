@@ -13,8 +13,64 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID TEST = 3157003241U;
+        static const AkUniqueID COLL_MIN = 3799010202U;
+        static const AkUniqueID COLL_WALL = 3001930118U;
+        static const AkUniqueID OBJ_MINION_DIE = 2792663994U;
+        static const AkUniqueID OBJ_MINION_SET = 2862290544U;
+        static const AkUniqueID PLYR_PADDLE_HIT = 376783433U;
+        static const AkUniqueID PLYR_PADDLE_MOVE = 3258129853U;
+        static const AkUniqueID TESTEVENT2D = 378692277U;
+        static const AkUniqueID TESTEVENT3D = 361914714U;
+        static const AkUniqueID UI_CONFIRM_GENERIC = 4060032068U;
+        static const AkUniqueID UI_CONFIRM_PLAY = 2428166787U;
+        static const AkUniqueID UI_CONFIRM_QUITGAME = 2912873858U;
+        static const AkUniqueID UI_HIGHLIGHT = 1402340918U;
+        static const AkUniqueID UI_PAUSEGAME = 3783962382U;
+        static const AkUniqueID UI_RESUMEGAME = 3020718913U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMESTATE
+        {
+            static const AkUniqueID GROUP = 4091656514U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PAUSE = 3092587493U;
+            } // namespace STATE
+        } // namespace GAMESTATE
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace MINIONSIZE
+        {
+            static const AkUniqueID GROUP = 3068666232U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HEAVY = 2732489590U;
+                static const AkUniqueID MED = 981339021U;
+                static const AkUniqueID SMALL = 1846755610U;
+            } // namespace SWITCH
+        } // namespace MINIONSIZE
+
+        namespace MINIONTYPE
+        {
+            static const AkUniqueID GROUP = 4233847531U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HEAVEN = 3460057008U;
+                static const AkUniqueID HELL = 3632828376U;
+            } // namespace SWITCH
+        } // namespace MINIONTYPE
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {

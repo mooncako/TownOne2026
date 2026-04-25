@@ -14,7 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="OBJ_Minion_Die" ID="{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}"/>
+				<Event Name="OBJ_Minion_Die" ID="{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}">
+					<ChildrenList>
+						<Action Name="" ID="{0A6E4A21-EE17-48F7-9F37-FE3C0F41E4ED}" ShortID="931221979">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OBJ_Minion_Scream_Hell" ID="{DF430762-0285-4E38-8EE5-10797C4E47DE}" WorkUnitID="{6B084A74-5F57-463A-8EA0-85B559386AFE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

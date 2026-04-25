@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     private void ApplyRigidbodySettings()
     {
         if(_rigidBody == null) return;
-        _rigidBody.isKinematic = false;
+        _rigidBody.isKinematic = true;
         _rigidBody.useGravity = false;
         _rigidBody.constraints = RigidbodyConstraints.FreezePositionY
             | RigidbodyConstraints.FreezePositionZ
