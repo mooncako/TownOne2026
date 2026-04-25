@@ -16,6 +16,8 @@ public class GameplayUI : MonoBehaviour,
     [SerializeField, BoxGroup("FillDisplay")] private TMP_Text _heavenLabel;
     [SerializeField, BoxGroup("FillDisplay")] private TMP_Text _hellLabel;
 
+    [SerializeField, BoxGroup("Timer")] private TMP_Text _timer;
+
     private float heavenTotal;
     private float hellTotal;
 
@@ -30,7 +32,21 @@ public class GameplayUI : MonoBehaviour,
 
     private void Update()
     {
-        GameStateManager.Instance.RoundManager
+
+        UpdateTimer();
+    }
+
+    private void UpdateTimer()
+    {
+        if(GameStateManager.Instance != null)
+        {
+            float timeInSeconds = GameStateManager.Instance.RoundManager.RoundTimer.ElapsedTime;
+            int minutes = Mathf.FloorToInt(timeInSeconds / 60);
+            int seconds = Mathf.FloorToInt(timeInSeconds % 60);
+            string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
+            _timer.text = timerText;
+        }
+
     }
 
     public void OnMMEvent(ScoreChangeEvent e)
