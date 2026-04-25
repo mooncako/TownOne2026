@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Minions" ID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}">
+					<ChildrenList>
+						<Switch Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
+						<Switch Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
+						<Switch Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}">
+					<ChildrenList>
+						<Switch Name="Hell" ID="{EF11EED1-0876-43FD-975C-1B2B6CA33007}"/>
+						<Switch Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

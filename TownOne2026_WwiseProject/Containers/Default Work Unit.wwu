@@ -25,6 +25,35 @@
 						<ActiveSource Name="UI_Confirm_Play_01" ID="{1ACEB20F-61A1-4056-967A-3A8FAAA06676}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<PropertyContainer Name="Ingame" ID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" ShortID="677418933">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="Player" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" PersistMode="Reference"/>
+						<WorkUnit Name="Minions" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" PersistMode="Reference"/>
+						<WorkUnit Name="Collisions" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" PersistMode="Reference"/>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="UI" ID="{71C34049-8236-44F6-AAC9-A987C8C0384E}" ShortID="504215364">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="UI" ID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}" PersistMode="Reference"/>
+					</ChildrenList>
+				</PropertyContainer>
+				<WorkUnit Name="TestEvents" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

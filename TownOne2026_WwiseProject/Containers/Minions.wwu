@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+	<Containers>
+		<WorkUnit Name="Minions" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
+			<ChildrenList>
+				<PropertyContainer Name="OBJ_Minion_Set" ID="{2897EA10-250C-44C4-AFE1-2BA23D756F16}" ShortID="54796255">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="OBJ_Minion_Set" ID="{4A48070E-280C-4725-9185-D19BD915DA87}" ShortID="537723280">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="OBJ_Minion_Fire" ID="{A28CC865-F600-41E1-8D35-CEC09CEB4772}" ShortID="488320244">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="OBJ_Minion_Impact" ID="{A740562C-F3DE-45EA-A931-E7F065CA4404}" ShortID="716268893">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<SwitchContainer Name="OBJ_Minion_Laugh" ID="{8D82B5D9-C2B6-4885-A3B5-AEED092BE73B}" ShortID="530209562">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SwitchContainer Name="OBJ_Minion_Laugh_Heaven" ID="{8EA759FC-8B13-4C50-A220-24F14C868906}" ShortID="778638203">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="OBJ_Minion_Laugh_Heaven_Heavy" ID="{B4166D61-D596-4547-8A11-636CAA776084}" ShortID="304749862">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="OBJ_Minion_Laugh_Heaven_Med" ID="{D3778D6E-CEB0-485E-B134-0F340DBECC3C}" ShortID="561080909">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="OBJ_Minion_Laugh_Heaven_Small" ID="{9A2BE7F4-15DF-4A6B-A16A-6BD426CD0F94}" ShortID="847514467">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="OBJ_Minion_Laugh_Heaven_Heavy" ID="{B4166D61-D596-4547-8A11-636CAA776084}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="OBJ_Minion_Laugh_Heaven_Med" ID="{D3778D6E-CEB0-485E-B134-0F340DBECC3C}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="OBJ_Minion_Laugh_Heaven_Small" ID="{9A2BE7F4-15DF-4A6B-A16A-6BD426CD0F94}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
+														<ItemList>
+															<ItemRef Name="OBJ_Minion_Laugh_Heaven_Small" ID="{9A2BE7F4-15DF-4A6B-A16A-6BD426CD0F94}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
+														<ItemList>
+															<ItemRef Name="OBJ_Minion_Laugh_Heaven_Med" ID="{D3778D6E-CEB0-485E-B134-0F340DBECC3C}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
+														<ItemList>
+															<ItemRef Name="OBJ_Minion_Laugh_Heaven_Heavy" ID="{B4166D61-D596-4547-8A11-636CAA776084}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="OBJ_Minion_Laugh_Hell" ID="{DC271C4B-B59E-4E51-88EC-D69A6834E697}" ShortID="190067846">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="OBJ_Minion_Laugh_Hell_Heavy" ID="{672A7706-972F-42CD-9673-F436A23A5F22}" ShortID="456920076">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="OBJ_Minion_Laugh_Hell_Med" ID="{84C17BFC-C147-4BC5-AB9C-D22D147B47BA}" ShortID="57009427">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="OBJ_Minion_Laugh_Hell_Small" ID="{DC81D204-4409-4A6C-BAEC-BAF6F231F0B0}" ShortID="802976582">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="OBJ_Minion_Laugh_Hell_Small" ID="{DC81D204-4409-4A6C-BAEC-BAF6F231F0B0}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="OBJ_Minion_Laugh_Hell_Heavy" ID="{672A7706-972F-42CD-9673-F436A23A5F22}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="OBJ_Minion_Laugh_Hell_Med" ID="{84C17BFC-C147-4BC5-AB9C-D22D147B47BA}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
+														<ItemList>
+															<ItemRef Name="OBJ_Minion_Laugh_Hell_Small" ID="{DC81D204-4409-4A6C-BAEC-BAF6F231F0B0}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
+														<ItemList>
+															<ItemRef Name="OBJ_Minion_Laugh_Hell_Med" ID="{84C17BFC-C147-4BC5-AB9C-D22D147B47BA}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
+														<ItemList>
+															<ItemRef Name="OBJ_Minion_Laugh_Hell_Heavy" ID="{672A7706-972F-42CD-9673-F436A23A5F22}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Laugh_Hell" ID="{DC271C4B-B59E-4E51-88EC-D69A6834E697}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Laugh_Heaven" ID="{8EA759FC-8B13-4C50-A220-24F14C868906}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"/>
+												<ItemList>
+													<ItemRef Name="OBJ_Minion_Laugh_Heaven" ID="{8EA759FC-8B13-4C50-A220-24F14C868906}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Hell" ID="{EF11EED1-0876-43FD-975C-1B2B6CA33007}"/>
+												<ItemList>
+													<ItemRef Name="OBJ_Minion_Laugh_Hell" ID="{DC271C4B-B59E-4E51-88EC-D69A6834E697}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="OBJ_Minion_Whoosh" ID="{23FF02E7-B250-4698-A163-C723E091D241}" ShortID="535845499">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="OBJ_Minion_Whoosh_Heaven" ID="{78F3E4D1-6F05-4EBF-9DA3-9828D9918CE4}" ShortID="978244032">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="OBJ_Minion_Whoosh_Hell" ID="{7DA013CE-E98E-4072-B8A1-751EC425E51B}" ShortID="375028704">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Whoosh_Hell" ID="{7DA013CE-E98E-4072-B8A1-751EC425E51B}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Whoosh_Heaven" ID="{78F3E4D1-6F05-4EBF-9DA3-9828D9918CE4}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"/>
+												<ItemList>
+													<ItemRef Name="OBJ_Minion_Whoosh_Heaven" ID="{78F3E4D1-6F05-4EBF-9DA3-9828D9918CE4}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Hell" ID="{EF11EED1-0876-43FD-975C-1B2B6CA33007}"/>
+												<ItemList>
+													<ItemRef Name="OBJ_Minion_Whoosh_Hell" ID="{7DA013CE-E98E-4072-B8A1-751EC425E51B}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="OBJ_Minion_Die" ID="{53BF6082-E967-4C92-AA49-9E5833F4FC9E}" ShortID="752417005">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="OBJ_Minion_Scream" ID="{2B02FDAD-DD6F-48DF-A9AF-80D8BE51EFF1}" ShortID="175891656">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="OBJ_Minion_Scream_Heaven" ID="{E4D3CD97-A187-4C6C-88E4-3EDC9B223637}" ShortID="948041635">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="OBJ_Minion_Scream_Heaven_Heavy" ID="{2CD717CF-845E-4102-95C9-0A2686AE7293}" ShortID="297603403">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="OBJ_Minion_Scream_Heaven_Med" ID="{8BE397A9-19AA-4311-9A91-203C25F1C9D8}" ShortID="68666175">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="OBJ_Minion_Scream_Heaven_Small" ID="{EC8727B7-562E-4126-BB38-2229C147F2A2}" ShortID="50880253">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Scream_Heaven_Med" ID="{8BE397A9-19AA-4311-9A91-203C25F1C9D8}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Scream_Heaven_Small" ID="{EC8727B7-562E-4126-BB38-2229C147F2A2}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Scream_Heaven_Heavy" ID="{2CD717CF-845E-4102-95C9-0A2686AE7293}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="OBJ_Minion_Scream_Hell" ID="{DF430762-0285-4E38-8EE5-10797C4E47DE}" ShortID="42543683">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="OBJ_Minion_Scream_Heaven_Heavy" ID="{A85CFC73-46BE-4522-A831-D5C9DCFA257C}" ShortID="172665552">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="OBJ_Minion_Scream_Heaven_Med" ID="{8A0859F5-A676-4B50-B5A9-6395E256B6DA}" ShortID="736853800">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="OBJ_Minion_Scream_Heaven_Small" ID="{3D9C3AB5-9F4D-4ABD-B228-7EAC5C44B414}" ShortID="855112139">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Scream_Heaven_Heavy" ID="{A85CFC73-46BE-4522-A831-D5C9DCFA257C}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Scream_Heaven_Small" ID="{3D9C3AB5-9F4D-4ABD-B228-7EAC5C44B414}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="OBJ_Minion_Scream_Heaven_Med" ID="{8A0859F5-A676-4B50-B5A9-6395E256B6DA}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="OBJ_Minion_Scream_Hell" ID="{DF430762-0285-4E38-8EE5-10797C4E47DE}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="OBJ_Minion_Scream_Heaven" ID="{E4D3CD97-A187-4C6C-88E4-3EDC9B223637}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"/>
+										<ItemList>
+											<ItemRef Name="OBJ_Minion_Scream_Heaven" ID="{E4D3CD97-A187-4C6C-88E4-3EDC9B223637}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Hell" ID="{EF11EED1-0876-43FD-975C-1B2B6CA33007}"/>
+										<ItemList>
+											<ItemRef Name="OBJ_Minion_Scream_Hell" ID="{DF430762-0285-4E38-8EE5-10797C4E47DE}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<RandomSequenceContainer Name="OBJ_Minion_Fire" ID="{A8DF1C18-959A-4E03-BAD9-6AC0F0FB81D7}" ShortID="667158473">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="OBJ_Minion_Impact" ID="{4FB5C9F9-6F18-40B9-A49C-1374FECE5C33}" ShortID="752593886">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

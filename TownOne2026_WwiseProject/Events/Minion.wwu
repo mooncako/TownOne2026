@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{855A4877-A07E-42D5-91AB-DBEB69BB44EF}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Minion" ID="{855A4877-A07E-42D5-91AB-DBEB69BB44EF}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="OBJ_Minion_Set" ID="{B0EABF68-4739-40B2-84C0-E3ECE88D2B4E}">
+					<ChildrenList>
+						<Action Name="" ID="{4E44EAF3-6872-45AC-8EF5-4F3506DBFDF1}" ShortID="120096930">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OBJ_Minion_Set" ID="{4A48070E-280C-4725-9185-D19BD915DA87}" WorkUnitID="{6B084A74-5F57-463A-8EA0-85B559386AFE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OBJ_Minion_Die" ID="{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
