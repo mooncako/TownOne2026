@@ -3,28 +3,8 @@
 	<Events>
 		<WorkUnit Name="TestEvent" ID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="TestEvent3D" ID="{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}">
-					<ChildrenList>
-						<Action Name="" ID="{6265CC57-35CE-4AA5-9324-7D6D35BE634C}" ShortID="908140947">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_Confirm_Play_01" ID="{D064F45D-B15F-4C11-B7A5-EADE33CA5C70}" WorkUnitID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="TestEvent2D" ID="{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}">
-					<ChildrenList>
-						<Action Name="" ID="{DD947D40-2081-4654-933E-030ED4ABA1FD}" ShortID="284186561">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_Confirm_Play_01" ID="{D064F45D-B15F-4C11-B7A5-EADE33CA5C70}" WorkUnitID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="TestEvent3D" ID="{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}"/>
+				<Event Name="TestEvent2D" ID="{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

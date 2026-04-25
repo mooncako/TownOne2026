@@ -1,7 +1,9 @@
+using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Minion : MonoBehaviour
+public class Minion : MonoBehaviour, IInteract
 {
     [SerializeField, BoxGroup("Stats")] private float health;
     [SerializeField, BoxGroup("Stats")] private MinionData data;
@@ -32,5 +34,20 @@ public class Minion : MonoBehaviour
         Debug.Log("Destroyed");
         data.MinionSpawnPoint.IsOccupied = false;
         gameObject.SetActive(false);
+    }
+
+    public bool Interact(GameObject Instigator, string Action = "")
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public List<string> GetInteractOptions(GameObject Instigator = null)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool Interact(GameObject Instigator, Action callback = null)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	376783433	PLYR_Paddle_Hit			\Player\PLYR_Paddle_Hit	
+

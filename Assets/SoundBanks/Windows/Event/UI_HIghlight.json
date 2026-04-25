@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1402340918",
+    "Type": "Event",
+    "GUID": "{D8B3B900-C206-46A8-A79F-DE99BE4BE002}",
+    "Language": "SFX",
+    "Hash": "{63715628-4A46-700A-E34E-286C4CC7366B}",
+    "ObjectPath": "UI_HIghlight",
+    "ShortName": "UI_HIghlight",
+    "Path": "Event/UI_HIghlight.bnk",
+    "Media": [
+     {
+      "Id": "310673553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_Select.wav",
+      "Path": "Media/310673553.wem",
+      "CachePath": "84/{84E138C1-7EAC-D5DB-C6EE-9E0361243DB2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1402340918",
+      "Name": "UI_HIghlight",
+      "ObjectPath": "\\Events\\UI\\UI_HIghlight",
+      "GUID": "{D8B3B900-C206-46A8-A79F-DE99BE4BE002}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9191667",
+      "DurationMax": "0.9191667",
+      "MediaRefs": [
+       {
+        "Id": "310673553"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E5CC7F47-DD58-57B6-2C62-5C2C40E859E9}"
+ }
+}
