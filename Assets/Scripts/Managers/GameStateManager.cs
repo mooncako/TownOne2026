@@ -3,7 +3,8 @@ using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class GameStateManager : MMSingleton<GameStateManager>
+public class GameStateManager : MMSingleton<GameStateManager>,
+    MMEventListener<PlayerConnectionEvent>
 {
     [SerializeField, BoxGroup("References")] private RoundManager _roundManager;
     [SerializeField, BoxGroup("References")] private GameSettingsSO _gameSettingsSO;
@@ -11,8 +12,8 @@ public class GameStateManager : MMSingleton<GameStateManager>
 
     [SerializeField, BoxGroup("Debug")] public GameState GameState = GameState.Preparation;
     [SerializeField, BoxGroup("Debug")] public int CurrentRound = 0;
-    [SerializeField, BoxGroup("Debug")] public PlayerState HeavenPlayerState;
-    [SerializeField, BoxGroup("Debug")] public PlayerState HellPlayerState;
+    [SerializeField, BoxGroup("Debug")] public PlayerInfo HeavenPlayerInfo;
+    [SerializeField, BoxGroup("Debug")] public PlayerInfo HellPlayerInfo;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
 
 
@@ -40,6 +41,8 @@ public class GameStateManager : MMSingleton<GameStateManager>
         {
             _gameSettings = new GameSettings(_gameSettingsSO);
         }
+
+        this.MMEventStartListening<PlayerConnectionEvent>();
     }
 
     void OnDisable()
@@ -49,14 +52,16 @@ public class GameStateManager : MMSingleton<GameStateManager>
             _roundManager.OnRoundStarted -= OnRoundStarted;
             _roundManager.OnRoundEnd -= OnRoundEnded;
         }
+
+        this.MMEventStopListening<PlayerConnectionEvent>();
     }
 
     public void NewRound()
     {
         CurrentRound++;
         _roundManager.StartRound();
-        HeavenPlayerState.Initialize();
-        HellPlayerState.Initialize();
+        HeavenPlayerInfo.Initialize();
+        HellPlayerInfo.Initialize();
         _gameSettings.Reset(_gameSettingsSO);
     }
 
@@ -68,7 +73,7 @@ public class GameStateManager : MMSingleton<GameStateManager>
     private void OnRoundEnded()
     {
         SetState(GameState.Result);
-        var roundResult = new RoundResult(HeavenPlayerState.Score, HellPlayerState.Score);
+        var roundResult = new RoundResult(HeavenPlayerInfo.Score, HellPlayerInfo.Score);
         _roundManager.AssignRoundResult(roundResult, CurrentRound - 1);
 
         if(CurrentRound >= _roundManager.RoundResults.Length)
@@ -84,5 +89,29 @@ public class GameStateManager : MMSingleton<GameStateManager>
         GameState = state;
     }
 
-
+    public void OnMMEvent(PlayerConnectionEvent e)
+    {
+        if (e.ConnectionType == ConnectionType.Connect)
+        {
+            if (e.Faction == Faction.Heaven)
+            {
+                HeavenPlayerInfo = e.PlayerInfo;
+            }
+            else if (e.Faction == Faction.Hell)
+            {
+                HellPlayerInfo = e.PlayerInfo;
+            }
+        }
+        else if (e.ConnectionType == ConnectionType.Disconnect)
+        {
+            if (e.Faction == Faction.Heaven)
+            {
+                HeavenPlayerInfo = null;
+            }
+            else if (e.Faction == Faction.Hell)
+            {
+                HellPlayerInfo = null;
+            }
+        }
+    }
 }
