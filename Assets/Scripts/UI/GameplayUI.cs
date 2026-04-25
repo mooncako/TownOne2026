@@ -1,3 +1,4 @@
+using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using System.Collections;
 using TMPro;
@@ -6,7 +7,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameplayUI : MonoBehaviour
+public class GameplayUI : MonoBehaviour,
+    MMEventListener<ScoreChangeEvent>
 {
     [SerializeField, BoxGroup("FillDisplay")] private Image _heavenDisplay;
     [SerializeField, BoxGroup("FillDisplay")] private Image _hellDisplay;
@@ -17,29 +19,32 @@ public class GameplayUI : MonoBehaviour
     private float heavenTotal;
     private float hellTotal;
 
-    private void Start()
+    private void OnEnable()
     {
-        heavenTotal = 0;
-        hellTotal = 0;
-        UpdateRatioFill();
+        this.MMEventStartListening<ScoreChangeEvent>();
+    }
+    private void OnDisable()
+    {
+        this.MMEventStopListening<ScoreChangeEvent>();
     }
 
-    private void Update()
+    public void OnMMEvent(ScoreChangeEvent e)
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
+        
+        if (e.Owner == GameStateManager.Instance.HeavenPlayerInfo)
         {
-            heavenTotal += 1;
-            UpdateRatioFill();
+            e.NewScore = heavenTotal;
         }
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        else
         {
-            hellTotal += 1;
-            UpdateRatioFill();
+            e.NewScore = hellTotal;
         }
 
+        UpdateScoreDisplay();
+        
     }
 
-    private void UpdateRatioFill()
+    private void UpdateScoreDisplay()
     {
         float combinedTotal = heavenTotal + hellTotal;
 
