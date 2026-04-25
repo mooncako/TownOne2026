@@ -207,8 +207,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
   _roundManager: {fileID: 459492350}
+  _gameSettingsSO: {fileID: 11400000, guid: a94dc1f46818c7145879a4464aad48ea, type: 2}
   GameState: 0
   CurrentRound: 1
+  HeavenPlayerState:
+    ReadyState: 0
+  HellPlayerState:
+    ReadyState: 0
+  _gameSettings:
+    TotalRounds: 0
+    RoundDurationSeconds: 0
+    StartingScore: 0
 --- !u!4 &459492349
 Transform:
   m_ObjectHideFlags: 0
@@ -236,6 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafbab467fbeb19448b812d0cba09bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoundManager
+  RoundResults:
+  - {}
+  - {}
+  - {}
 --- !u!1 &968698894
 GameObject:
   m_ObjectHideFlags: 0
