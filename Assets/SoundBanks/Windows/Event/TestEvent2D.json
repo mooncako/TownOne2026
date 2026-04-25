@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "378692277",
+    "Type": "Event",
+    "GUID": "{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}",
+    "Language": "SFX",
+    "Hash": "{749C13D9-22CB-B857-6684-2CE71D82382F}",
+    "ObjectPath": "TestEvent2D",
+    "ShortName": "TestEvent2D",
+    "Path": "Event/TestEvent2D.bnk",
+    "Events": [
+     {
+      "Id": "378692277",
+      "Name": "TestEvent2D",
+      "ObjectPath": "\\Events\\TestEvent\\TestEvent2D",
+      "GUID": "{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BBE8B032-DBF6-2CFF-B3E5-D9ADE85455B8}"
+ }
+}
