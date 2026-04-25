@@ -38,7 +38,8 @@ public class Minion : MonoBehaviour, IInteract
 
     public bool Interact(GameObject Instigator, string Action = "")
     {
-        throw new System.NotImplementedException();
+        
+        return true;
     }
 
     public List<string> GetInteractOptions(GameObject Instigator = null)
