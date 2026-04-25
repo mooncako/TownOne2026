@@ -16,11 +16,13 @@ public class MenuInputManager : MonoBehaviour
             {
                 menuPlayer.Id = PlayerId.PlayerOne;
                 _isPlayerOneTaken = true;
+                GameStateManager.Instance.PlayerOneDevice = player.devices[0];
             }
             else if (!_isPlayerTwoTaken)
             {
                 menuPlayer.Id = PlayerId.PlayerTwo;
                 _isPlayerTwoTaken = true;
+                GameStateManager.Instance.PlayerTwoDevice = player.devices[0];
             }
         }
     }
@@ -34,10 +36,12 @@ public class MenuInputManager : MonoBehaviour
                 case PlayerId.PlayerOne:
                     _isPlayerOneTaken = false;
                     menuPlayer.Id = PlayerId.None;
+                    GameStateManager.Instance.PlayerOneDevice = null;
                     break;
                 case PlayerId.PlayerTwo:
                     _isPlayerTwoTaken = false;
                     menuPlayer.Id = PlayerId.None;
+                    GameStateManager.Instance.PlayerTwoDevice = null;
                     break;
             }
         }

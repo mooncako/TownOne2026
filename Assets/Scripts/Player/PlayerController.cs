@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -106,4 +107,5 @@ public class PlayerController : MonoBehaviour
     {
         _targetAngle = _flipAngle * Mathf.Clamp(direction, -1f, 1f);
     }
+
 }

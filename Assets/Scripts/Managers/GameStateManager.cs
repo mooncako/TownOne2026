@@ -2,6 +2,7 @@ using System;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
     MMEventListener<PlayerConnectionEvent>
@@ -16,6 +17,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [SerializeField, BoxGroup("Debug")] public PlayerId HeavenPlayerId;
     [SerializeField, BoxGroup("Debug")] public PlayerInfo HellPlayerInfo;
     [SerializeField, BoxGroup("Debug")] public PlayerId HellPlayerId;
+    [SerializeField, BoxGroup("Debug")] public InputDevice PlayerOneDevice;
+    [SerializeField, BoxGroup("Debug")] public InputDevice PlayerTwoDevice;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
 
 
@@ -130,5 +133,10 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             FactionChangedEvent.Trigger(false);
         }
+    }
+
+    public RoundManager GetRoundManager()
+    {
+        return _roundManager;
     }
 }
