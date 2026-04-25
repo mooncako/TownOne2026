@@ -12,17 +12,18 @@ public class MenuInputManager : MonoBehaviour
     {
         if (player.TryGetComponent(out MenuPlayer menuPlayer))
         {
+            var joinDevice = GetJoinDevice(player);
             if (!_isPlayerOneTaken)
             {
                 menuPlayer.Id = PlayerId.PlayerOne;
                 _isPlayerOneTaken = true;
-                GameStateManager.Instance.PlayerOneDevice = player.devices[0];
+                GameStateManager.Instance.PlayerOneDevice = joinDevice;
             }
             else if (!_isPlayerTwoTaken)
             {
                 menuPlayer.Id = PlayerId.PlayerTwo;
                 _isPlayerTwoTaken = true;
-                GameStateManager.Instance.PlayerTwoDevice = player.devices[0];
+                GameStateManager.Instance.PlayerTwoDevice = joinDevice;
             }
         }
     }
@@ -45,5 +46,16 @@ public class MenuInputManager : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private static InputDevice GetJoinDevice(PlayerInput player)
+    {
+        var pairedDevices = player.user.pairedDevices;
+        if (pairedDevices.Count > 0)
+        {
+            return pairedDevices[0];
+        }
+
+        return player.devices.Count > 0 ? player.devices[0] : null;
     }
 }
