@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1402340918	UI_HIghlight			\UI\UI_HIghlight	
+

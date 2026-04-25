@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3783962382",
+    "Type": "Event",
+    "GUID": "{C3C6F7AF-8E9B-429F-A7CF-1BDFBD2A9C70}",
+    "Language": "SFX",
+    "Hash": "{0D94DFA2-1E2B-C427-39AC-D48F65BE8F11}",
+    "ObjectPath": "UI_PauseGame",
+    "ShortName": "UI_PauseGame",
+    "Path": "Event/UI_PauseGame.bnk",
+    "Events": [
+     {
+      "Id": "3783962382",
+      "Name": "UI_PauseGame",
+      "ObjectPath": "\\Events\\UI\\UI_PauseGame",
+      "GUID": "{C3C6F7AF-8E9B-429F-A7CF-1BDFBD2A9C70}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6A764616-BD2F-0B8A-CA93-6AEDB2156C4F}"
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2792663994",
+    "Type": "Event",
+    "GUID": "{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}",
+    "Language": "SFX",
+    "Hash": "{0DBB0F7C-FC20-A378-7F71-8951954BF1CF}",
+    "ObjectPath": "OBJ_Minion_Die",
+    "ShortName": "OBJ_Minion_Die",
+    "Path": "Event/OBJ_Minion_Die.bnk",
+    "Media": [
+     {
+      "Id": "4143777",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Obj_Minion_Death_Hell_03.wav",
+      "Path": "Media/4143777.wem",
+      "CachePath": "B8/{B8C3B5E4-4E27-A37B-35CA-0ECE637AB8CE}.wem"
+     },
+     {
+      "Id": "246321530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Obj_Minion_Death_Hell_02.wav",
+      "Path": "Media/246321530.wem",
+      "CachePath": "66/{6607E235-A50E-1FE1-65E9-357938A565B7}.wem"
+     },
+     {
+      "Id": "656919707",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Obj_Minion_Death_Hell_01.wav",
+      "Path": "Media/656919707.wem",
+      "CachePath": "10/{101C150F-A08D-7FAA-B14C-D6C865FE819C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2792663994",
+      "Name": "OBJ_Minion_Die",
+      "ObjectPath": "\\Events\\Minion\\OBJ_Minion_Die",
+      "GUID": "{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.65",
+      "DurationMax": "4.9333334",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3068666232",
+         "Id": "1846755610",
+         "GUID": "{5970B058-EEAD-4693-A2E8-008A4CD2744D}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "4143777"
+         },
+         {
+          "Id": "246321530"
+         },
+         {
+          "Id": "656919707"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3068666232",
+         "Id": "981339021",
+         "GUID": "{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "4143777"
+         },
+         {
+          "Id": "246321530"
+         },
+         {
+          "Id": "656919707"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3068666232",
+         "Id": "2732489590",
+         "GUID": "{A641D999-DC36-4070-99C9-A5E780602207}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "4143777"
+         },
+         {
+          "Id": "246321530"
+         },
+         {
+          "Id": "656919707"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3068666232",
+      "Name": "MinionSize",
+      "ObjectPath": "\\Switches\\Minions\\MinionSize",
+      "GUID": "{C20D7473-ED3B-45C3-828D-CD10877BEF44}",
+      "Switches": [
+       {
+        "Id": "981339021",
+        "Name": "Med",
+        "ObjectPath": "\\Switches\\Minions\\MinionSize\\Med",
+        "GUID": "{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"
+       },
+       {
+        "Id": "1846755610",
+        "Name": "Small",
+        "ObjectPath": "\\Switches\\Minions\\MinionSize\\Small",
+        "GUID": "{5970B058-EEAD-4693-A2E8-008A4CD2744D}"
+       },
+       {
+        "Id": "2732489590",
+        "Name": "Heavy",
+        "ObjectPath": "\\Switches\\Minions\\MinionSize\\Heavy",
+        "GUID": "{A641D999-DC36-4070-99C9-A5E780602207}"
+       }
+      ]
+     },
+     {
+      "Id": "4233847531",
+      "Name": "MinionType",
+      "ObjectPath": "\\Switches\\Minions\\MinionType",
+      "GUID": "{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}",
+      "Switches": [
+       {
+        "Id": "3460057008",
+        "Name": "Heaven",
+        "ObjectPath": "\\Switches\\Minions\\MinionType\\Heaven",
+        "GUID": "{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"
+       },
+       {
+        "Id": "3632828376",
+        "Name": "Hell",
+        "ObjectPath": "\\Switches\\Minions\\MinionType\\Hell",
+        "GUID": "{EF11EED1-0876-43FD-975C-1B2B6CA33007}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8B07D748-BB01-AB3F-9D17-9021F50421F4}"
+ }
+}
