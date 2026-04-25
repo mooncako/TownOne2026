@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _playerInfo: {fileID: 2215674665842302170}
-  _rigidBody: {fileID: 1566069033102647077}
+  _rigidBody: {fileID: 9222858482850756291}
   _playerInput: {fileID: 359527489038731594}
   _movementSpeed: 5
   _rangeX: 1
@@ -306,15 +306,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3903647500035384430, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3739812782602290813}
+    - targetCorrespondingSourceObject: {fileID: 3903647500035384430, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9222858482850756291}
   m_SourcePrefab: {fileID: 100100000, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
---- !u!54 &1566069033102647077 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 2193246248327955067, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
-  m_PrefabInstance: {fileID: 852361940764810590}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2894350076970693518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2593790416447811280, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
   m_PrefabInstance: {fileID: 852361940764810590}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4465521423567960368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3903647500035384430, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
+  m_PrefabInstance: {fileID: 852361940764810590}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3739812782602290813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465521423567960368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61426d861c4e6845bee26490a8187b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Paddle
+--- !u!54 &9222858482850756291
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465521423567960368}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 92
+  m_CollisionDetection: 0
