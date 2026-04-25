@@ -221,7 +221,7 @@ MonoBehaviour:
   _movementSpeed: 5
   _rangeX: 1
   _flipAngle: 60
-  _flipRotationSpeed: 360
+  _flipRotationSpeed: 700
   _movementInput: 0
   _rotationInput: 0
 --- !u!114 &2215674665842302170
@@ -247,6 +247,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6494382509009583121}
     m_Modifications:
+    - target: {fileID: 2193246248327955067, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2593790416447811280, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -293,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6029389619733613793, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7039027344825826949, guid: fa448d1341129f14fba4e734c01680a0, type: 3}
       propertyPath: m_Name

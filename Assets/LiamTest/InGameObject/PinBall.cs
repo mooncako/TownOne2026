@@ -1,12 +1,22 @@
+using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 public class PinBall : MonoBehaviour, IPhysics
 {
+    [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
+
+
+    private void OnValidate()
+    {
+        if(_rigidBody == null) _rigidBody = GetComponent<Rigidbody>();
+    }
+
     public bool AddImpulse(Vector3 Impulse, bool ChangeVel = true)
     {
         //Impulse
+        _rigidBody.AddForce(Impulse, ForceMode.Impulse);
         return true;
     }
 
