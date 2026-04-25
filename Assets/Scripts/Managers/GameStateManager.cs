@@ -108,11 +108,17 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             if (e.Faction == Faction.Heaven)
             {
-                HeavenPlayerId = PlayerId.None;
+                if(HeavenPlayerId == e.PlayerId)
+                {
+                    HeavenPlayerId = PlayerId.None;
+                }
             }
             else if (e.Faction == Faction.Hell)
             {
-                HellPlayerId = PlayerId.None;
+                if(HellPlayerId == e.PlayerId)
+                {
+                    HellPlayerId = PlayerId.None;
+                }
             }
         }
 
