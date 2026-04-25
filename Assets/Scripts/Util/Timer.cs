@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float Duration { get; private set; }
-    public float ElapsedTime { get; private set; }
-    public bool IsRunning { get; private set; }
+    [SerializeField] public float Duration;
+    [SerializeField] public float ElapsedTime;
+    [SerializeField] public bool IsRunning;
 
     public event Action OnTimerComplete;
 
