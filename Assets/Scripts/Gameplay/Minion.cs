@@ -3,10 +3,17 @@ using UnityEngine;
 public class Minion : MonoBehaviour
 {
     private float health;
-    [SerializeField] private float maxHealth = 1;
+    private MinionData data;
+    public float MaxHealth => data.Value;
+    public string Name => data.MinionName;
     private void Start()
     {
-        health = maxHealth;
+        health = MaxHealth;
+    }
+
+    public void Init(MinionData d)
+    {
+        data = d;
     }
 
     private void OnCollisionEnter(Collision collision)
