@@ -1,8 +1,10 @@
+using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class UIInputController : MonoBehaviour
+public class UIInputController : MonoBehaviour,
+    MMEventListener<MenuPlayerInputEvent>
 {
     [SerializeField, BoxGroup("References")] private Transform _heavenSelectionPos;
     [SerializeField, BoxGroup("References")] private Transform _hellSelectionPos;
@@ -11,18 +13,30 @@ public class UIInputController : MonoBehaviour
     [SerializeField, BoxGroup("Settings")] private float horizontalDeadzone = 0.5f;
 
 
+    void OnEnable()
+    {
+        this.MMEventStartListening<MenuPlayerInputEvent>();
+    }
+
+    void OnDisable()
+    {
+        this.MMEventStopListening<MenuPlayerInputEvent>();
+    }
+
+
     // Navigate codes are currently placeholder, need to be replaced by using playerinput manager
 
-    private void OnPlayerOneNavigate(InputValue value)
+    private void OnPlayerOneNavigate(Vector2 navigation)
     {
-        Vector2 navigation = value.Get<Vector2>();
 
         if (navigation.x <= -horizontalDeadzone)
         {
             if (MoveCursorRight(_playerOneCursor, _playerTwoCursor))
             {
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Hell, ConnectionType.Connect);
-            }else{
+            }
+            else
+            {
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Hell, ConnectionType.Disconnect);
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Heaven, ConnectionType.Disconnect);
             }
@@ -32,16 +46,17 @@ public class UIInputController : MonoBehaviour
             if (MoveCursorLeft(_playerOneCursor, _playerTwoCursor))
             {
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Heaven, ConnectionType.Connect);
-            }else{
+            }
+            else
+            {
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Hell, ConnectionType.Disconnect);
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Heaven, ConnectionType.Disconnect);
             }
         }
     }
 
-    private void OnPlayerTwoNavigate(InputValue value)
+    private void OnPlayerTwoNavigate(Vector2 navigation)
     {
-        Vector2 navigation = value.Get<Vector2>();
 
         if (navigation.x <= -horizontalDeadzone)
         {
@@ -107,5 +122,18 @@ public class UIInputController : MonoBehaviour
 
         cursor.Move(_hellSelectionPos.localPosition, MainMenuPlayerCursor.CursorLocation.Hell);
         return true;
+    }
+
+    public void OnMMEvent(MenuPlayerInputEvent e)
+    {
+        switch (e.Id)
+        {
+            case PlayerId.PlayerOne:
+                OnPlayerOneNavigate(e.Input);
+                break;
+            case PlayerId.PlayerTwo:
+                OnPlayerTwoNavigate(e.Input);
+                break;
+        }
     }
 }
