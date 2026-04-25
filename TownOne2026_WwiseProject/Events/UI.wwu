@@ -6,40 +6,21 @@
 				<Event Name="UI_Confirm_Play" ID="{F18B3BCE-BB08-4677-99F5-D38987E3B27E}">
 					<ChildrenList>
 						<Action Name="" ID="{9E587A55-BB40-4906-ABF9-94919B8B58D6}" ShortID="888006301">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="UI_Confirm_Play" ID="{104E2EA9-1F65-4D51-99D6-F40906D019A1}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
+									<ObjectRef Name="UI_Confirm_Play" ID="{B3334AAD-2839-4507-8A05-CEB8E3758A20}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UI_Confirm_QuitGame" ID="{67033A41-BA86-4CA1-845A-C5D254A98EB1}">
-					<ChildrenList>
-						<Action Name="" ID="{E4826A2C-B127-4FF5-A029-EBA73AA7CDD8}" ShortID="840138134">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_Confirm_QuitGame" ID="{7E50EBA1-C5A2-4EE0-A538-E2BACAE6573E}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="UI_Confirm_QuitGame" ID="{67033A41-BA86-4CA1-845A-C5D254A98EB1}"/>
 				<Event Name="UI_Confirm_Generic" ID="{F3BFB0E8-483E-4B51-9247-4FAC33496544}">
 					<ChildrenList>
-						<Action Name="" ID="{F0557753-455E-49EB-B6B4-9229F65ED25B}" ShortID="916914222">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
+						<Action Name="" ID="{B1728626-918D-45FD-956B-AF04D13D27AE}" ShortID="990038878">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="UI_Confirm_Generic" ID="{158CA15F-AB7F-42B1-815E-AF00105FB910}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
+									<ObjectRef Name="UI_Confirm_Generic" ID="{38CE28DE-D76B-4073-A7F1-59E728776EBA}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -48,52 +29,16 @@
 				<Event Name="UI_HIghlight" ID="{D8B3B900-C206-46A8-A79F-DE99BE4BE002}">
 					<ChildrenList>
 						<Action Name="" ID="{A31D54BC-555B-4095-8CED-EE5626C5D60F}" ShortID="768852167">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="UI_Highlight" ID="{31F38EAD-63F2-4715-B32B-DF59DCB40CF0}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
+									<ObjectRef Name="UI_Highlight" ID="{1FE72768-AEA0-41A3-89D5-1AEE5F79124A}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UI_PauseGame" ID="{C3C6F7AF-8E9B-429F-A7CF-1BDFBD2A9C70}">
-					<ChildrenList>
-						<Action Name="" ID="{48F9CC30-E1D0-43BA-A22D-FC898C7DFE07}" ShortID="321151771">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_PauseGame" ID="{0EF9DE96-BF97-47DF-A74A-54AEE76AA992}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="UI_ResumeGame" ID="{30183105-F5A9-4A44-9CF3-1085216CBD0E}">
-					<ChildrenList>
-						<Action Name="" ID="{1DBFFFF8-D8BC-41B8-BA1B-E99CF09FC85D}" ShortID="61269632">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="PLYR_Paddle_Hit" ID="{DCA9AA8F-5883-41E6-88B3-8101DDCBA4A8}" WorkUnitID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{A5C28D7E-9EC4-49D0-96D9-2A279EA67CC0}" ShortID="71587328">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_ResumeGame" ID="{C9F8BD77-D2F5-4C85-A1BB-9DE767E3E6CF}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="UI_PauseGame" ID="{C3C6F7AF-8E9B-429F-A7CF-1BDFBD2A9C70}"/>
+				<Event Name="UI_ResumeGame" ID="{30183105-F5A9-4A44-9CF3-1085216CBD0E}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

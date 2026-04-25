@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,11 @@ public class WorldUnit : MonoBehaviour, IInteract
             return true;   
         }
         return false;
+    }
+
+    public bool Interact(GameObject Instigator, Action callback = null)
+    {
+        throw new NotImplementedException();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

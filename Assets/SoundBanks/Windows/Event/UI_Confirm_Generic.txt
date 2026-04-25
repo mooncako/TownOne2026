@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4060032068	UI_Confirm_Generic			\UI\UI_Confirm_Generic	
+
