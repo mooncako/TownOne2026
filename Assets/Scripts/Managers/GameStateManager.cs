@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Generic;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
     MMEventListener<PlayerConnectionEvent>
@@ -17,10 +19,22 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [SerializeField, BoxGroup("Debug")] public PlayerId HeavenPlayerId;
     [SerializeField, BoxGroup("Debug")] public PlayerInfo HellPlayerInfo;
     [SerializeField, BoxGroup("Debug")] public PlayerId HellPlayerId;
-    [ShowInInspector, BoxGroup("Debug")] public InputDevice PlayerOneDevice;
-    [ShowInInspector, BoxGroup("Debug")] public InputDevice PlayerTwoDevice;
+    [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerOneDeviceIds = new List<int>();
+    [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerTwoDeviceIds = new List<int>();
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
 
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        _instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void OnValidate()
     {
@@ -33,13 +47,6 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             _roundManager.OnRoundStarted += OnRoundStarted;
             _roundManager.OnRoundEnd += OnRoundEnded;
-        }
-
-        DontDestroyOnLoad(gameObject);
-
-        if(Instance != this)
-        {
-            Destroy(gameObject);
         }
 
         if(_gameSettingsSO != null)
@@ -138,5 +145,112 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     public RoundManager GetRoundManager()
     {
         return _roundManager;
+    }
+
+    public void SetPlayerDeviceIds(PlayerId playerId, IReadOnlyList<InputDevice> devices)
+    {
+        var targetList = GetDeviceIdList(playerId);
+        if (targetList == null)
+        {
+            return;
+        }
+
+        var otherList = playerId == PlayerId.PlayerOne ? PlayerTwoDeviceIds : PlayerOneDeviceIds;
+
+        targetList.Clear();
+        for (var i = 0; i < devices.Count; i++)
+        {
+            var deviceId = devices[i].deviceId;
+            if (!targetList.Contains(deviceId))
+            {
+                targetList.Add(deviceId);
+            }
+
+            if (otherList != null)
+            {
+                otherList.Remove(deviceId);
+            }
+        }
+    }
+
+    public void ClearPlayerDeviceIds(PlayerId playerId)
+    {
+        var targetList = GetDeviceIdList(playerId);
+        if (targetList == null)
+        {
+            return;
+        }
+
+        targetList.Clear();
+    }
+
+    public void NormalizeDeviceAssignments()
+    {
+        if (PlayerOneDeviceIds.Count == 0 && PlayerTwoDeviceIds.Count > 1)
+        {
+            TrySplitDeviceLists(PlayerTwoDeviceIds, PlayerOneDeviceIds);
+        }
+        else if (PlayerTwoDeviceIds.Count == 0 && PlayerOneDeviceIds.Count > 1)
+        {
+            TrySplitDeviceLists(PlayerOneDeviceIds, PlayerTwoDeviceIds);
+        }
+    }
+
+    private static void TrySplitDeviceLists(List<int> source, List<int> target)
+    {
+        if (target.Count > 0 || source.Count <= 1)
+        {
+            return;
+        }
+
+        var hasKeyboard = false;
+        var hasMouse = false;
+        var gamepadId = -1;
+
+        for (var i = 0; i < source.Count; i++)
+        {
+            var device = InputSystem.GetDeviceById(source[i]);
+            if (device is Keyboard)
+            {
+                hasKeyboard = true;
+            }
+            else if (device is Mouse)
+            {
+                hasMouse = true;
+            }
+            else if (device is Gamepad && gamepadId == -1)
+            {
+                gamepadId = source[i];
+            }
+        }
+
+        if (hasKeyboard && hasMouse && gamepadId == -1)
+        {
+            return;
+        }
+
+        if (gamepadId != -1)
+        {
+            source.Remove(gamepadId);
+            target.Add(gamepadId);
+            return;
+        }
+
+        var moveId = source[source.Count - 1];
+        source.RemoveAt(source.Count - 1);
+        target.Add(moveId);
+    }
+
+    private List<int> GetDeviceIdList(PlayerId playerId)
+    {
+        switch (playerId)
+        {
+            case PlayerId.PlayerOne:
+                return PlayerOneDeviceIds;
+            case PlayerId.PlayerTwo:
+                return PlayerTwoDeviceIds;
+            default:
+                return null;
+        }
     }
 }

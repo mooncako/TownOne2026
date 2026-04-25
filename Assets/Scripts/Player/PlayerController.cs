@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
+using UnityEngine.InputSystem.Utilities;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerInfo))]
@@ -9,6 +12,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField, BoxGroup("References")] private PlayerInfo _playerInfo;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
+    [SerializeField, BoxGroup("References")] private PlayerInput _playerInput;
 
     [SerializeField, BoxGroup("Settings | Movement")] private float _movementSpeed = 5f;
     [SerializeField, BoxGroup("Settings | Movement")] private float _rangeX = 1f;
@@ -31,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void OnValidate()
     {
         if(_playerInfo == null) _playerInfo = GetComponent<PlayerInfo>();
+        if(_playerInput == null) _playerInput = GetComponent<PlayerInput>();
         if(_rigidBody == null) 
         {
             _rigidBody = GetComponentInChildren<Rigidbody>();
@@ -42,6 +47,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         if(_playerInfo == null) _playerInfo = GetComponent<PlayerInfo>();
+        if(_playerInput == null) _playerInput = GetComponent<PlayerInput>();
         if(_rigidBody == null) _rigidBody = GetComponentInChildren<Rigidbody>();
         ApplyRigidbodySettings();
     }
@@ -106,6 +112,121 @@ public class PlayerController : MonoBehaviour
     private void SetFlip(float direction)
     {
         _targetAngle = _flipAngle * Mathf.Clamp(direction, -1f, 1f);
+    }
+
+    public bool AssignDevicesFromGameState(PlayerId playerId)
+    {
+        if (_playerInput == null)
+        {
+            _playerInput = GetComponent<PlayerInput>();
+            if (_playerInput == null)
+            {
+                return false;
+            }
+        }
+
+        var gameState = GameStateManager.Instance;
+        if (gameState == null)
+        {
+            return false;
+        }
+
+        List<int> deviceIds = null;
+        switch (playerId)
+        {
+            case PlayerId.PlayerOne:
+                deviceIds = gameState.PlayerOneDeviceIds;
+                break;
+            case PlayerId.PlayerTwo:
+                deviceIds = gameState.PlayerTwoDeviceIds;
+                break;
+            default:
+                return false;
+        }
+
+        if (deviceIds == null || deviceIds.Count == 0)
+        {
+            if (_playerInput.actions != null)
+            {
+                _playerInput.actions.devices = new ReadOnlyArray<InputDevice>(Array.Empty<InputDevice>());
+            }
+
+            _playerInput.DeactivateInput();
+            return false;
+        }
+
+        var resolvedDevices = new List<InputDevice>(deviceIds.Count);
+        for (var i = 0; i < deviceIds.Count; i++)
+        {
+            var device = InputSystem.GetDeviceById(deviceIds[i]);
+            if (device != null)
+            {
+                resolvedDevices.Add(device);
+            }
+        }
+
+        if (resolvedDevices.Count == 0)
+        {
+            return false;
+        }
+
+        if (!_playerInput.user.valid)
+        {
+            _playerInput.ActivateInput();
+            if (!_playerInput.user.valid)
+            {
+                return false;
+            }
+        }
+
+        UnpairDevicesFromOtherUsers(_playerInput.user, resolvedDevices);
+
+        _playerInput.neverAutoSwitchControlSchemes = true;
+        _playerInput.user.UnpairDevices();
+
+        for (var i = 0; i < resolvedDevices.Count; i++)
+        {
+            InputUser.PerformPairingWithDevice(resolvedDevices[i], _playerInput.user);
+        }
+
+        if (_playerInput.actions != null)
+        {
+            _playerInput.actions.devices = new ReadOnlyArray<InputDevice>(resolvedDevices.ToArray());
+        }
+
+        if (!string.IsNullOrWhiteSpace(_playerInput.currentControlScheme))
+        {
+            _playerInput.SwitchCurrentControlScheme(_playerInput.currentControlScheme, resolvedDevices.ToArray());
+        }
+
+        return _playerInput.user.pairedDevices.Count > 0;
+    }
+
+    private static void UnpairDevicesFromOtherUsers(InputUser targetUser, List<InputDevice> devices)
+    {
+        if (devices.Count == 0)
+        {
+            return;
+        }
+
+        var users = InputUser.all;
+        for (var i = 0; i < users.Count; i++)
+        {
+            var user = users[i];
+            if (!user.valid || user == targetUser)
+            {
+                continue;
+            }
+
+            for (var d = 0; d < devices.Count; d++)
+            {
+                var device = devices[d];
+                if (device != null && user.pairedDevices.ContainsReference(device))
+                {
+                    user.UnpairDevice(device);
+                }
+            }
+        }
     }
 
 }
