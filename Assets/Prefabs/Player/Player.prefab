@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 8081843274187191683}
   - component: {fileID: 2215674665842302170}
   m_Layer: 0
-  m_Name: HellPlayer
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

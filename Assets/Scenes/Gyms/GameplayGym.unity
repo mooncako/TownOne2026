@@ -1460,8 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa18a5b1de01f6e40be614703ef0b5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameplayInputManager
-  _heavenPlayerPrefab: {fileID: 3403904554866843744, guid: f6108e3370217404c934e24882d7b5d3, type: 3}
-  _hellPlayerPrefab: {fileID: 5903098457447053162, guid: 23ef312959ff85541b21af33d41c586a, type: 3}
+  _playerPrefab: {fileID: 5903098457447053162, guid: 23ef312959ff85541b21af33d41c586a, type: 3}
   _heavenSpawnPoint: {fileID: 1538111718}
   _hellSpawnPoint: {fileID: 1883047254}
   _disablePlayerInputManager: 1

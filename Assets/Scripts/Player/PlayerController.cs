@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
 
     private float _targetAngle = 0f;
+    private float _baseAngle = 0f;
 
     private float GetCurrentAngle()
     {
@@ -50,6 +51,8 @@ public class PlayerController : MonoBehaviour
         if(_playerInput == null) _playerInput = GetComponent<PlayerInput>();
         if(_rigidBody == null) _rigidBody = GetComponentInChildren<Rigidbody>();
         ApplyRigidbodySettings();
+        _baseAngle = GetCurrentAngle();
+        _targetAngle = _baseAngle;
     }
 
     private void ApplyRigidbodySettings()
@@ -66,8 +69,11 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Movement
-        float targetX = _rigidBody.position.x + _movementInput * _movementSpeed * Time.fixedDeltaTime;
-        _rigidBody.MovePosition(new Vector3(targetX, _rigidBody.position.y, _rigidBody.position.z));
+        var right = _rigidBody.rotation * Vector3.right;
+        right.y = 0f;
+        right.Normalize();
+        var moveDelta = right * (_movementInput * _movementSpeed * Time.fixedDeltaTime);
+        _rigidBody.MovePosition(_rigidBody.position + moveDelta);
 
         float currentAngle = GetCurrentAngle();
         float newAngle = Mathf.MoveTowardsAngle(currentAngle, _targetAngle, _flipRotationSpeed * Time.fixedDeltaTime);
@@ -111,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetFlip(float direction)
     {
-        _targetAngle = _flipAngle * Mathf.Clamp(direction, -1f, 1f);
+        _targetAngle = _baseAngle + _flipAngle * Mathf.Clamp(direction, -1f, 1f);
     }
 
     public bool AssignDevicesFromGameState(PlayerId playerId)
