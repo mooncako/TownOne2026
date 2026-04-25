@@ -25,13 +25,15 @@ public class MinionManager : MonoBehaviour
 
     private void CyclePosition(int dir)
     {
-        minionSpawnIndex = (minionSpawnIndex + dir) % minionSpawns.Length;
+        minionSpawnIndex = 
+            ((minionSpawnIndex % minionSpawns.Length + minionSpawns.Length) + dir) % minionSpawns.Length;
         Debug.Log($"Position {minionSpawnIndex}");
     }
 
     private void CycleMinionType(int dir)
     {
-        minionTypeIndex = (minionTypeIndex + dir) % minionTypes.Length;
+        minionTypeIndex = 
+            ((minionTypeIndex % minionTypes.Length + minionTypes.Length) + dir) % minionTypes.Length;
         Debug.Log($"Minion type {minionTypeIndex}");
     }
 
