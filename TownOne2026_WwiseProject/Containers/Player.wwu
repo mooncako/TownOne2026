@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+	<Containers>
+		<WorkUnit Name="Player" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
+			<ChildrenList>
+				<PropertyContainer Name="Player" ID="{AF5C5E53-C9A5-4725-AFDE-651B11B63D83}" ShortID="471461596">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="PLYR_Paddle_Move" ID="{7CE1B297-D96B-42D5-BDCE-4467E1759629}" ShortID="233453938">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="PLYR_Paddle_Hit" ID="{DCA9AA8F-5883-41E6-88B3-8101DDCBA4A8}" ShortID="756220005">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

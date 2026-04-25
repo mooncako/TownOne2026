@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BB253C03-A8B9-451D-98E9-88AF12E7EDDC}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Player" ID="{BB253C03-A8B9-451D-98E9-88AF12E7EDDC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PLYR_Paddle_Move" ID="{3C514036-6CAF-4EEE-B630-E35001BF3A7E}">
+					<ChildrenList>
+						<Action Name="" ID="{CE0E513E-52DA-4868-971C-14EFAD5895C5}" ShortID="638952851">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PLYR_Paddle_Move" ID="{7CE1B297-D96B-42D5-BDCE-4467E1759629}" WorkUnitID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PLYR_Paddle_Hit" ID="{C246DFF3-B527-4E8F-B684-AAF06E4FD9D2}">
+					<ChildrenList>
+						<Action Name="" ID="{E8BFD49F-2EA3-4985-9943-FCF1A03A17FD}" ShortID="836503311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PLYR_Paddle_Hit" ID="{DCA9AA8F-5883-41E6-88B3-8101DDCBA4A8}" WorkUnitID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
