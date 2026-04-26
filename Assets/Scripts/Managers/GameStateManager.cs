@@ -279,6 +279,9 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         };
     }
 
+    public PlayerInfo GetOpponentInfo(PlayerInfo playerInfo) =>
+    playerInfo == HeavenPlayerInfo ? HellPlayerInfo : HeavenPlayerInfo;
+
     public PlayerId GetPlayerIDFromInfo(PlayerInfo playerInfo)
     {
         return playerInfo switch
@@ -288,4 +291,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
             _ => throw new ArgumentException($"Unknown PlayerInfo: {playerInfo}", nameof(playerInfo))
         };
     }
+
+    public PlayerId GetOpponentID(PlayerId playerId) =>
+    playerId == HeavenPlayerId ? HellPlayerId : HeavenPlayerId;
 }
