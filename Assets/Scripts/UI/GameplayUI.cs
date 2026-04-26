@@ -37,9 +37,24 @@ public class GameplayUI : MonoBehaviour,
         if(GameStateManager.Instance != null)
         {
             float timeInSeconds = GameStateManager.Instance.RoundManager.RoundTimer.Countdown;
-            int minutes = Mathf.FloorToInt(timeInSeconds / 60);
-            int seconds = Mathf.FloorToInt(timeInSeconds % 60);
-            string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
+            string timerText;
+
+            if (GameStateManager.Instance.GameState == GameState.Preparation)
+            {
+                timerText = Mathf.FloorToInt(timeInSeconds+1).ToString();
+            }
+            else if (GameStateManager.Instance.GameState == GameState.InRound)
+            {
+                int minutes = Mathf.FloorToInt(timeInSeconds / 60);
+                int seconds = Mathf.FloorToInt(timeInSeconds % 60);
+                timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
+            }
+            else
+            {
+                timerText = "";
+            }
+
+            
             _timer.text = timerText;
         }
 
