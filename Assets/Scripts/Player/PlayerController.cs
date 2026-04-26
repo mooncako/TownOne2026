@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using MoreMountains.Tools;
+using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,7 +11,8 @@ using UnityEngine.InputSystem.Utilities;
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerInfo))]
 public class PlayerController : MonoBehaviour,
-    MMEventListener<GameStateChangeEvent>
+    MMEventListener<GameStateChangeEvent>,
+    MMEventListener<PreparationEndedEvent>
 {
     [SerializeField, BoxGroup("References")] private PlayerInfo _playerInfo;
     public PlayerInfo PlayerInfo => _playerInfo;
@@ -26,15 +28,16 @@ public class PlayerController : MonoBehaviour,
     [SerializeField, BoxGroup("Debug"), ReadOnly] private float _movementInput;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private float _rotationInput;
 
-    public event Action<float> OnNavigationInput;
-    public event Action<PlayerInfo> OnConfirmInput;
     public event Action OnCycleRightInput;
     public event Action OnCycleLeftInput;
-    public event Action<bool> OnReadyInput;
+    public event Action<PlayerController, PlayerInfo> OnConfirmInput;
+
+    public event Action OnArmamentApplied;
 
 
     private float _targetAngle = 0f;
     private float _baseAngle = 0f;
+    private int _lastNavigateDirection = 0;
 
     private float GetCurrentAngle()
     {
@@ -68,11 +71,13 @@ public class PlayerController : MonoBehaviour,
     void OnEnable()
     {
         this.MMEventStartListening<GameStateChangeEvent>();
+        this.MMEventStartListening<PreparationEndedEvent>();
     }
 
     void OnDisable()
     {
         this.MMEventStopListening<GameStateChangeEvent>();
+        this.MMEventStopListening<PreparationEndedEvent>();
     }
 
     private void ApplyRigidbodySettings()
@@ -115,50 +120,39 @@ public class PlayerController : MonoBehaviour,
     {
         if(value.isPressed)
         {
-            OnConfirmInput?.Invoke(_playerInfo);
+            OnConfirmInput?.Invoke(this, _playerInfo);
         }
     }
 
-    private void OnNavigation(InputValue value)
+    private void OnNavigate(InputValue value)
     {
         float navInput = value.Get<float>();
-        OnNavigationInput?.Invoke(navInput);
-    }
-
-    private void OnCycleRight(InputValue value)
-    {
-        if(value.isPressed)
+        int direction = 0;
+        if (navInput > 0.5f)
         {
-            OnCycleRightInput?.Invoke();
+            direction = 1;
         }
-    }
-
-    private void OnCycleLeft(InputValue value)
-    {
-        if(value.isPressed)
+        else if (navInput < -0.5f)
         {
-            OnCycleLeftInput?.Invoke();
+            direction = -1;
         }
-    }
 
-    private void OnReady(InputValue value)
-    {
-        if(value.isPressed)
+        if (direction != 0 && direction != _lastNavigateDirection)
         {
-            switch(_playerInfo.ReadyState)
+            if (direction > 0)
             {
-                case ReadyState.Preparing:
-                    _playerInfo.ToggleReadyState(ReadyState.Ready);
-                    OnReadyInput?.Invoke(true);
-                    break;
-                case ReadyState.Ready:
-                    _playerInfo.ToggleReadyState(ReadyState.Preparing);
-                    OnReadyInput?.Invoke(false);
-                    break;
+                OnCycleRightInput?.Invoke();
             }
-            
+            else
+            {
+                OnCycleLeftInput?.Invoke();
+            }
         }
+
+        _lastNavigateDirection = direction;
     }
+
+    
 
     private void SetFlip(float direction)
     {
@@ -297,5 +291,27 @@ public class PlayerController : MonoBehaviour,
                 _playerInput.SwitchCurrentActionMap("Player");
                 break;
         }
+    }
+
+    public void ApplySpeedBoost(float multiplier, float duration)
+    {
+        _movementSpeed *= multiplier;
+        Tween.Delay(duration).OnComplete(() => _movementSpeed /= multiplier);
+    }
+
+    public void ExtendOverExtension(float extensionMultiplier, float duration)
+    {
+        _rigidBody.transform.localScale *= extensionMultiplier;
+        Tween.Delay(duration).OnComplete(() => _rigidBody.transform.localScale /= extensionMultiplier);
+    }
+
+    public void ApplyArmament()
+    {
+        OnArmamentApplied?.Invoke();
+    }
+
+    public void OnMMEvent(PreparationEndedEvent e)
+    {
+        _playerInfo.ToggleReadyState(ReadyState.Ready);
     }
 }

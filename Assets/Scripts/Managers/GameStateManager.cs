@@ -49,6 +49,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             _roundManager.OnRoundStarted += OnRoundStarted;
             _roundManager.OnRoundEnd += OnRoundEnded;
+            _roundManager.OnPreparationEnded += OnPreparationEnded;
         }
 
         if(_gameSettingsSO != null)
@@ -60,12 +61,15 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         this.MMEventStartListening<PlayerSetupCompleteEvent>();
     }
 
+    
+
     void OnDisable()
     {
         if (_roundManager != null)
         {
             _roundManager.OnRoundStarted -= OnRoundStarted;
             _roundManager.OnRoundEnd -= OnRoundEnded;
+            _roundManager.OnPreparationEnded -= OnPreparationEnded;
         }
 
         this.MMEventStopListening<PlayerConnectionEvent>();
@@ -79,7 +83,14 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
         HellPlayerInfo.Initialize(_gameSettings.StartingScore);
         _gameSettings.Reset(_gameSettingsSO);
+        _roundManager.StartPreparation(3f);
+
         // _roundManager.StartRound(_gameSettings.RoundDuration);
+    }
+
+    private void OnPreparationEnded()
+    {
+        PreparationEndedEvent.Trigger();
     }
 
     public void NewRound()
