@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4763820043535789529}
   - component: {fileID: 6533004607991780415}
   m_Layer: 5
-  m_Name: HellLabel
+  m_Name: P2Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 3549801370001112707}
   - component: {fileID: 4772106985965358409}
   - component: {fileID: 767023646156557376}
+  - component: {fileID: 8855522039736351798}
   m_Layer: 5
   m_Name: BarBkd
   m_TagString: Untagged
@@ -287,8 +288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -396}
-  m_SizeDelta: {x: 2018.1, y: 327.2}
+  m_AnchoredPosition: {x: 0, y: -460}
+  m_SizeDelta: {x: 2018.1, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4772106985965358409
 CanvasRenderer:
@@ -328,6 +329,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8855522039736351798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173210982175721499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 10, y: 10}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5539678155381465635
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +493,7 @@ GameObject:
   - component: {fileID: 4447434218902364819}
   - component: {fileID: 6986701764071010722}
   m_Layer: 5
-  m_Name: HellBkd
+  m_Name: P2ScoreBkd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,57 +557,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &6244227120448918425
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6812630287748226309}
-  - component: {fileID: 3898377560460851197}
-  m_Layer: 5
-  m_Name: UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6812630287748226309
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6244227120448918425}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9128371175494182359}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3898377560460851197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6244227120448918425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e111b82dbe75d841acaa43ec2688a27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameplayUI
-  _p1Display: {fileID: 0}
-  _p2Display: {fileID: 0}
-  _timer: {fileID: 1717845337940498608}
 --- !u!1 &6742003519748501602
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +569,7 @@ GameObject:
   - component: {fileID: 4176046969848803883}
   - component: {fileID: 7240478900612041381}
   m_Layer: 5
-  m_Name: HeavenLabel
+  m_Name: P1Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,7 +706,7 @@ GameObject:
   - component: {fileID: 7542924110075629930}
   - component: {fileID: 3203591211851436871}
   m_Layer: 5
-  m_Name: HeavenBkd
+  m_Name: P1ScoreBkd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,6 +782,7 @@ GameObject:
   - component: {fileID: 4292340333134451199}
   - component: {fileID: 451901528453625673}
   - component: {fileID: 930049649318775601}
+  - component: {fileID: 695048870310694736}
   m_Layer: 5
   m_Name: GameplayUi
   m_TagString: Untagged
@@ -836,7 +802,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6812630287748226309}
   - {fileID: 3549801370001112707}
   - {fileID: 8914987213135732485}
   m_Father: {fileID: 0}
@@ -909,6 +874,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &695048870310694736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390997956151346331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e111b82dbe75d841acaa43ec2688a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameplayUI
+  _p1Display: {fileID: 3402939984643503838}
+  _p2Display: {fileID: 1542027866426293715}
+  _p1Score: {fileID: 0}
+  _p2Score: {fileID: 0}
+  _timer: {fileID: 1717845337940498608}
 --- !u!1 &7467979482939092369
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +903,7 @@ GameObject:
   - component: {fileID: 189852404996807137}
   - component: {fileID: 3402939984643503838}
   m_Layer: 5
-  m_Name: Heaven
+  m_Name: P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,7 +978,7 @@ GameObject:
   - component: {fileID: 2377162096463485361}
   - component: {fileID: 1542027866426293715}
   m_Layer: 5
-  m_Name: Hell
+  m_Name: P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
