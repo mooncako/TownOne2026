@@ -27,7 +27,7 @@ public class PinBall : MonoBehaviour, IPhysics
 
     private void OnCollisionEnter(Collision other)
     {
-        other.gameObject.Interact(this.gameObject);
+        // other.gameObject.Interact(this.gameObject);
         if((_interactableLayerMask.value & (1 << other.gameObject.layer)) != 0) 
         {
             other.gameObject.Interact(gameObject);
@@ -35,7 +35,7 @@ public class PinBall : MonoBehaviour, IPhysics
 
         if((_paddleLayerMask.value & (1 << other.gameObject.layer)) != 0)
         {
-            if(other.gameObject.TryGetComponent(out Team team))
+            if(other.transform.parent.parent.gameObject.TryGetComponent(out Team team))
             {
                 _team.OwnerId = team.OwnerId;
             }

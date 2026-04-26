@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8311ceca9d2ccc54fb5b9c6d23f4dd36, type: 3}
-  m_Name: HeavenMinionLvl3
+  m_Name: HellMinionLvl3
   m_EditorClassIdentifier: Assembly-CSharp::MinionData
   mValue: 6
-  mName: ArchAngel
-  mFaction: 0
+  mName: Demon
+  mFaction: 1
   mCost: 2500
