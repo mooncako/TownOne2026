@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Team))]
 public class Minion : MonoBehaviour, IInteract
 {
+    [SerializeField, BoxGroup("References")] private Team _team;
+
+    [SerializeField, BoxGroup("Settings")] private LayerMask _pinBallLayerMask;
+
     [SerializeField, BoxGroup("Stats")] private float health;
     [SerializeField, BoxGroup("Stats")] private MinionData data;
     public float MaxHealth => data.Value;
     public string Name => data.Name;
+    public Faction Faction => data.Faction;
+
+    void OnValidate()
+    {
+        if(_team == null) _team = GetComponent<Team>();
+    }
 
     private void Start()
     {
@@ -18,11 +30,20 @@ public class Minion : MonoBehaviour, IInteract
     public void Init(MinionData d)
     {
         data = d;
+        switch (data.Faction)
+        {
+            case Faction.Heaven:
+                _team.OwnerId = GameStateManager.Instance.HeavenPlayerId;
+                break;
+            case Faction.Hell:
+                _team.OwnerId = GameStateManager.Instance.HellPlayerId;
+                break;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ball"))
+        if ((_pinBallLayerMask.value & (1 << collision.gameObject.layer)) != 0)
         {
             health -= 1;
             if (health <= 0) DestroyMinion();
@@ -38,7 +59,6 @@ public class Minion : MonoBehaviour, IInteract
 
     public bool Interact(GameObject Instigator, string Action = "")
     {
-        
         return true;
     }
 

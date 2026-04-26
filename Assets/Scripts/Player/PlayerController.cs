@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField, BoxGroup("References")] private PlayerInfo _playerInfo;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
     [SerializeField, BoxGroup("References")] private PlayerInput _playerInput;
+    [SerializeField, BoxGroup("References")] private Team _team;
 
     [SerializeField, BoxGroup("Settings | Movement")] private float _movementSpeed = 5f;
     [SerializeField, BoxGroup("Settings | Movement")] private float _rangeX = 1f;
@@ -233,6 +234,12 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetTeam(PlayerId teamId)
+    {
+        if(_team == null) return;
+        _team.OwnerId = teamId;
     }
 
 }

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8311ceca9d2ccc54fb5b9c6d23f4dd36, type: 3}
-  m_Name: MinionLvl2
-  m_EditorClassIdentifier: Assembly-CSharp::MinionData
-  value: 5
-  minionName: Normal
+  m_Script: {fileID: 11500000, guid: 89258b3863ed3cc4f867fa5cbf6376da, type: 3}
+  m_Name: PointBonus1
+  m_EditorClassIdentifier: Assembly-CSharp::PointBonus
+  amt: 1
