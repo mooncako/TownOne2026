@@ -69,7 +69,7 @@ public class Minion : MonoBehaviour, IInteract
                 PlayerInfo info = GameStateManager.Instance.GetPlayerInfo(instigatorTeam.OwnerId);
                 if(info != null)
                 {
-                    info.Score.UpdateScore(Cost);
+                    info.Score.UpdateScore(Cost/2);
                 }
             }
         }

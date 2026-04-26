@@ -3,7 +3,47 @@ guid: b223c2c30a1843b4cbe97b371a577c21
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye.black
+    second: {fileID: 2100000, guid: 0ecd8ae93407d554e81082e256fac7d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye.blue
+    second: {fileID: 2100000, guid: 6a834227498a91a4d85326f3cccf8be3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye.green
+    second: {fileID: 2100000, guid: fb1b59730b59bcf45b458e55defa3900, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye.pink
+    second: {fileID: 2100000, guid: 8869338dc24fff643a2e94cafbbc2049, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye.white
+    second: {fileID: 2100000, guid: 50a93675f657119499412f49dfab06e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tan
+    second: {fileID: 2100000, guid: 55580f66c8150ac449a51edb33ca1975, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white.wing
+    second: {fileID: 2100000, guid: 492802641d73103429567d7cb719e106, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow.halo
+    second: {fileID: 2100000, guid: 8171b28f7ca0bd343951927822d715b1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
