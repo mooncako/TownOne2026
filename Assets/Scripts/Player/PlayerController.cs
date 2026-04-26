@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour,
     [SerializeField, BoxGroup("References")] private PlayerInput _playerInput;
     [SerializeField, BoxGroup("References")] private Team _team;
 
-    [SerializeField, BoxGroup("Settings | Movement")] private float _movementSpeed = 5f;
+    [SerializeField, BoxGroup("Settings | Movement")] private float _movementSpeed = 10f;
     [SerializeField, BoxGroup("Settings | Movement")] private float _rangeX = 1f;
     [SerializeField, BoxGroup("Settings | Flip")] private float _flipAngle = 15f;
     [SerializeField, BoxGroup("Settings | Flip")] private float _flipRotationSpeed = 360f;
