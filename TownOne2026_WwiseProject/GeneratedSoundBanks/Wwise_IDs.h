@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID EMIT_POWERUP = 2031107581U;
         static const AkUniqueID EMIT_SCORE = 2401631563U;
         static const AkUniqueID EMIT_SHOP = 2436315639U;
+        static const AkUniqueID MUS_PLAY = 1280297747U;
         static const AkUniqueID OBJ_MINION_DIE = 2792663994U;
         static const AkUniqueID OBJ_MINION_SET = 2862290544U;
         static const AkUniqueID PLYR_PADDLE_MOVE = 3258129853U;
@@ -81,7 +82,6 @@ namespace AK
                 static const AkUniqueID P1 = 1635194252U;
                 static const AkUniqueID P2 = 1635194255U;
                 static const AkUniqueID P3 = 1635194254U;
-                static const AkUniqueID P4 = 1635194249U;
             } // namespace SWITCH
         } // namespace POWERUPS
 

@@ -8,7 +8,6 @@
 						<Switch Name="P1" ID="{155B8958-F0E7-417F-9F5E-734EE27437EB}"/>
 						<Switch Name="P2" ID="{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"/>
 						<Switch Name="P3" ID="{7F85A161-C5AC-47FE-B9FD-E4CDF589798F}"/>
-						<Switch Name="P4" ID="{53D1A8B5-2276-43AD-A961-ACDDCAF9CB56}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

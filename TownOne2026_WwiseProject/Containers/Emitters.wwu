@@ -3,188 +3,6 @@
 	<Containers>
 		<WorkUnit Name="Emitters" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
-				<PropertyContainer Name="Powerups" ID="{C5DF8311-0DFA-480D-92EE-DEA9550FEA6E}" ShortID="825509785">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<SwitchContainer Name="EMIT_Powerup" ID="{D379266A-009C-44E1-AD86-98E2F265DC03}" ShortID="733428102">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-								</Reference>
-								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="P1" ID="{155B8958-F0E7-417F-9F5E-734EE27437EB}" WorkUnitID="{76F1655B-7CC6-4317-A795-C770494F7E67}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="Powerups" ID="{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}" WorkUnitID="{76F1655B-7CC6-4317-A795-C770494F7E67}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<BlendContainer Name="SFX_Emit_Powereup_01" ID="{C324F290-4504-4245-ABF2-A83DA063FB10}" ShortID="721183062">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Emit_Powereup_01" ID="{60545968-BE46-412E-A07C-D3FE0E87C823}" ShortID="34101238">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Emit_Powereup_01" ID="{1A94A467-7A38-4A1F-BDD4-157F424B6297}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Emit_Powereup_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="527780068"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Emit_Powereup_01" ID="{1A94A467-7A38-4A1F-BDD4-157F424B6297}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</BlendContainer>
-								<BlendContainer Name="SFX_Emit_Powereup_02" ID="{063CAD99-C268-4AA8-8650-214503643C70}" ShortID="864434047">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Emit_Powereup_02" ID="{F31951D2-1B5F-4E7F-A26E-BAE96C15B838}" ShortID="503921383">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Emit_Powereup_02" ID="{5BBE7781-F1E3-4683-8B48-C513B9568DAA}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Emit_Powereup_02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1005780438"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Emit_Powereup_02" ID="{5BBE7781-F1E3-4683-8B48-C513B9568DAA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</BlendContainer>
-								<BlendContainer Name="SFX_Emit_Powereup_03" ID="{12B30A9C-DF3E-47D6-ABB9-F1B8400F16B5}" ShortID="816642995">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Emit_Powereup_03" ID="{E1AA687A-D462-498E-920D-2CA6F198DAFA}" ShortID="11276738">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Emit_Powereup_03" ID="{BB615AF6-340B-4773-A87D-B8B3262AA52A}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Emit_Powereup_03.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="550688884"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Emit_Powereup_03" ID="{BB615AF6-340B-4773-A87D-B8B3262AA52A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</BlendContainer>
-								<BlendContainer Name="SFX_Emit_Powereup_04" ID="{50F31CE7-9AFE-4F23-A1DA-EE5DB82317A8}" ShortID="895397354">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Emit_Powereup_04" ID="{E185362B-47FA-4C6A-8F71-206FABE7962F}" ShortID="235934259">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Emit_Powereup_04" ID="{BEF17689-5A99-4C0C-A0FB-BF400529D7BA}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Emit_Powereup_04.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="163015747"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Emit_Powereup_04" ID="{BEF17689-5A99-4C0C-A0FB-BF400529D7BA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</BlendContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="SFX_Emit_Powereup_01" ID="{C324F290-4504-4245-ABF2-A83DA063FB10}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="SFX_Emit_Powereup_02" ID="{063CAD99-C268-4AA8-8650-214503643C70}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="SFX_Emit_Powereup_03" ID="{12B30A9C-DF3E-47D6-ABB9-F1B8400F16B5}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="SFX_Emit_Powereup_04" ID="{50F31CE7-9AFE-4F23-A1DA-EE5DB82317A8}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-							</GroupingInfo>
-						</SwitchContainer>
-					</ChildrenList>
-				</PropertyContainer>
 				<PropertyContainer Name="Score" ID="{7BC8664A-DD8A-4017-BFF9-5C9BB5268127}" ShortID="23814005">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -242,6 +60,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="EMIT_Shop" ID="{13862009-3A4A-48E4-8793-E6BA424C620C}" ShortID="1008492040">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -251,123 +76,194 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="SFX_Obj_Shop_Souls_Cries" ID="{7E906A12-30EC-48EC-84FD-018EABA9A480}" ShortID="349372969">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Obj_Shop_Souls_Cries_01" ID="{F7779F17-1051-4A45-9A90-7FC2C7AA4888}" ShortID="989301747">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Obj_Shop_Souls_Cries_01" ID="{EE69D36C-3472-4A1A-B3F7-CCA761A19870}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Cries_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="491395643"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Obj_Shop_Souls_Cries_01" ID="{EE69D36C-3472-4A1A-B3F7-CCA761A19870}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_Obj_Shop_Souls_Cries_02" ID="{4EA1CDF5-22E4-4055-8F47-5566C67DE2D1}" ShortID="524388707">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Obj_Shop_Souls_Cries_02" ID="{8724184C-CBD2-4B2C-B351-014C4A320CC8}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Cries_02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="297621944"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Obj_Shop_Souls_Cries_02" ID="{8724184C-CBD2-4B2C-B351-014C4A320CC8}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="SFX_Obj_Shop_Souls_Growls" ID="{9E61BE0C-DC69-43CE-A599-EAE8031FAD44}" ShortID="779258124">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="SFX_Obj_Shop_Souls_Growls_01" ID="{C67A5B8F-BB0F-4DC8-B457-41956473746E}" ShortID="338779649">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Obj_Shop_Souls_Growls_01" ID="{DA56AD43-836D-471C-8286-9D07AC35633D}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Growls_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="44531392"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Obj_Shop_Souls_Growls_01" ID="{DA56AD43-836D-471C-8286-9D07AC35633D}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_Obj_Shop_Souls_Growls_02" ID="{957163C2-1E3D-4C7F-9F37-6B486A77E59A}" ShortID="437111061">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="SFX_Obj_Shop_Souls_Growls_02" ID="{E16AB498-4130-434E-BCBC-3A75FCF08F1F}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Growls_02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="955246401"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Obj_Shop_Souls_Growls_02" ID="{E16AB498-4130-434E-BCBC-3A75FCF08F1F}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="SFX_Obj_Shop_Souls_Whispers" ID="{F91B73C5-832B-435C-943F-A8E02636A425}" ShortID="1070582403">
+								<SwitchContainer Name="EMIT_Powerup" ID="{D379266A-009C-44E1-AD86-98E2F265DC03}" ShortID="733428102">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-16</Value>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="P1" ID="{155B8958-F0E7-417F-9F5E-734EE27437EB}" WorkUnitID="{76F1655B-7CC6-4317-A795-C770494F7E67}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Powerups" ID="{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}" WorkUnitID="{76F1655B-7CC6-4317-A795-C770494F7E67}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="SFX_Emit_Powereup_01" ID="{C324F290-4504-4245-ABF2-A83DA063FB10}" ShortID="721183062">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6A0CC9CE-02EE-454B-B6A6-AC80378DEF46}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Emit_Powereup_01" ID="{60545968-BE46-412E-A07C-D3FE0E87C823}" ShortID="34101238">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Emit_Powereup_01" ID="{1A94A467-7A38-4A1F-BDD4-157F424B6297}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Emit_Powereup_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="527780068"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Emit_Powereup_01" ID="{1A94A467-7A38-4A1F-BDD4-157F424B6297}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="SFX_Emit_Powereup_02" ID="{063CAD99-C268-4AA8-8650-214503643C70}" ShortID="864434047">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Emit_Powereup_02" ID="{F31951D2-1B5F-4E7F-A26E-BAE96C15B838}" ShortID="503921383">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Emit_Powereup_02" ID="{5BBE7781-F1E3-4683-8B48-C513B9568DAA}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Emit_Powereup_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1005780438"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Emit_Powereup_02" ID="{5BBE7781-F1E3-4683-8B48-C513B9568DAA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="SFX_Emit_Powereup_03" ID="{50F31CE7-9AFE-4F23-A1DA-EE5DB82317A8}" ShortID="895397354">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Emit_Powereup_04" ID="{E185362B-47FA-4C6A-8F71-206FABE7962F}" ShortID="235934259">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Emit_Powereup_04" ID="{BEF17689-5A99-4C0C-A0FB-BF400529D7BA}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Emit_Powereup_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="163015747"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Emit_Powereup_04" ID="{BEF17689-5A99-4C0C-A0FB-BF400529D7BA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="SFX_Emit_Powereup_01" ID="{C324F290-4504-4245-ABF2-A83DA063FB10}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="SFX_Emit_Powereup_02" ID="{063CAD99-C268-4AA8-8650-214503643C70}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="SFX_Emit_Powereup_03" ID="{50F31CE7-9AFE-4F23-A1DA-EE5DB82317A8}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="P2" ID="{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"/>
+												<ItemList>
+													<ItemRef Name="SFX_Emit_Powereup_02" ID="{063CAD99-C268-4AA8-8650-214503643C70}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="P1" ID="{155B8958-F0E7-417F-9F5E-734EE27437EB}"/>
+												<ItemList>
+													<ItemRef Name="SFX_Emit_Powereup_01" ID="{C324F290-4504-4245-ABF2-A83DA063FB10}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="EMIT_Souls" ID="{F3574F1F-A941-4546-AE66-1357A7DCA1E9}" ShortID="502276685">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0442E0D6-2CFC-4945-BA4E-3A8FBA8E2FE2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="275"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -378,9 +274,12 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Powerups" ID="{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}" WorkUnitID="{76F1655B-7CC6-4317-A795-C770494F7E67}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="SFX_Obj_Shop_Souls_Whispers_01" ID="{9B7E7B37-EE35-4044-A6F5-F2BF59D44F04}" ShortID="383526667">
+										<RandomSequenceContainer Name="EMIT_Shop_Souls_Cries" ID="{7E906A12-30EC-48EC-84FD-018EABA9A480}" ShortID="349372969">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -390,19 +289,53 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="SFX_Obj_Shop_Souls_Whispers_01" ID="{6C667C78-87BF-41CE-A399-5362F48236DC}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Whispers_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="642652476"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="SFX_Obj_Shop_Souls_Cries_01" ID="{F7779F17-1051-4A45-9A90-7FC2C7AA4888}" ShortID="989301747">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Obj_Shop_Souls_Cries_01" ID="{EE69D36C-3472-4A1A-B3F7-CCA761A19870}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Cries_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="491395643"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Obj_Shop_Souls_Cries_01" ID="{EE69D36C-3472-4A1A-B3F7-CCA761A19870}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Obj_Shop_Souls_Cries_02" ID="{4EA1CDF5-22E4-4055-8F47-5566C67DE2D1}" ShortID="524388707">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Obj_Shop_Souls_Cries_02" ID="{8724184C-CBD2-4B2C-B351-014C4A320CC8}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Cries_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="297621944"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Obj_Shop_Souls_Cries_02" ID="{8724184C-CBD2-4B2C-B351-014C4A320CC8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Obj_Shop_Souls_Whispers_01" ID="{6C667C78-87BF-41CE-A399-5362F48236DC}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="SFX_Obj_Shop_Souls_Whispers_02" ID="{DDD53D63-F5CF-420C-AE10-93DC861E0299}" ShortID="1059205090">
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="EMIT_Shop_Souls_Growls" ID="{9E61BE0C-DC69-43CE-A599-EAE8031FAD44}" ShortID="779258124">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -412,20 +345,148 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="SFX_Obj_Shop_Souls_Whispers_02" ID="{434FE75D-9A51-4BD5-A296-E82D4A488566}">
-													<Language>SFX</Language>
-													<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Whispers_02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="581046367"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="SFX_Obj_Shop_Souls_Growls_01" ID="{C67A5B8F-BB0F-4DC8-B457-41956473746E}" ShortID="338779649">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Obj_Shop_Souls_Growls_01" ID="{DA56AD43-836D-471C-8286-9D07AC35633D}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Growls_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="44531392"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Obj_Shop_Souls_Growls_01" ID="{DA56AD43-836D-471C-8286-9D07AC35633D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Obj_Shop_Souls_Growls_02" ID="{957163C2-1E3D-4C7F-9F37-6B486A77E59A}" ShortID="437111061">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Obj_Shop_Souls_Growls_02" ID="{E16AB498-4130-434E-BCBC-3A75FCF08F1F}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Growls_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="955246401"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Obj_Shop_Souls_Growls_02" ID="{E16AB498-4130-434E-BCBC-3A75FCF08F1F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="SFX_Obj_Shop_Souls_Whispers_02" ID="{434FE75D-9A51-4BD5-A296-E82D4A488566}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="EMIT_Shop_Souls_Whispers" ID="{F91B73C5-832B-435C-943F-A8E02636A425}" ShortID="1070582403">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-16</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Obj_Shop_Souls_Whispers_01" ID="{9B7E7B37-EE35-4044-A6F5-F2BF59D44F04}" ShortID="383526667">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Obj_Shop_Souls_Whispers_01" ID="{6C667C78-87BF-41CE-A399-5362F48236DC}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Whispers_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="642652476"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Obj_Shop_Souls_Whispers_01" ID="{6C667C78-87BF-41CE-A399-5362F48236DC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Obj_Shop_Souls_Whispers_02" ID="{DDD53D63-F5CF-420C-AE10-93DC861E0299}" ShortID="1059205090">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Obj_Shop_Souls_Whispers_02" ID="{434FE75D-9A51-4BD5-A296-E82D4A488566}">
+															<Language>SFX</Language>
+															<AudioFile>Renders_0426\SFX_Obj_Shop_Souls_Whispers_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="581046367"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Obj_Shop_Souls_Whispers_02" ID="{434FE75D-9A51-4BD5-A296-E82D4A488566}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
-								</RandomSequenceContainer>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="EMIT_Shop_Souls_Growls" ID="{9E61BE0C-DC69-43CE-A599-EAE8031FAD44}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="EMIT_Shop_Souls_Cries" ID="{7E906A12-30EC-48EC-84FD-018EABA9A480}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="EMIT_Shop_Souls_Whispers" ID="{F91B73C5-832B-435C-943F-A8E02636A425}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="P2" ID="{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"/>
+												<ItemList>
+													<ItemRef Name="EMIT_Shop_Souls_Cries" ID="{7E906A12-30EC-48EC-84FD-018EABA9A480}"/>
+													<ItemRef Name="EMIT_Shop_Souls_Growls" ID="{9E61BE0C-DC69-43CE-A599-EAE8031FAD44}"/>
+													<ItemRef Name="EMIT_Shop_Souls_Whispers" ID="{F91B73C5-832B-435C-943F-A8E02636A425}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="P1" ID="{155B8958-F0E7-417F-9F5E-734EE27437EB}"/>
+												<ItemList>
+													<ItemRef Name="EMIT_Shop_Souls_Cries" ID="{7E906A12-30EC-48EC-84FD-018EABA9A480}"/>
+													<ItemRef Name="EMIT_Shop_Souls_Growls" ID="{9E61BE0C-DC69-43CE-A599-EAE8031FAD44}"/>
+													<ItemRef Name="EMIT_Shop_Souls_Whispers" ID="{F91B73C5-832B-435C-943F-A8E02636A425}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 							</ChildrenList>
 						</BlendContainer>
 					</ChildrenList>

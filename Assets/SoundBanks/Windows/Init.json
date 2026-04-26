@@ -78,12 +78,6 @@
       "GUID": "{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}",
       "Switches": [
        {
-        "Id": "1635194249",
-        "Name": "P4",
-        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P4",
-        "GUID": "{53D1A8B5-2276-43AD-A961-ACDDCAF9CB56}"
-       },
-       {
         "Id": "1635194252",
         "Name": "P1",
         "ObjectPath": "\\Switches\\Powerups\\Powerups\\P1",
@@ -152,6 +146,6 @@
     ]
    }
   ],
-  "FileHash": "{ED28952B-5BF5-3171-1821-13962F91F526}"
+  "FileHash": "{D4E438D5-4C50-5D65-26C5-07B995DB2FE2}"
  }
 }

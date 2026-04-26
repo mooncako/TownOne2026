@@ -3,7 +3,7 @@
 	<Containers>
 		<WorkUnit Name="Music" ID="{BA680393-3AFC-4BE5-A808-A07198DC27EE}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicPlaylistContainer Name="New Music Playlist Container" ID="{342529EC-CC8E-4145-9735-B1076BB3AC8F}" ShortID="737481142">
+				<MusicPlaylistContainer Name="Music" ID="{342529EC-CC8E-4145-9735-B1076BB3AC8F}" ShortID="737481142">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
