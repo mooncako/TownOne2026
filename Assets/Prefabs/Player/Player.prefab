@@ -219,7 +219,8 @@ MonoBehaviour:
   _playerInfo: {fileID: 2215674665842302170}
   _rigidBody: {fileID: 9222858482850756291}
   _playerInput: {fileID: 359527489038731594}
-  _movementSpeed: 5
+  _team: {fileID: 0}
+  _movementSpeed: 13
   _rangeX: 1
   _flipAngle: 60
   _flipRotationSpeed: 700
