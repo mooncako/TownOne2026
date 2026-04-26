@@ -41,7 +41,7 @@ public class MinionManager : MonoBehaviour
 
     private void HandleReadyInput(bool isReady)
     {
-        throw new NotImplementedException();
+        
     }
 
     private void HandleCycleLeftInput()
