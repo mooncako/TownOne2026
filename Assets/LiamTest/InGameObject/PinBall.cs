@@ -29,7 +29,6 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     {
         //Impulse
         Impulse = Mathf.Lerp(SpeedMultiplierClamp.y , SpeedMultiplierRemap.y, Mathf.InverseLerp(SpeedMultiplierClamp.x, SpeedMultiplierRemap.x, HitTimes)) * Impulse;
-        Debug.Log(Impulse.ToString());
         Impulse *= 0.45f;
         _rigidBody.AddForce(Impulse, ChangeVel? ForceMode.VelocityChange : ForceMode.Impulse);
         HitTimes = Mathf.Clamp(HitTimes+1.0f, SpeedMultiplierClamp.x, SpeedMultiplierClamp.y);

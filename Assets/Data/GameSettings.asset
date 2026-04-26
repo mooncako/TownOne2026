@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: Assembly-CSharp::GameSettingsSO
   TotalRounds: 1
-  RoundDurationSeconds: 120
+  RoundDurationSeconds: 45
   StartingScore: 1000

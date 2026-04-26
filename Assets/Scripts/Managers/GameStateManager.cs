@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
     MMEventListener<PlayerConnectionEvent>,
@@ -59,6 +60,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
         this.MMEventStartListening<PlayerConnectionEvent>();
         this.MMEventStartListening<PlayerSetupCompleteEvent>();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     
@@ -74,6 +77,18 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
         this.MMEventStopListening<PlayerConnectionEvent>();
         this.MMEventStopListening<PlayerSetupCompleteEvent>();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        if(arg0.buildIndex == 0)
+        {
+            SetState(GameState.Preparation);
+            CurrentRound = 0;
+            HeavenPlayerInfo = null;
+            HellPlayerInfo = null;
+        }
     }
 
     public void NewGame()
