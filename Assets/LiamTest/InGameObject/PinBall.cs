@@ -20,7 +20,8 @@ public class PinBall : MonoBehaviour, IPhysics
     public bool AddImpulse(Vector3 Impulse, bool ChangeVel = true)
     {
         //Impulse
-        _rigidBody.AddForce(Impulse, ForceMode.Impulse);
+        
+        _rigidBody.AddForce(Impulse, ChangeVel? ForceMode.VelocityChange : ForceMode.Impulse);
         return true;
     }
 
