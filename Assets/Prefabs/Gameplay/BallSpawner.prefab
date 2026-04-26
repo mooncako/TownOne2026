@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3fd5d3b8be8b44e865accf4c8c2af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallSpawnManager
-  maxNumBalls: 6
-  prefabToSpawn: {fileID: 0}
+  maxNumBalls: 2
+  prefabToSpawn: {fileID: 3960820101879804104, guid: 1021252d75b56d34bb1dc3fae297b6f2, type: 3}
   spawnInterval: 2

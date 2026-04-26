@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Tools;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class BallSpawnManager : MonoBehaviour
+public class BallSpawnManager : MonoBehaviour,
+    MMEventListener<GameStateChangeEvent>
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int maxNumBalls = 6;
@@ -11,9 +14,14 @@ public class BallSpawnManager : MonoBehaviour
     public GameObject prefabToSpawn;
     public float spawnInterval = 2f;
 
-    void Start()
+    void OnEnable()
     {
-        StartCoroutine(SpawnRoutine());
+        this.MMEventStartListening<GameStateChangeEvent>();
+    }
+
+    void OnDisable()
+    {
+        this.MMEventStopListening<GameStateChangeEvent>();
     }
 
     IEnumerator SpawnRoutine()
@@ -35,5 +43,11 @@ public class BallSpawnManager : MonoBehaviour
             }
 
         }
+    }
+
+    public void OnMMEvent(GameStateChangeEvent e)
+    {
+        if(e.CurrentState == GameState.InRound)
+            StartCoroutine(SpawnRoutine());
     }
 }

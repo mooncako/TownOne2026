@@ -13,9 +13,12 @@ public class Minion : MonoBehaviour, IInteract
 
     [SerializeField, BoxGroup("Stats")] private float health;
     [SerializeField, BoxGroup("Stats")] private MinionData data;
+    [SerializeField] private MinionSpawnPoint mSpawnPoint;
     public float MaxHealth => data.Value;
     public string Name => data.Name;
     public Faction Faction => data.Faction;
+    public float Cost => data.Cost;
+    public MinionSpawnPoint MinionSpawnPoint => mSpawnPoint;
 
     void OnValidate()
     {
@@ -27,9 +30,8 @@ public class Minion : MonoBehaviour, IInteract
         health = MaxHealth;
     }
 
-    public void Init(MinionData d)
+    public void Init()
     {
-        data = d;
         switch (data.Faction)
         {
             case Faction.Heaven:
@@ -45,31 +47,61 @@ public class Minion : MonoBehaviour, IInteract
     {
         if ((_pinBallLayerMask.value & (1 << collision.gameObject.layer)) != 0)
         {
-            health -= 1;
-            if (health <= 0) DestroyMinion();
+            
         }
+
+        
     }
 
     private void DestroyMinion()
     {
         Debug.Log("Destroyed");
-        data.MinionSpawnPoint.IsOccupied = false;
+        mSpawnPoint.IsOccupied = false;
         gameObject.SetActive(false);
     }
 
     public bool Interact(GameObject Instigator, string Action = "")
     {
+        if(Instigator.TryGetComponent(out Team instigatorTeam) && health == 1)
+        {
+            if(instigatorTeam.OwnerId != _team.OwnerId)
+            {
+                PlayerInfo info = GameStateManager.Instance.GetPlayerInfo(instigatorTeam.OwnerId);
+                if(info != null)
+                {
+                    info.Score.UpdateScore(Cost/2);
+                }
+            }
+        }
+
+        if(Instigator.TryGetComponent<IPhysics>(out IPhysics comp))
+        {
+            Vector3 normal = Instigator.GetComponent<Collider>().ClosestPoint(transform.position) - transform.position;
+            normal = Vector3.ProjectOnPlane(normal, Vector3.up);
+            comp.AddImpulse(normal * 20f);
+        }
+        health -= 1;
+
+        if(health <= 0)
+        {
+            DestroyMinion();
+        }
 
         return true;
     }
 
     public List<string> GetInteractOptions(GameObject Instigator = null)
     {
-        throw new System.NotImplementedException();
+        return new List<string>() { "" };
     }
 
     public bool Interact(GameObject Instigator, Action callback = null)
     {
-        throw new NotImplementedException();
+        return true;
+    }
+
+    public void SetSpawnPoint(MinionSpawnPoint spawnPoint)
+    {
+        mSpawnPoint = spawnPoint;
     }
 }

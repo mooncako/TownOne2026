@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,20 +9,28 @@ using UnityEngine.InputSystem.Utilities;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerInfo))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour,
+    MMEventListener<GameStateChangeEvent>
 {
     [SerializeField, BoxGroup("References")] private PlayerInfo _playerInfo;
+    public PlayerInfo PlayerInfo => _playerInfo;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
     [SerializeField, BoxGroup("References")] private PlayerInput _playerInput;
     [SerializeField, BoxGroup("References")] private Team _team;
 
-    [SerializeField, BoxGroup("Settings | Movement")] private float _movementSpeed = 5f;
+    [SerializeField, BoxGroup("Settings | Movement")] private float _movementSpeed = 10f;
     [SerializeField, BoxGroup("Settings | Movement")] private float _rangeX = 1f;
     [SerializeField, BoxGroup("Settings | Flip")] private float _flipAngle = 15f;
     [SerializeField, BoxGroup("Settings | Flip")] private float _flipRotationSpeed = 360f;
 
     [SerializeField, BoxGroup("Debug"), ReadOnly] private float _movementInput;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private float _rotationInput;
+
+    public event Action<float> OnNavigationInput;
+    public event Action<PlayerInfo> OnConfirmInput;
+    public event Action OnCycleRightInput;
+    public event Action OnCycleLeftInput;
+    public event Action<bool> OnReadyInput;
 
 
     private float _targetAngle = 0f;
@@ -54,6 +63,16 @@ public class PlayerController : MonoBehaviour
         ApplyRigidbodySettings();
         _baseAngle = GetCurrentAngle();
         _targetAngle = _baseAngle;
+    }
+
+    void OnEnable()
+    {
+        this.MMEventStartListening<GameStateChangeEvent>();
+    }
+
+    void OnDisable()
+    {
+        this.MMEventStopListening<GameStateChangeEvent>();
     }
 
     private void ApplyRigidbodySettings()
@@ -96,7 +115,29 @@ public class PlayerController : MonoBehaviour
     {
         if(value.isPressed)
         {
-            
+            OnConfirmInput?.Invoke(_playerInfo);
+        }
+    }
+
+    private void OnNavigation(InputValue value)
+    {
+        float navInput = value.Get<float>();
+        OnNavigationInput?.Invoke(navInput);
+    }
+
+    private void OnCycleRight(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            OnCycleRightInput?.Invoke();
+        }
+    }
+
+    private void OnCycleLeft(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            OnCycleLeftInput?.Invoke();
         }
     }
 
@@ -108,11 +149,14 @@ public class PlayerController : MonoBehaviour
             {
                 case ReadyState.Preparing:
                     _playerInfo.ToggleReadyState(ReadyState.Ready);
+                    OnReadyInput?.Invoke(true);
                     break;
                 case ReadyState.Ready:
                     _playerInfo.ToggleReadyState(ReadyState.Preparing);
+                    OnReadyInput?.Invoke(false);
                     break;
             }
+            
         }
     }
 
@@ -242,4 +286,16 @@ public class PlayerController : MonoBehaviour
         _team.OwnerId = teamId;
     }
 
+    public void OnMMEvent(GameStateChangeEvent e)
+    {
+        switch(e.CurrentState)
+        {
+            case GameState.Preparation:
+                _playerInput.SwitchCurrentActionMap("Preparation");
+                break;
+            case GameState.InRound:
+                _playerInput.SwitchCurrentActionMap("Player");
+                break;
+        }
+    }
 }
