@@ -52,4 +52,31 @@ public class PinBall : MonoBehaviour, IPhysics
     {
         
     }
+
+        [SerializeField] private float sphereRadius = 0.5f;
+        [SerializeField] private float castDistance = 6f;
+        [SerializeField] private LayerMask groundLayer;
+        [SerializeField] private float hoverHeight = 0.5f;
+
+        void FixedUpdate()
+        {
+            Vector3 origin = transform.position + Vector3.up * 0.1f;
+
+            if (Physics.SphereCast(origin, sphereRadius, Vector3.down, out RaycastHit hit, castDistance, groundLayer))
+            {
+                float dot = Vector3.Dot(Vector3.up, hit.normal);
+
+                if (dot >= 0.866f) 
+                {
+                    Vector3 targetWorldPos = hit.point + hit.normal * hoverHeight;
+                    if (TryGetComponent(out Rigidbody rb))
+                    {
+                        rb.position = targetWorldPos;
+
+                        Vector3 horizontalVel = Vector3.ProjectOnPlane(rb.linearVelocity, hit.normal);
+                        rb.linearVelocity = horizontalVel;
+                    }
+                }
+            }
+        }
 }
