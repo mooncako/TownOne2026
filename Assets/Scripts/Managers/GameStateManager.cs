@@ -72,12 +72,19 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         this.MMEventStopListening<PlayerSetupCompleteEvent>();
     }
 
+    public void NewGame()
+    {
+        // CurrentRound++;
+        HeavenPlayerInfo.Initialize(_gameSettings.StartingScore);
+
+        HellPlayerInfo.Initialize(_gameSettings.StartingScore);
+        _gameSettings.Reset(_gameSettingsSO);
+        // _roundManager.StartRound(_gameSettings.RoundDuration);
+    }
+
     public void NewRound()
     {
         CurrentRound++;
-        HeavenPlayerInfo.Initialize();
-        HellPlayerInfo.Initialize();
-        _gameSettings.Reset(_gameSettingsSO);
         _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
@@ -274,6 +281,9 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
     public void OnMMEvent(PlayerSetupCompleteEvent e)
     {
-       SetState(GameState.Preparation);
+        HeavenPlayerInfo = e.HeavenPlayerInfo;
+        HellPlayerInfo = e.HellPlayerInfo;
+        SetState(GameState.Preparation);
+        NewGame();
     }
 }

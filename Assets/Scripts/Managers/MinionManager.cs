@@ -19,6 +19,7 @@ public class MinionManager : MonoBehaviour
     private void Awake()
     {
         minionSpawns = GetComponentsInChildren<MinionSpawnPoint>();
+        _currentSelectedMinionPrefab = _minionPrefabs[0];
     }
 
     void OnValidate()
@@ -45,12 +46,12 @@ public class MinionManager : MonoBehaviour
 
     private void HandleCycleLeftInput()
     {
-        CyclePosition(-1);
+        CycleMinionType(-1);
     }
 
     private void HandleCycleRightInput()
     {
-        CyclePosition(1);
+        CycleMinionType(1);
     }
 
     private void HandleConfirmInput(PlayerInfo playerInfo)
@@ -109,8 +110,9 @@ public class MinionManager : MonoBehaviour
 
         if (!s.IsOccupied)
         {
-            SpawnMinion(_currentSelectedMinionPrefab, s.transform.position, s.transform.rotation);
+            Minion m = SpawnMinion(_currentSelectedMinionPrefab, s.transform.position, s.transform.rotation);
             s.IsOccupied = true;
+            m.SetSpawnPoint(s);
 
             Debug.Log($"Spawning minion {minionIndex} at position {minionSpawnPosIndex}");
         }
@@ -122,8 +124,8 @@ public class MinionManager : MonoBehaviour
     }
     public Minion SpawnMinion(Minion m, Vector3 position, Quaternion rotation)
     {
-        Instantiate(m, position, rotation);
-        return m;
+        Minion mInstance = Instantiate(m, position, rotation);
+        return mInstance;
     }
 
 }

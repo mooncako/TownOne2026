@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour,
     MMEventListener<GameStateChangeEvent>
 {
     [SerializeField, BoxGroup("References")] private PlayerInfo _playerInfo;
+    public PlayerInfo PlayerInfo => _playerInfo;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
     [SerializeField, BoxGroup("References")] private PlayerInput _playerInput;
     [SerializeField, BoxGroup("References")] private Team _team;
@@ -62,6 +63,16 @@ public class PlayerController : MonoBehaviour,
         ApplyRigidbodySettings();
         _baseAngle = GetCurrentAngle();
         _targetAngle = _baseAngle;
+    }
+
+    void OnEnable()
+    {
+        this.MMEventStartListening<GameStateChangeEvent>();
+    }
+
+    void OnDisable()
+    {
+        this.MMEventStopListening<GameStateChangeEvent>();
     }
 
     private void ApplyRigidbodySettings()
