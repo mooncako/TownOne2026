@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,7 +9,8 @@ using UnityEngine.InputSystem.Utilities;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerInfo))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour,
+    MMEventListener<GameStateChangeEvent>
 {
     [SerializeField, BoxGroup("References")] private PlayerInfo _playerInfo;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
@@ -22,6 +24,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField, BoxGroup("Debug"), ReadOnly] private float _movementInput;
     [SerializeField, BoxGroup("Debug"), ReadOnly] private float _rotationInput;
+
+    public event Action<float> OnNavigationInput;
+    public event Action<PlayerInfo> OnConfirmInput;
+    public event Action OnCycleRightInput;
+    public event Action OnCycleLeftInput;
+    public event Action<bool> OnReadyInput;
 
 
     private float _targetAngle = 0f;
@@ -96,7 +104,29 @@ public class PlayerController : MonoBehaviour
     {
         if(value.isPressed)
         {
-            
+            OnConfirmInput?.Invoke(_playerInfo);
+        }
+    }
+
+    private void OnNavigation(InputValue value)
+    {
+        float navInput = value.Get<float>();
+        OnNavigationInput?.Invoke(navInput);
+    }
+
+    private void OnCycleRight(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            OnCycleRightInput?.Invoke();
+        }
+    }
+
+    private void OnCycleLeft(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            OnCycleLeftInput?.Invoke();
         }
     }
 
@@ -108,11 +138,14 @@ public class PlayerController : MonoBehaviour
             {
                 case ReadyState.Preparing:
                     _playerInfo.ToggleReadyState(ReadyState.Ready);
+                    OnReadyInput?.Invoke(true);
                     break;
                 case ReadyState.Ready:
                     _playerInfo.ToggleReadyState(ReadyState.Preparing);
+                    OnReadyInput?.Invoke(false);
                     break;
             }
+            
         }
     }
 
@@ -242,4 +275,16 @@ public class PlayerController : MonoBehaviour
         _team.OwnerId = teamId;
     }
 
+    public void OnMMEvent(GameStateChangeEvent e)
+    {
+        switch(e.CurrentState)
+        {
+            case GameState.Preparation:
+                _playerInput.SwitchCurrentActionMap("Preparation");
+                break;
+            case GameState.InRound:
+                _playerInput.SwitchCurrentActionMap("Player");
+                break;
+        }
+    }
 }

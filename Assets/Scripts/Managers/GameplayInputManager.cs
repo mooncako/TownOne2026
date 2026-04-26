@@ -33,6 +33,9 @@ public class GameplayInputManager : MonoBehaviour
         PlayerController hellController = Instantiate(_playerPrefab, _hellSpawnPoint.position, _hellSpawnPoint.rotation).GetComponent<PlayerController>();
         hellController.AssignDevicesFromGameState(GameStateManager.Instance.HellPlayerId);
         hellController.SetTeam(GameStateManager.Instance.HellPlayerId);
+
+
+        PlayerSetupCompleteEvent.Trigger();
     }
 
     private static string FormatIds(List<int> ids)

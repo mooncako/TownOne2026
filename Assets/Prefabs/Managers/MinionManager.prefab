@@ -46,14 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559b7d5c363d882488448eca72bc0821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinionManager
-  minionTypes:
-  - {fileID: 11400000, guid: b8489642cf7f9da44a880a85dd97f27a, type: 2}
-  - {fileID: 11400000, guid: d1af2fe01dc0c2c4d8d29a61928e1bee, type: 2}
-  - {fileID: 11400000, guid: 91ad68559a3011c43bb9605f9fe3f292, type: 2}
-  minionSpawns:
-  - {fileID: 3081118879342945099}
-  - {fileID: 2450493369397120811}
-  minionPrefab: {fileID: 9078444588451094508, guid: bed660c34db576340ae5a356880b02fb, type: 3}
+  _minionPrefabs:
+  - {fileID: 3933625717031997218, guid: 66ca2f35ecaa55a46ba9a8d0185eecbb, type: 3}
+  - {fileID: 3933625717031997218, guid: 22ac077a47b122340aeda3960afa5a09, type: 3}
+  - {fileID: 3933625717031997218, guid: c5fc5e159ced87d458a3322f8c577aa0, type: 3}
+  _currentSelectedMinionPrefab: {fileID: 0}
+  _currentSelectedSpawnPoint: {fileID: 0}
+  _playerController: {fileID: 0}
 --- !u!1001 &367159858820156079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,17 +110,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c18650faebbd994ebcf288267e7ff12, type: 3}
---- !u!114 &2450493369397120811 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2817440608000378244, guid: 5c18650faebbd994ebcf288267e7ff12, type: 3}
-  m_PrefabInstance: {fileID: 367159858820156079}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93da781003f539f4ebaca498c56db688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MinionSpawnPoint
 --- !u!4 &2898190107229238431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3251626961397694000, guid: 5c18650faebbd994ebcf288267e7ff12, type: 3}
@@ -189,14 +177,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3251626961397694000, guid: 5c18650faebbd994ebcf288267e7ff12, type: 3}
   m_PrefabInstance: {fileID: 998631461401913039}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3081118879342945099 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2817440608000378244, guid: 5c18650faebbd994ebcf288267e7ff12, type: 3}
-  m_PrefabInstance: {fileID: 998631461401913039}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93da781003f539f4ebaca498c56db688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MinionSpawnPoint
