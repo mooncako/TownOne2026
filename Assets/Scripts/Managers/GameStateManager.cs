@@ -268,4 +268,24 @@ public class GameStateManager : MMSingleton<GameStateManager>,
                 return null;
         }
     }
+
+    public PlayerInfo GetPlayerInfoFromID(PlayerId playerId)
+    {
+        return playerId switch
+        {
+            _ when playerId == HeavenPlayerId => HeavenPlayerInfo,
+            _ when playerId == HellPlayerId => HellPlayerInfo,
+            _ => throw new ArgumentException($"Unknown PlayerId: {playerId}", nameof(playerId))
+        };
+    }
+
+    public PlayerId GetPlayerIDFromInfo(PlayerInfo playerInfo)
+    {
+        return playerInfo switch
+        {
+            _ when playerInfo == HeavenPlayerInfo => HeavenPlayerId,
+            _ when playerInfo == HellPlayerInfo => HellPlayerId,
+            _ => throw new ArgumentException($"Unknown PlayerInfo: {playerInfo}", nameof(playerInfo))
+        };
+    }
 }

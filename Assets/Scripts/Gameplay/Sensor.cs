@@ -1,14 +1,17 @@
+using Cysharp.Threading.Tasks.Triggers;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Sensor : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private Powerup powerup;
+
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ball"))
+        if (other.TryGetComponent<PinBall>(out var pinBall))
         {
-            OnSensorTriggered();
+            SensorHitEvent.Trigger(pinBall.Team.OwnerId, powerup);
         }
     }
-
-    private void OnSensorTriggered(){ }
 }

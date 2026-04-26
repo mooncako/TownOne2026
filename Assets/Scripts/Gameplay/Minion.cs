@@ -59,7 +59,6 @@ public class Minion : MonoBehaviour, IInteract
 
     public bool Interact(GameObject Instigator, string Action = "")
     {
-
         return true;
     }
 

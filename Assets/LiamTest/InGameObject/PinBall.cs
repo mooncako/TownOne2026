@@ -9,6 +9,7 @@ public class PinBall : MonoBehaviour, IPhysics
     [SerializeField, BoxGroup("References")] private Team _team;
     [SerializeField, BoxGroup("Settings")] private LayerMask _interactableLayerMask;
     [SerializeField, BoxGroup("Settings")] private LayerMask _paddleLayerMask;
+    public Team Team => _team; 
 
 
     private void OnValidate()
