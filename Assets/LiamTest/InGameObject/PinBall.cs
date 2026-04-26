@@ -57,8 +57,6 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
                 AkUnitySoundEngine.PostEvent("COLL_Ball", gameObject);
             }
         }
-<<<<<<< HEAD
-=======
 
         if(other.gameObject.TryGetComponent<PinBall>(out PinBall ball) && ClashVfx)
         {
@@ -70,7 +68,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
             GameObject effect = Instantiate(ClashVfx, other.contacts[0].point, Quaternion.identity);
             Destroy(effect, 0.8f);
         }
->>>>>>> dev
+
         
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
