@@ -12,5 +12,8 @@ public class OverExtension : ShopPowerUpSO
         base.ApplyPowerUp(playerController, playerInfo);
 
         playerController.ExtendOverExtension(_extensionMultiplier, _duration);
+
+        AkUnitySoundEngine.SetSwitch("Powerups", "P2", SoundManager.Instance.gameObject);
+        AkUnitySoundEngine.PostEvent("EMIT_Powerup", SoundManager.Instance.gameObject);
     }
 }

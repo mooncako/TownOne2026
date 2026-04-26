@@ -9,5 +9,6 @@ public class Bouncer : MonoBehaviour
         Vector3 normal = other.GetContact(0).normal * -1;
         normal = Vector3.ProjectOnPlane(normal, Vector3.up);
         other.gameObject.AddImpulse(normal * force, ForceMode.Impulse);
+        AkUnitySoundEngine.PostEvent("COLL_Bumpers", gameObject);
     }
 }
