@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{41E3EDF1-2644-42F5-9349-A414E8FC9010}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{41E3EDF1-2644-42F5-9349-A414E8FC9010}" SchemaVersion="133" RootDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}" ParentDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}">
 	<Containers>
-		<WorkUnit Name="Ambience" ID="{41E3EDF1-2644-42F5-9349-A414E8FC9010}" PersistMode="Standalone">
+		<WorkUnit Name="Ambience" ID="{41E3EDF1-2644-42F5-9349-A414E8FC9010}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
 				<PropertyContainer Name="Ambience" ID="{DB15FF1A-0E9F-46B8-88B4-A86152F38ACC}" ShortID="290401677">
 					<ReferenceList>

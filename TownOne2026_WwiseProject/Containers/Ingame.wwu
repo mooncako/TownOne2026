@@ -16,6 +16,8 @@
 						<WorkUnit Name="Player" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" PersistMode="Reference"/>
 						<WorkUnit Name="Minions" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" PersistMode="Reference"/>
 						<WorkUnit Name="Collisions" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" PersistMode="Reference"/>
+						<WorkUnit Name="Emitters" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" PersistMode="Reference"/>
+						<WorkUnit Name="Ambience" ID="{41E3EDF1-2644-42F5-9349-A414E8FC9010}" PersistMode="Reference"/>
 					</ChildrenList>
 				</PropertyContainer>
 			</ChildrenList>

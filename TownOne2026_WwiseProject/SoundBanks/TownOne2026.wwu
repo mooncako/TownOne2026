@@ -18,6 +18,7 @@
 						<ObjectRef Name="UI_Confirm_QuitGame" ID="{67033A41-BA86-4CA1-845A-C5D254A98EB1}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="EMIT_Score" ID="{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}" WorkUnitID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="COLL_Ball" ID="{66D72F1F-0713-4E28-BB9E-73889601DB6F}" WorkUnitID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="COLL_Bumpers" ID="{DD866089-4845-4EB1-BBF0-9B79CC1A418B}" WorkUnitID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PLYR_Paddle_Move" ID="{3C514036-6CAF-4EEE-B630-E35001BF3A7E}" WorkUnitID="{BB253C03-A8B9-451D-98E9-88AF12E7EDDC}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{F50FBE01-9BC3-4887-B265-066EE9E10A7A}",
     "Language": "SFX",
-    "Hash": "{F287798B-4355-0BF8-8514-BCDC852F7ECC}",
+    "Hash": "{E6EA1A38-DDFC-35CD-F237-C65BD28D2B49}",
     "ObjectPath": "\\SoundBanks\\TownOne2026\\TO26_SB",
     "ShortName": "TO26_SB",
     "Path": "TO26_SB.bnk",
@@ -280,6 +280,14 @@
       "CachePath": "2C/{2C67DC0E-FBF6-1844-9355-32F2FD2D32E9}.wem"
      },
      {
+      "Id": "599914716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_COLL_Ball.wav",
+      "CachePath": "77/{779F19EE-3586-11D2-EF13-F53E7CB31D68}.wem"
+     },
+     {
       "Id": "620306174",
       "Language": "SFX",
       "Streaming": "false",
@@ -448,6 +456,14 @@
       "CachePath": "86/{86425B4D-92C1-C4C1-138F-9D8666FAD35E}.wem"
      },
      {
+      "Id": "1021117964",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Ball_01.wav",
+      "CachePath": "C9/{C9BE7CB4-110E-9FC5-FA98-4E54A3D4671C}.wem"
+     },
+     {
       "Id": "1053845861",
       "Language": "SFX",
       "Streaming": "false",
@@ -471,50 +487,26 @@
       "ObjectPath": "\\Events\\Collisions\\COLL_Ball",
       "GUID": "{66D72F1F-0713-4E28-BB9E-73889601DB6F}",
       "DurationType": "OneShot",
-      "DurationMin": "2.410854",
-      "DurationMax": "2.5333333",
-      "SwitchContainers": [
+      "DurationMin": "0.35",
+      "DurationMax": "0.35",
+      "MediaRefs": [
        {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3068666232",
-         "Id": "1846755610",
-         "GUID": "{5970B058-EEAD-4693-A2E8-008A4CD2744D}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "230114657"
-         }
-        ]
+        "Id": "599914716"
        },
        {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3068666232",
-         "Id": "981339021",
-         "GUID": "{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "947087605"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3068666232",
-         "Id": "2732489590",
-         "GUID": "{A641D999-DC36-4070-99C9-A5E780602207}",
-         "Default": "true"
-        },
-        "MediaRefs": [
-         {
-          "Id": "845031703"
-         }
-        ]
+        "Id": "1021117964"
        }
       ]
+     },
+     {
+      "Id": "2883100974",
+      "Name": "COLL_Bumpers",
+      "ObjectPath": "\\Events\\Collisions\\COLL_Bumpers",
+      "GUID": "{DD866089-4845-4EB1-BBF0-9B79CC1A418B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "773862064",
@@ -1086,6 +1078,6 @@
     ]
    }
   ],
-  "FileHash": "{4FE65428-DA8C-ABBD-CED6-3B20930E2F43}"
+  "FileHash": "{F092F31E-C040-1E52-9C5D-3E72D3423430}"
  }
 }

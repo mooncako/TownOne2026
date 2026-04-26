@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" SchemaVersion="133" RootDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}" ParentDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}">
 	<Containers>
-		<WorkUnit Name="Emitters" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" PersistMode="Standalone">
+		<WorkUnit Name="Emitters" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
 				<PropertyContainer Name="Powerups" ID="{C5DF8311-0DFA-480D-92EE-DEA9550FEA6E}" ShortID="825509785">
 					<ReferenceList>

@@ -24,6 +24,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="SFX_Coll_Ball_01" ID="{2BA56CE2-ECBA-4B57-8098-94AFA0E62786}" ShortID="545086127">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>

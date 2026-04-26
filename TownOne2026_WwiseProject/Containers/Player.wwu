@@ -4,6 +4,13 @@
 		<WorkUnit Name="Player" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
 				<PropertyContainer Name="Paddle" ID="{AF5C5E53-C9A5-4725-AFDE-651B11B63D83}" ShortID="471461596">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
