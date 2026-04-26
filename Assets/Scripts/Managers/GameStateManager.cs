@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
-    MMEventListener<PlayerConnectionEvent>
+    MMEventListener<PlayerConnectionEvent>,
+    MMEventListener<PlayerSetupCompleteEvent>
 {
     [SerializeField, BoxGroup("References")] private RoundManager _roundManager;
     [SerializeField, BoxGroup("References")] private GameSettingsSO _gameSettingsSO;
@@ -25,7 +26,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [ShowInInspector, BoxGroup("Debug"), ReadOnly] public bool IsSceneTransitioning { get; private set; } = false;
 
 
-    private void Awake()
+    protected override void Awake()
     {
         if (_instance != null && _instance != this)
         {
@@ -34,7 +35,6 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         _instance = this;
-        Debug.Log("GameStateManager Awake: instance set and persisted");
         DontDestroyOnLoad(gameObject);
     }
 
@@ -57,6 +57,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         this.MMEventStartListening<PlayerConnectionEvent>();
+        this.MMEventStartListening<PlayerSetupCompleteEvent>();
     }
 
     void OnDisable()
@@ -68,14 +69,22 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         this.MMEventStopListening<PlayerConnectionEvent>();
+        this.MMEventStopListening<PlayerSetupCompleteEvent>();
+    }
+
+    public void NewGame()
+    {
+        // CurrentRound++;
+        HeavenPlayerInfo.Initialize(_gameSettings.StartingScore);
+
+        HellPlayerInfo.Initialize(_gameSettings.StartingScore);
+        _gameSettings.Reset(_gameSettingsSO);
+        // _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
     public void NewRound()
     {
         CurrentRound++;
-        HeavenPlayerInfo.Initialize();
-        HellPlayerInfo.Initialize();
-        _gameSettings.Reset(_gameSettingsSO);
         _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
@@ -101,6 +110,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     private void SetState(GameState state)
     {
         GameState = state;
+        GameStateChangeEvent.Trigger(state);
     }
 
     public void OnMMEvent(PlayerConnectionEvent e)
@@ -267,5 +277,13 @@ public class GameStateManager : MMSingleton<GameStateManager>,
             default:
                 return null;
         }
+    }
+
+    public void OnMMEvent(PlayerSetupCompleteEvent e)
+    {
+        HeavenPlayerInfo = e.HeavenPlayerInfo;
+        HellPlayerInfo = e.HellPlayerInfo;
+        SetState(GameState.Preparation);
+        NewGame();
     }
 }
