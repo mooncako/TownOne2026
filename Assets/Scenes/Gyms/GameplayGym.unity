@@ -3394,6 +3394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 3960820101879804104, guid: 1021252d75b56d34bb1dc3fae297b6f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4708345832661899248, guid: 1021252d75b56d34bb1dc3fae297b6f2, type: 3}
       propertyPath: m_Material
       value: 

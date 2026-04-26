@@ -283,7 +283,20 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     {
         HeavenPlayerInfo = e.HeavenPlayerInfo;
         HellPlayerInfo = e.HellPlayerInfo;
+        HeavenPlayerInfo.OnReadyStateChanged += OnReadyStateChanged;
+        HellPlayerInfo.OnReadyStateChanged += OnReadyStateChanged;
         SetState(GameState.Preparation);
         NewGame();
+    }
+
+    private void OnReadyStateChanged(ReadyState state)
+    {
+        if (state == ReadyState.Ready)
+        {
+            if (HeavenPlayerInfo.ReadyState == ReadyState.Ready && HellPlayerInfo.ReadyState == ReadyState.Ready)
+            {
+                NewRound();
+            }
+        }
     }
 }
