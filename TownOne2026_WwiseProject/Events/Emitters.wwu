@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Emitters" ID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="EMIT_Score" ID="{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}">
+					<ChildrenList>
+						<Action Name="" ID="{56861C9C-177D-4815-8F2D-F325B738CC47}" ShortID="766746767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EMIT_Score" ID="{338D3B31-5672-48DA-944D-A6287FEF03D0}" WorkUnitID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EMIT_Powerup" ID="{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}">
+					<ChildrenList>
+						<Action Name="" ID="{6D0DD7DD-267C-45CD-8CF8-8EA845656CD6}" ShortID="824872604">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EMIT_Powerup" ID="{D379266A-009C-44E1-AD86-98E2F265DC03}" WorkUnitID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EMIT_Shop" ID="{9F5F95FD-7745-445E-92A3-8CE633CFB24E}">
+					<ChildrenList>
+						<Action Name="" ID="{02A290FC-D804-4792-9A95-FBDA29BEAC08}" ShortID="60868230">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EMIT_Shop" ID="{13862009-3A4A-48E4-8793-E6BA424C620C}" WorkUnitID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

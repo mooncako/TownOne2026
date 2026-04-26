@@ -14,17 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="PLYR_Paddle_Hit" ID="{C246DFF3-B527-4E8F-B684-AAF06E4FD9D2}">
-					<ChildrenList>
-						<Action Name="" ID="{E8BFD49F-2EA3-4985-9943-FCF1A03A17FD}" ShortID="836503311">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="PLYR_Paddle_Hit" ID="{DCA9AA8F-5883-41E6-88B3-8101DDCBA4A8}" WorkUnitID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

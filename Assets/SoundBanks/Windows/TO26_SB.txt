@@ -1,24 +1,29 @@
 Event	ID	Name			Wwise Object Path	Notes
-	361914714	TestEvent3D			\TestEvent\TestEvent3D	
-	376783433	PLYR_Paddle_Hit			\Player\PLYR_Paddle_Hit	
-	378692277	TestEvent2D			\TestEvent\TestEvent2D	
+	773862064	COLL_Minion			\Collisions\COLL_Minion	
 	1402340918	UI_HIghlight			\UI\UI_HIghlight	
 	1627453353	COLL_Ball			\Collisions\COLL_Ball	
+	2031107581	EMIT_Powerup			\Emitters\EMIT_Powerup	
+	2401631563	EMIT_Score			\Emitters\EMIT_Score	
 	2428166787	UI_Confirm_Play			\UI\UI_Confirm_Play	
+	2436315639	EMIT_Shop			\Emitters\EMIT_Shop	
 	2792663994	OBJ_Minion_Die			\Minion\OBJ_Minion_Die	
 	2862290544	OBJ_Minion_Set			\Minion\OBJ_Minion_Set	
 	2912873858	UI_Confirm_QuitGame			\UI\UI_Confirm_QuitGame	
-	3001930118	COLL_Wall			\Collisions\COLL_Wall	
 	3020718913	UI_ResumeGame			\UI\UI_ResumeGame	
 	3258129853	PLYR_Paddle_Move			\Player\PLYR_Paddle_Move	
 	3783962382	UI_PauseGame			\UI\UI_PauseGame	
 	4060032068	UI_Confirm_Generic			\UI\UI_Confirm_Generic	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	2600048462	Powerups			\Powerups\Powerups	
 	3068666232	MinionSize			\Minions\MinionSize	
 	4233847531	MinionType			\Minions\MinionType	
 
 Switch	ID	Name	Switch Group			Notes
+	1635194249	P4	Powerups			
+	1635194252	P1	Powerups			
+	1635194254	P3	Powerups			
+	1635194255	P2	Powerups			
 	981339021	Med	MinionSize			
 	1846755610	Small	MinionSize			
 	2732489590	Heavy	MinionSize			
@@ -26,17 +31,60 @@ Switch	ID	Name	Switch Group			Notes
 	3632828376	Hell	MinionType			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	2108770	SFX_Obj_Minion_Set_Hell-003	.cache\F3\{F3E35BD6-A42A-0075-9894-F99A36C450A9}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Hell\OBJ_Minion_Laugh_Hell_Small\SFX_Obj_Minion_Set_Hell-003		534496
-	4143777	SFX_Obj_Minion_Death_Hell_03	.cache\B8\{B8C3B5E4-4E27-A37B-35CA-0ECE637AB8CE}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Die\OBJ_Minion_Scream\OBJ_Minion_Scream_Hell\OBJ_Minion_Scream_Heaven_Heavy\SFX_Obj_Minion_Death_Hell_03		892896
-	78496703	SFX_Obj_Minion_Set_Heaven-001	.cache\4A\{4A323194-22A6-DF03-E6B0-FA6E13FB6F59}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Med\SFX_Obj_Minion_Set_Heaven-001		531296
-	246321530	SFX_Obj_Minion_Death_Hell_02	.cache\66\{6607E235-A50E-1FE1-65E9-357938A565B7}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Die\OBJ_Minion_Scream\OBJ_Minion_Scream_Hell\OBJ_Minion_Scream_Heaven_Heavy\SFX_Obj_Minion_Death_Hell_02		947296
-	310673553	UI_Select	.cache\84\{84E138C1-7EAC-D5DB-C6EE-9E0361243DB2}.wem		\Containers\UI\UI\UI_Highlight\UI_Highlight\UI_Select		176576
-	502375207	SFX_COLL_Ball	.cache\77\{779F19EE-3586-11D2-EF13-F53E7CB31D68}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion_Type\COLL_Minion_Heaven\COLL_Minion_Heaven_Small\SFX_COLL_Ball		67296
-	559494333	UI_Confirm_Generic	.cache\78\{781A3F8A-9F1F-1B7E-A110-5B39030623D3}.wem		\Containers\UI\UI\UI_Confirm_Generic\UI_Confirm_Generic\UI_Confirm_Generic		237572
-	656919707	SFX_Obj_Minion_Death_Hell_01	.cache\10\{101C150F-A08D-7FAA-B14C-D6C865FE819C}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Die\OBJ_Minion_Scream\OBJ_Minion_Scream_Hell\OBJ_Minion_Scream_Heaven_Med\SFX_Obj_Minion_Death_Hell_01		912096
-	694912507	SFX_Obj_Minion_Set_Heaven-003	.cache\6C\{6C06C707-A035-0FDD-6FBF-068AA2833351}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Med\SFX_Obj_Minion_Set_Heaven-003		605296
-	803433348	SFX_Obj_Minion_Set_Hell-002	.cache\5F\{5F7F10E4-0079-8435-5D2B-D31868A63682}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Hell\OBJ_Minion_Laugh_Hell_Med\SFX_Obj_Minion_Set_Hell-002		540176
-	917880804	SFX_Obj_Minion_Set_Hell-001	.cache\7B\{7BD124C5-444C-902D-61D2-7BA95C9926E2}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Hell\OBJ_Minion_Laugh_Hell_Heavy\SFX_Obj_Minion_Set_Hell-001		537696
-	944739144	SFX_Obj_Minion_Set_Heaven-002	.cache\B9\{B96B233F-4D22-B3BE-8272-32F065737409}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Heavy\SFX_Obj_Minion_Set_Heaven-002		563296
-	1046153367	UI_Confirm_Play	.cache\DA\{DAE875D6-34B2-575B-F3AB-4AAE3DF4EAE8}.wem		\Containers\UI\UI\UI_Confirm_Play\UI_Confirm_Play\UI_Confirm_Play		469596
+	16487730	SFX_Obj_Minion_Set_Heaven_Scream_01	.cache\FE\{FECAA5BA-47F2-3E94-D6C8-3BE11019AF09}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Small\SFX_Obj_Minion_Set_Heaven_Scream_01		100530
+	30548152	UI_Select	.cache\0C\{0C058CAB-9E49-93AD-7810-0A004F9ED06E}.wem		\Containers\UI\UI\UI_Highlight\UI_Highlight\UI_Select		176576
+	40292256	SFX_Obj_Minion_Set_Heaven_Scream_03	.cache\89\{89724F8E-DFE3-FC47-23E0-45E4F646E2FE}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Heavy\SFX_Obj_Minion_Set_Heaven_Scream_03		103250
+	44531392	SFX_Obj_Shop_Souls_Growls_01	.cache\0A\{0A7C5DB5-8C1B-0D85-D844-D91FA40FB3BC}.wem		\Containers\Emitters\Shop\EMIT_Shop\SFX_Obj_Shop_Souls_Growls\SFX_Obj_Shop_Souls_Growls_01		374496
+	67106732	SFX_Coll_Min_Impt_01	.cache\CD\{CDBA7E5C-CA79-F590-3466-ADEF4A22AA8E}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Impt\SFX_Coll_Min_Impt_01		38496
+	82817418	SFX_Obj_Min_Set_Hell_Laugh_03	.cache\6D\{6D88134A-B448-DA6D-74D9-4091E180E70E}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Laugh\OBJ_Minion_Laugh_Hell_Small\SFX_Obj_Min_Set_Hell_Laugh_03		349664
+	130778159	SFX_Paddle_Move_01	.cache\AD\{AD8D362B-D001-AD25-D067-141BE41B459C}.wem		\Containers\Ingame\Ingame\Player\Paddle\PLYR_Paddle_Move\SFX_Paddle_Move_01		40192
+	138002598	SFX_Paddle_Move_05	.cache\31\{31AEBBDA-6EEF-A8F6-F2C1-605DBC9DDD90}.wem		\Containers\Ingame\Ingame\Player\Paddle\PLYR_Paddle_Move\SFX_Paddle_Move_05		40192
+	180062318	SFX_Coll_Min_Hammer_01	.cache\87\{8786B45D-AC1D-0AFC-ACF5-7A13A5188065}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Heaven\COLL_Min_Heaven_Hammer\SFX_Coll_Min_Hammer_01		43460
+	230114657	SFX_Coll_Min_Heaven_Scream_01	.cache\4D\{4DEBD552-2FAB-10E0-337E-5A3CD7E3B9AE}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Heaven\COLL_Minion_Heaven_Screams\COLL_Minion_Heaven_Small\SFX_Coll_Min_Heaven_Scream_01		243296
+	235806516	SFX_Coll_Min_Hell_Scream_01	.cache\14\{14306AC2-E22C-7684-BB89-091CE620A93E}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Hell\COLL_Minion_Hell_Scream\COLL_Minion_Hell_Heavy\SFX_Coll_Min_Hell_Scream_01		83296
+	244000149	SFX_Obj_Minion_Set_Heaven_Sword_01	.cache\E4\{E48DA341-13A2-9B24-F191-E7BB08C3E7E0}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Sword\SFX_Obj_Minion_Set_Heaven_Sword_01		48096
+	271309381	SFX_Obj_Min_Set_Hell_Chord_01	.cache\5D\{5DE065D5-1747-6F89-1575-1421B106629E}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Chord\SFX_Obj_Min_Set_Hell_Chord_01		223910
+	292003887	SFX_Paddle_Move_02	.cache\B4\{B4CA3504-9A1B-71CD-4624-050D0DB8E82A}.wem		\Containers\Ingame\Ingame\Player\Paddle\PLYR_Paddle_Move\SFX_Paddle_Move_02		40192
+	297621944	SFX_Obj_Shop_Souls_Cries_02	.cache\A9\{A94D5285-D74C-77E5-D77A-AF719F06FC9B}.wem		\Containers\Emitters\Shop\EMIT_Shop\SFX_Obj_Shop_Souls_Cries\SFX_Obj_Shop_Souls_Cries_02		428896
+	317344889	UI_Confirm_Generic	.cache\8C\{8C656FD2-685F-DCE3-30FD-B4228DB1861B}.wem		\Containers\UI\UI\UI_Confirm_Generic\UI_Confirm_Generic\UI_Confirm_Generic		237572
+	355017554	SFX_Obj_Min_Set_Fire_01	.cache\27\{27A94622-33AB-E1A8-C689-C5D8CF1FA4A0}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Fire\SFX_Obj_Min_Set_Fire_01		172896
+	360401364	SFX_Obj_Min_Set_Hell_Chord_03	.cache\17\{177A558C-2022-A98D-2D23-41CF4887D55E}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Chord\SFX_Obj_Min_Set_Hell_Chord_03		221040
+	361097862	SFX_Obj_Minion_Set_Heaven_Sword_02	.cache\2C\{2CF826ED-76CF-2A33-53DD-05E020D8216B}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Sword\SFX_Obj_Minion_Set_Heaven_Sword_02		57696
+	418080204	SFX_Paddle_Move_03	.cache\BB\{BB71341C-B8F3-95C5-5C42-923C75D097A5}.wem		\Containers\Ingame\Ingame\Player\Paddle\PLYR_Paddle_Move\SFX_Paddle_Move_03		40192
+	425865739	SFX_Coll_Min_Hell_Scream_02	.cache\5B\{5B0BF091-0373-7906-C807-586598A6D381}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Hell\COLL_Minion_Hell_Scream\COLL_Minion_Hell_Med\SFX_Coll_Min_Hell_Scream_02		78264
+	448127734	SFX_Obj_Minion_Set_Heaven_Sword_03	.cache\E5\{E5C4BCF4-9EB9-1764-653F-13CA44509741}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Sword\SFX_Obj_Minion_Set_Heaven_Sword_03		58540
+	464643614	SFX_Coll_Min_Hammer_02	.cache\4D\{4DA9ED27-779C-4B27-C806-E8913D4CBCF6}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Heaven\COLL_Min_Heaven_Hammer\SFX_Coll_Min_Hammer_02		46330
+	473456762	SFX_Obj_Minion_Set_Heaven_Impt_01	.cache\40\{4087C1AC-AEDF-B49F-2C33-0F7FCAC0A13F}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Impt\SFX_Obj_Minion_Set_Heaven_Impt_01		164078
+	477671849	SFX_Obj_Min_Set_Fire_03	.cache\C1\{C14FB8EC-29CB-B61E-A853-FB7F458B53BA}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Fire\SFX_Obj_Min_Set_Fire_03		164896
+	491395643	SFX_Obj_Shop_Souls_Cries_01	.cache\BA\{BA7E09CE-E172-398C-5071-E32DA8CCC753}.wem		\Containers\Emitters\Shop\EMIT_Shop\SFX_Obj_Shop_Souls_Cries\SFX_Obj_Shop_Souls_Cries_01		384096
+	534373619	SFX_EMIT_Score_01	.cache\B8\{B83F2A74-29D6-C5A6-5580-21828D42D65F}.wem		\Containers\Emitters\Score\EMIT_Score\SFX_EMIT_Score_01		630744
+	543808969	SFX_Obj_Minion_Set_Heaven_Scream_02	.cache\91\{919B360B-26E1-33AF-3BF0-AC5FCD8A8D6F}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Med\SFX_Obj_Minion_Set_Heaven_Scream_02		115854
+	551719624	SFX_Coll_Min_Impt_02	.cache\75\{7583C0FF-9FDC-D630-8E61-4B45FDAAAA37}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Impt\SFX_Coll_Min_Impt_02		44770
+	556219952	SFX_Coll_Min_Hell_Scream_03	.cache\FE\{FEDEB98E-CA36-8EC2-AD69-8B6832C3A850}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Hell\COLL_Minion_Hell_Scream\COLL_Minion_Hell_Small\SFX_Coll_Min_Hell_Scream_03		87516
+	581046367	SFX_Obj_Shop_Souls_Whispers_02	.cache\D1\{D16A0E2C-5198-272C-4255-81205F68BACC}.wem		\Containers\Emitters\Shop\EMIT_Shop\SFX_Obj_Shop_Souls_Whispers\SFX_Obj_Shop_Souls_Whispers_02		520096
+	597061638	SFX_Obj_Min_Set_Heaven_Chord_03	.cache\F2\{F2E535F7-E7B7-B157-B7F2-E19B013AE40E}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Chord\OBJ_Minion__Heaven_Chord\SFX_Obj_Min_Set_Heaven_Chord_03		321500
+	597273672	SFX_Obj_Min_Set_Heaven_Chord_01	.cache\2C\{2C67DC0E-FBF6-1844-9355-32F2FD2D32E9}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Chord\OBJ_Minion__Heaven_Chord\SFX_Obj_Min_Set_Heaven_Chord_01		326496
+	620306174	UI_Confirm_Play	.cache\AF\{AF101C38-29ED-4596-28E4-2FAB5EEBB14F}.wem		\Containers\UI\UI\UI_Confirm_Play\UI_Confirm_Play\UI_Confirm_Play		469596
+	624084264	SFX_Obj_Min_Set_Fire_02	.cache\83\{8342E5EF-2DA9-B03B-683E-AA48A9966869}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Fire\SFX_Obj_Min_Set_Fire_02		168096
+	642652476	SFX_Obj_Shop_Souls_Whispers_01	.cache\17\{17DAECF2-7FE6-2835-6448-5859FE1C62B5}.wem		\Containers\Emitters\Shop\EMIT_Shop\SFX_Obj_Shop_Souls_Whispers\SFX_Obj_Shop_Souls_Whispers_01		336096
+	653671294	SFX_Paddle_Move_04	.cache\D3\{D3371FE3-1613-DC7E-9038-F44CE35DFED1}.wem		\Containers\Ingame\Ingame\Player\Paddle\PLYR_Paddle_Move\SFX_Paddle_Move_04		40192
+	654235208	SFX_Coll_Min_Impt_03	.cache\DF\{DF6707C8-BF2E-D5BF-2951-FA30ED0DFA06}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Impt\SFX_Coll_Min_Impt_03		32096
+	660132557	SFX_Obj_Min_Set_Impt_01	.cache\08\{08BFD628-2B0D-B767-7E3E-D7BA89E6936E}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Impact\SFX_Obj_Min_Set_Impt_01		121696
+	673104915	SFX_Coll_Min_Sword_01	.cache\AE\{AE14E3AC-545C-1826-55BF-0A9C61892B0F}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Hell\COLL_Min_Heaven_Sword\SFX_Coll_Min_Sword_01		32096
+	706633051	SFX_Paddle_Move_06	.cache\FB\{FB2E2DFA-2611-C999-FDEC-C4A00DC02573}.wem		\Containers\Ingame\Ingame\Player\Paddle\PLYR_Paddle_Move\SFX_Paddle_Move_06		40192
+	720213286	SFX_Obj_Minion_Set_Heaven_Impt_02	.cache\51\{510BE5B5-53B4-BF3D-CB56-C5C0FB1BD78B}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Impt\SFX_Obj_Minion_Set_Heaven_Impt_02		144034
+	723028727	SFX_Obj_Min_Set_Hell_Laugh_01	.cache\EE\{EEC3C983-99C6-F70F-8C30-18D620835177}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Laugh\OBJ_Minion_Laugh_Hell_Heavy\SFX_Obj_Min_Set_Hell_Laugh_01		360096
+	845031703	SFX_Coll_Min_Heaven_Scream_03	.cache\F9\{F9639667-D232-0577-434C-74FC32901CFF}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Heaven\COLL_Minion_Heaven_Screams\COLL_Minion_Heaven_Heavy\SFX_Coll_Min_Heaven_Scream_03		231538
+	876658794	SFX_Obj_Minion_Set_Heaven_Impt_03	.cache\C2\{C22AAECA-9865-BFB8-4A04-FF8A1FC51C3F}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Impt\SFX_Obj_Minion_Set_Heaven_Impt_03		200296
+	902662763	SFX_Obj_Min_Set_Hell_Laugh_02	.cache\F3\{F3FBD968-ECFC-8B1C-A425-067A10523832}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Laugh\OBJ_Minion_Laugh_Hell_Med\SFX_Obj_Min_Set_Hell_Laugh_02		380896
+	936940907	SFX_Obj_Min_Set_Heaven_Chord_02	.cache\8E\{8E1B9632-D772-7569-4C74-51E7EC1B5383}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Heaven\OBJ_Minion_Heaven_Chord\OBJ_Minion__Heaven_Chord\SFX_Obj_Min_Set_Heaven_Chord_02		352096
+	947087605	SFX_Coll_Min_Heaven_Scream_02	.cache\C0\{C019B45C-AFE8-08AD-FC7D-94BDD69AE6F6}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Heaven\COLL_Minion_Heaven_Screams\COLL_Minion_Heaven_Med\SFX_Coll_Min_Heaven_Scream_02		233696
+	950030815	SFX_Obj_Min_Set_Impt_03	.cache\FB\{FB948978-CE75-5C6C-24E8-453955755936}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Impact\SFX_Obj_Min_Set_Impt_03		164896
+	955246401	SFX_Obj_Shop_Souls_Growls_02	.cache\AA\{AA221DFF-901C-E124-3673-53C8D9D90D90}.wem		\Containers\Emitters\Shop\EMIT_Shop\SFX_Obj_Shop_Souls_Growls\SFX_Obj_Shop_Souls_Growls_02		318496
+	961158113	SFX_Coll_Min_Sword_03	.cache\46\{46152260-CE18-DB58-5661-796675A7F27B}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Hell\COLL_Min_Heaven_Sword\SFX_Coll_Min_Sword_03		32096
+	987342207	SFX_Coll_Min_Sword_02	.cache\F6\{F6E508A2-F990-B9B0-5147-C6D075FACE97}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Hell\COLL_Min_Heaven_Sword\SFX_Coll_Min_Sword_02		32096
+	1001303815	SFX_Coll_Min_Hammer_03	.cache\00\{0083C313-628D-744D-5187-BEAB5DF2353C}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion\COLL_Min_Type\COLL_Minion_Heaven\COLL_Min_Heaven_Hammer\SFX_Coll_Min_Hammer_03		40744
+	1020016451	UI_Confirm_Back	.cache\86\{86425B4D-92C1-C4C1-138F-9D8666FAD35E}.wem		\Containers\UI\UI\UI_Confirm_QuitGame\UI_Confirm_QuitGame\UI_Confirm_Back		318460
+	1053845861	SFX_Obj_Min_Set_Hell_Chord_02	.cache\0D\{0DD802AB-7148-98F1-0427-7AD29231AB5B}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Chord\SFX_Obj_Min_Set_Hell_Chord_02		229650
+	1069254028	SFX_Obj_Min_Set_Impt_02	.cache\98\{9877799C-0EC8-2B0A-7627-239E6B35064D}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Type\OBJ_Minion_Hell\OBJ_Minion_Hell_Impact\SFX_Obj_Min_Set_Impt_02		162936
 

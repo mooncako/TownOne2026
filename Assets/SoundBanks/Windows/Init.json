@@ -72,6 +72,38 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "2600048462",
+      "Name": "Powerups",
+      "ObjectPath": "\\Switches\\Powerups\\Powerups",
+      "GUID": "{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}",
+      "Switches": [
+       {
+        "Id": "1635194249",
+        "Name": "P4",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P4",
+        "GUID": "{53D1A8B5-2276-43AD-A961-ACDDCAF9CB56}"
+       },
+       {
+        "Id": "1635194252",
+        "Name": "P1",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P1",
+        "GUID": "{155B8958-F0E7-417F-9F5E-734EE27437EB}"
+       },
+       {
+        "Id": "1635194254",
+        "Name": "P3",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P3",
+        "GUID": "{7F85A161-C5AC-47FE-B9FD-E4CDF589798F}"
+       },
+       {
+        "Id": "1635194255",
+        "Name": "P2",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P2",
+        "GUID": "{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"
+       }
+      ]
+     },
+     {
       "Id": "3068666232",
       "Name": "MinionSize",
       "ObjectPath": "\\Switches\\Minions\\MinionSize",
@@ -120,6 +152,6 @@
     ]
    }
   ],
-  "FileHash": "{4603ABE8-3EED-146D-5D16-B314F98C08E7}"
+  "FileHash": "{ED28952B-5BF5-3171-1821-13962F91F526}"
  }
 }

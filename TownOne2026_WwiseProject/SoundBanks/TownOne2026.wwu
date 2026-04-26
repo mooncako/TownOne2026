@@ -6,18 +6,18 @@
 				<SoundBank Name="TO26_SB" ID="{F50FBE01-9BC3-4887-B265-066EE9E10A7A}">
 					<ObjectInclusionList>
 						<ObjectRef Name="OBJ_Minion_Set" ID="{B0EABF68-4739-40B2-84C0-E3ECE88D2B4E}" WorkUnitID="{855A4877-A07E-42D5-91AB-DBEB69BB44EF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="COLL_Wall" ID="{9B91807E-75B3-4130-BAD4-130318532BF6}" WorkUnitID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="COLL_Minion" ID="{9B91807E-75B3-4130-BAD4-130318532BF6}" WorkUnitID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_PauseGame" ID="{C3C6F7AF-8E9B-429F-A7CF-1BDFBD2A9C70}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="TestEvent2D" ID="{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}" WorkUnitID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="EMIT_Shop" ID="{9F5F95FD-7745-445E-92A3-8CE633CFB24E}" WorkUnitID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="EMIT_Powerup" ID="{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}" WorkUnitID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="OBJ_Minion_Die" ID="{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}" WorkUnitID="{855A4877-A07E-42D5-91AB-DBEB69BB44EF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_Confirm_Play" ID="{F18B3BCE-BB08-4677-99F5-D38987E3B27E}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_HIghlight" ID="{D8B3B900-C206-46A8-A79F-DE99BE4BE002}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_ResumeGame" ID="{30183105-F5A9-4A44-9CF3-1085216CBD0E}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_Confirm_Generic" ID="{F3BFB0E8-483E-4B51-9247-4FAC33496544}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_Confirm_QuitGame" ID="{67033A41-BA86-4CA1-845A-C5D254A98EB1}" WorkUnitID="{81D37818-2FDE-4EF0-88D2-4062205CB551}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="TestEvent3D" ID="{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}" WorkUnitID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="EMIT_Score" ID="{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}" WorkUnitID="{B7DC3805-1E3B-4695-A40E-BC568CC435F8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="COLL_Ball" ID="{66D72F1F-0713-4E28-BB9E-73889601DB6F}" WorkUnitID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="PLYR_Paddle_Hit" ID="{C246DFF3-B527-4E8F-B684-AAF06E4FD9D2}" WorkUnitID="{BB253C03-A8B9-451D-98E9-88AF12E7EDDC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PLYR_Paddle_Move" ID="{3C514036-6CAF-4EEE-B630-E35001BF3A7E}" WorkUnitID="{BB253C03-A8B9-451D-98E9-88AF12E7EDDC}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

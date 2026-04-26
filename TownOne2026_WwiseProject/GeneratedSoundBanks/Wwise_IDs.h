@@ -14,13 +14,13 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID COLL_BALL = 1627453353U;
-        static const AkUniqueID COLL_WALL = 3001930118U;
+        static const AkUniqueID COLL_MINION = 773862064U;
+        static const AkUniqueID EMIT_POWERUP = 2031107581U;
+        static const AkUniqueID EMIT_SCORE = 2401631563U;
+        static const AkUniqueID EMIT_SHOP = 2436315639U;
         static const AkUniqueID OBJ_MINION_DIE = 2792663994U;
         static const AkUniqueID OBJ_MINION_SET = 2862290544U;
-        static const AkUniqueID PLYR_PADDLE_HIT = 376783433U;
         static const AkUniqueID PLYR_PADDLE_MOVE = 3258129853U;
-        static const AkUniqueID TESTEVENT2D = 378692277U;
-        static const AkUniqueID TESTEVENT3D = 361914714U;
         static const AkUniqueID UI_CONFIRM_GENERIC = 4060032068U;
         static const AkUniqueID UI_CONFIRM_PLAY = 2428166787U;
         static const AkUniqueID UI_CONFIRM_QUITGAME = 2912873858U;
@@ -69,6 +69,19 @@ namespace AK
                 static const AkUniqueID HELL = 3632828376U;
             } // namespace SWITCH
         } // namespace MINIONTYPE
+
+        namespace POWERUPS
+        {
+            static const AkUniqueID GROUP = 2600048462U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID P1 = 1635194252U;
+                static const AkUniqueID P2 = 1635194255U;
+                static const AkUniqueID P3 = 1635194254U;
+                static const AkUniqueID P4 = 1635194249U;
+            } // namespace SWITCH
+        } // namespace POWERUPS
 
     } // namespace SWITCHES
 

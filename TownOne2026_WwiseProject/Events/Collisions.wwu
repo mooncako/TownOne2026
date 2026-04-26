@@ -8,18 +8,18 @@
 						<Action Name="" ID="{366FADAA-466D-48AF-A0F5-B1CFD04A838F}" ShortID="555765404">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
+									<ObjectRef Name="COLL_Minion_Heaven_Screams" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="COLL_Wall" ID="{9B91807E-75B3-4130-BAD4-130318532BF6}">
+				<Event Name="COLL_Minion" ID="{9B91807E-75B3-4130-BAD4-130318532BF6}">
 					<ChildrenList>
 						<Action Name="" ID="{D1C6BE07-2598-451C-A520-A2FFD5C0CDCC}" ShortID="1042645189">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
+									<ObjectRef Name="COLL_Minion" ID="{5E9AB654-0964-42EA-BE7E-5255C73829DB}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
