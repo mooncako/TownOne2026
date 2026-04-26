@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 [RequireComponent(typeof(Collider))]
 public class PinBall : MonoBehaviour, IPhysics, IInteract
 {
+    public VisualEffect vfx;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
     [SerializeField, BoxGroup("References")] private Team _team;
     [SerializeField, BoxGroup("Settings")] private LayerMask _interactableLayerMask;
@@ -91,6 +93,11 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
                     }
                 }
             }
+
+            if (_rigidBody != null && vfx != null)
+            {
+                vfx.SetVector3("TargetVelocity", _rigidBody.linearVelocity);
+            }
         }
 
     public bool Interact(GameObject Instigator, string Action = "")
@@ -157,4 +164,10 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
 
         isSpiking = false;
     }
+
+    void LateUpdate()
+    {
+        vfx.transform.rotation = Quaternion.identity; 
+    }
+
 }
