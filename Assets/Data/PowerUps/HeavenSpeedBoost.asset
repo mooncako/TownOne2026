@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cdf6d949f516e042a0278e574dead6c, type: 3}
-  m_Name: SpeedBoost
+  m_Name: HeavenSpeedBoost
   m_EditorClassIdentifier: Assembly-CSharp::SpeedBoost
   PowerUpId: Speed Boost
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: e6123fae7e8a05c43886c14a3757793b, type: 3}
   Cost: 300
   _speedMultiplier: 1.5
   _duration: 5

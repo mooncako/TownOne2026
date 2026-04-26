@@ -592,7 +592,7 @@ MonoBehaviour:
   _selection: {fileID: 7856735255627533139}
   _icon: {fileID: 3929863994202686463}
   _costText: {fileID: 8343610320236499788}
-  _shopPowerUp: {fileID: 11400000, guid: daf9c9685d0e39944b6c07b90a9a6003, type: 2}
+  _shopPowerUp: {fileID: 11400000, guid: fb604cde1dac70c498721c5f156ae08e, type: 2}
 --- !u!1 &4359689788538957400
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 398.341}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4132061488495783369
@@ -1901,7 +1901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6464757339782154033, guid: 0f135f593a8bf6a45985c39e0a6c72f2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6464757339782154033, guid: 0f135f593a8bf6a45985c39e0a6c72f2, type: 3}
       propertyPath: m_AnchoredPosition.y
