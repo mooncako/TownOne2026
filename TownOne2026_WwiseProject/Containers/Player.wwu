@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+<WwiseDocument Type="WorkUnit" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" SchemaVersion="133" RootDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}" ParentDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}">
 	<Containers>
 		<WorkUnit Name="Player" ID="{FD69BD5F-0230-4E0A-9448-98326B9AC59B}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
-				<PropertyContainer Name="Player" ID="{AF5C5E53-C9A5-4725-AFDE-651B11B63D83}" ShortID="471461596">
+				<PropertyContainer Name="Paddle" ID="{AF5C5E53-C9A5-4725-AFDE-651B11B63D83}" ShortID="471461596">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -22,16 +29,140 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 								</Reference>
 							</ReferenceList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="PLYR_Paddle_Hit" ID="{DCA9AA8F-5883-41E6-88B3-8101DDCBA4A8}" ShortID="756220005">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-								</Reference>
-							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Paddle_Move_01" ID="{12F83846-92CC-4406-9609-FEDD00E07F25}" ShortID="750441244">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Paddle_Move_01" ID="{1A201A17-ACEC-4DDE-ABFE-27C016034F8E}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Paddle_Move_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="130778159"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Paddle_Move_01" ID="{1A201A17-ACEC-4DDE-ABFE-27C016034F8E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Paddle_Move_02" ID="{6D34A0A7-BA31-4AAD-AEDD-961B37AD7138}" ShortID="102743949">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Paddle_Move_02" ID="{39F5FE9D-CEBD-4FE3-B156-EAC6E7D3846E}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Paddle_Move_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="292003887"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Paddle_Move_02" ID="{39F5FE9D-CEBD-4FE3-B156-EAC6E7D3846E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Paddle_Move_03" ID="{9DF7EDBF-C44F-43BA-812C-0893633DCC3E}" ShortID="995560630">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Paddle_Move_03" ID="{EF7AF65F-7527-496E-925F-372EE512203B}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Paddle_Move_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="418080204"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Paddle_Move_03" ID="{EF7AF65F-7527-496E-925F-372EE512203B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Paddle_Move_04" ID="{38D9A131-6023-4E9D-A5C1-525DC4F409F2}" ShortID="929095966">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Paddle_Move_04" ID="{ACE36A88-4F6A-4FA9-B80C-9E92DE558347}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Paddle_Move_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="653671294"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Paddle_Move_04" ID="{ACE36A88-4F6A-4FA9-B80C-9E92DE558347}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Paddle_Move_05" ID="{E6FE0E95-789C-4350-ABD2-2EEDDD08E6B8}" ShortID="275555581">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Paddle_Move_05" ID="{A9E53968-37DD-4E10-96B3-9952AA4ECEA3}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Paddle_Move_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="138002598"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Paddle_Move_05" ID="{A9E53968-37DD-4E10-96B3-9952AA4ECEA3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Paddle_Move_06" ID="{A63FAF08-3813-44F6-BC4A-C637A342D068}" ShortID="365305648">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Paddle_Move_06" ID="{A2754640-7849-4673-BF38-8E2C67789544}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Paddle_Move_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="706633051"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Paddle_Move_06" ID="{A2754640-7849-4673-BF38-8E2C67789544}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</PropertyContainer>

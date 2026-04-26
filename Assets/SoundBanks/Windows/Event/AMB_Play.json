@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2381502256",
+    "Type": "Event",
+    "GUID": "{D30926B5-0E03-46DD-8149-BF370DE00A22}",
+    "Language": "SFX",
+    "Hash": "{176C5E21-ADB2-A921-D181-82644C95F961}",
+    "ObjectPath": "AMB_Play",
+    "ShortName": "AMB_Play",
+    "Path": "Event/AMB_Play.bnk",
+    "Media": [
+     {
+      "Id": "228702999",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Renders_0426\\AMB_Hell_Bed_St_01.wav",
+      "Path": "Media/228702999.wem",
+      "CachePath": "AC/{AC543254-B4FE-3619-45D3-32B6CC1DEA5A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2381502256",
+      "Name": "AMB_Play",
+      "ObjectPath": "\\Events\\Ambience\\AMB_Play",
+      "GUID": "{D30926B5-0E03-46DD-8149-BF370DE00A22}",
+      "DurationType": "OneShot",
+      "DurationMin": "90.73025",
+      "DurationMax": "90.73025",
+      "MediaRefs": [
+       {
+        "Id": "228702999"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{003D0EF8-3DAF-C9D5-24F9-95B5DC43D557}"
+ }
+}

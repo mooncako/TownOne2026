@@ -46,6 +46,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
         if((_interactableLayerMask.value & (1 << other.gameObject.layer)) != 0) 
         {
             other.gameObject.Interact(gameObject);
+            AkUnitySoundEngine.PostEvent("COLL_Ball", gameObject);
         }
 
         if((_paddleLayerMask.value & (1 << other.gameObject.layer)) != 0)
@@ -53,8 +54,11 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
             if(other.transform.parent.parent.gameObject.TryGetComponent(out Team team))
             {
                 _team.OwnerId = team.OwnerId;
+                AkUnitySoundEngine.PostEvent("COLL_Ball", gameObject);
             }
         }
+<<<<<<< HEAD
+=======
 
         if(other.gameObject.TryGetComponent<PinBall>(out PinBall ball) && ClashVfx)
         {
@@ -66,6 +70,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
             GameObject effect = Instantiate(ClashVfx, other.contacts[0].point, Quaternion.identity);
             Destroy(effect, 0.8f);
         }
+>>>>>>> dev
         
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

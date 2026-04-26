@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{76F1655B-7CC6-4317-A795-C770494F7E67}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Powerups" ID="{76F1655B-7CC6-4317-A795-C770494F7E67}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Powerups" ID="{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}">
+					<ChildrenList>
+						<Switch Name="P1" ID="{155B8958-F0E7-417F-9F5E-734EE27437EB}"/>
+						<Switch Name="P2" ID="{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"/>
+						<Switch Name="P3" ID="{7F85A161-C5AC-47FE-B9FD-E4CDF589798F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

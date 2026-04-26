@@ -3,23 +3,37 @@
 	<Events>
 		<WorkUnit Name="Collisions" ID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="COLL_Min" ID="{66D72F1F-0713-4E28-BB9E-73889601DB6F}">
+				<Event Name="COLL_Ball" ID="{66D72F1F-0713-4E28-BB9E-73889601DB6F}">
 					<ChildrenList>
 						<Action Name="" ID="{366FADAA-466D-48AF-A0F5-B1CFD04A838F}" ShortID="555765404">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
+									<ObjectRef Name="COLL_Ball" ID="{A209ED5A-29AE-49E2-B3CF-BC8E80046873}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="COLL_Wall" ID="{9B91807E-75B3-4130-BAD4-130318532BF6}">
+				<Event Name="COLL_Minion" ID="{9B91807E-75B3-4130-BAD4-130318532BF6}">
 					<ChildrenList>
 						<Action Name="" ID="{D1C6BE07-2598-451C-A520-A2FFD5C0CDCC}" ShortID="1042645189">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
+									<ObjectRef Name="COLL_Minion" ID="{5E9AB654-0964-42EA-BE7E-5255C73829DB}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="COLL_Bumpers" ID="{DD866089-4845-4EB1-BBF0-9B79CC1A418B}">
+					<ChildrenList>
+						<Action Name="" ID="{AF9E8B98-C074-44AC-9BC8-2206746A3D72}" ShortID="341835320">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="COLL_Bumpers" ID="{05E5F08A-3FF2-4A2C-9DDF-0A2BB648AA2A}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

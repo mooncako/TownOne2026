@@ -114,6 +114,11 @@ public class PlayerController : MonoBehaviour,
     {
         _rotationInput = value.Get<float>();
         SetFlip(_rotationInput);
+        if(value.isPressed)
+        {
+            
+        }
+        AkUnitySoundEngine.PostEvent("PLYR_Paddle_Move", gameObject);
     }
 
     private void OnConfirm(InputValue value)
@@ -297,17 +302,23 @@ public class PlayerController : MonoBehaviour,
     {
         _movementSpeed *= multiplier;
         Tween.Delay(duration).OnComplete(() => _movementSpeed /= multiplier);
+        AkUnitySoundEngine.SetSwitch("Powerups", "P1", gameObject);
+        AkUnitySoundEngine.PostEvent("EMIT_Shop", gameObject);
     }
 
     public void ExtendOverExtension(float extensionMultiplier, float duration)
     {
         _rigidBody.transform.localScale *= extensionMultiplier;
         Tween.Delay(duration).OnComplete(() => _rigidBody.transform.localScale /= extensionMultiplier);
+        AkUnitySoundEngine.SetSwitch("Powerups", "P2", gameObject);
+        AkUnitySoundEngine.PostEvent("EMIT_Shop", gameObject);
     }
 
     public void ApplyArmament()
     {
         OnArmamentApplied?.Invoke();
+        AkUnitySoundEngine.SetSwitch("Powerups", "P3", gameObject);
+        AkUnitySoundEngine.PostEvent("EMIT_Shop", gameObject);
     }
 
     public void OnMMEvent(PreparationEndedEvent e)

@@ -18,6 +18,7 @@ public class Bouncer : MonoBehaviour
         normal = Vector3.ProjectOnPlane(normal, Vector3.up);
         other.gameObject.AddImpulse(normal * force, ForceMode.Impulse);
         sizeTick = 1.15f;
+        AkUnitySoundEngine.PostEvent("COLL_Bumpers", gameObject);
     }
 
     private void Update()
