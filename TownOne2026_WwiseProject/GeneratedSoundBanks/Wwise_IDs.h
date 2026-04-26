@@ -13,7 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID COLL_MIN = 3799010202U;
+        static const AkUniqueID COLL_BALL = 1627453353U;
         static const AkUniqueID COLL_WALL = 3001930118U;
         static const AkUniqueID OBJ_MINION_DIE = 2792663994U;
         static const AkUniqueID OBJ_MINION_SET = 2862290544U;
@@ -75,7 +75,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID SB = 1584861542U;
+        static const AkUniqueID TO26_SB = 3575583478U;
     } // namespace BANKS
 
     namespace BUSSES

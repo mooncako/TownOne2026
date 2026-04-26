@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+<WwiseDocument Type="WorkUnit" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="TestEvents" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" OwnerID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" PersistMode="Nested">
+		<WorkUnit Name="TestEvents" ID="{5F86F48D-A682-4F56-8DAB-5623B67FF265}" PersistMode="Standalone">
 			<ChildrenList>
 				<PropertyContainer Name="TestEvents" ID="{C5DF8311-0DFA-480D-92EE-DEA9550FEA6E}" ShortID="825509785">
 					<ReferenceList>

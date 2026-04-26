@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Collisions" ID="{451B36C3-5918-44B2-81D2-0B4A8313D5F0}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="COLL_Min" ID="{66D72F1F-0713-4E28-BB9E-73889601DB6F}">
+				<Event Name="COLL_Ball" ID="{66D72F1F-0713-4E28-BB9E-73889601DB6F}">
 					<ChildrenList>
 						<Action Name="" ID="{366FADAA-466D-48AF-A0F5-B1CFD04A838F}" ShortID="555765404">
 							<ReferenceList>

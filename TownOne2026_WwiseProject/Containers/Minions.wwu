@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+<WwiseDocument Type="WorkUnit" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" SchemaVersion="133" RootDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}" ParentDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}">
 	<Containers>
 		<WorkUnit Name="Minions" ID="{6B084A74-5F57-463A-8EA0-85B559386AFE}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>

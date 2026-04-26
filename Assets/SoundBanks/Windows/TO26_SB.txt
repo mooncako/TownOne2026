@@ -1,0 +1,42 @@
+Event	ID	Name			Wwise Object Path	Notes
+	361914714	TestEvent3D			\TestEvent\TestEvent3D	
+	376783433	PLYR_Paddle_Hit			\Player\PLYR_Paddle_Hit	
+	378692277	TestEvent2D			\TestEvent\TestEvent2D	
+	1402340918	UI_HIghlight			\UI\UI_HIghlight	
+	1627453353	COLL_Ball			\Collisions\COLL_Ball	
+	2428166787	UI_Confirm_Play			\UI\UI_Confirm_Play	
+	2792663994	OBJ_Minion_Die			\Minion\OBJ_Minion_Die	
+	2862290544	OBJ_Minion_Set			\Minion\OBJ_Minion_Set	
+	2912873858	UI_Confirm_QuitGame			\UI\UI_Confirm_QuitGame	
+	3001930118	COLL_Wall			\Collisions\COLL_Wall	
+	3020718913	UI_ResumeGame			\UI\UI_ResumeGame	
+	3258129853	PLYR_Paddle_Move			\Player\PLYR_Paddle_Move	
+	3783962382	UI_PauseGame			\UI\UI_PauseGame	
+	4060032068	UI_Confirm_Generic			\UI\UI_Confirm_Generic	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3068666232	MinionSize			\Minions\MinionSize	
+	4233847531	MinionType			\Minions\MinionType	
+
+Switch	ID	Name	Switch Group			Notes
+	981339021	Med	MinionSize			
+	1846755610	Small	MinionSize			
+	2732489590	Heavy	MinionSize			
+	3460057008	Heaven	MinionType			
+	3632828376	Hell	MinionType			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2108770	SFX_Obj_Minion_Set_Hell-003	.cache\F3\{F3E35BD6-A42A-0075-9894-F99A36C450A9}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Hell\OBJ_Minion_Laugh_Hell_Small\SFX_Obj_Minion_Set_Hell-003		534496
+	4143777	SFX_Obj_Minion_Death_Hell_03	.cache\B8\{B8C3B5E4-4E27-A37B-35CA-0ECE637AB8CE}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Die\OBJ_Minion_Scream\OBJ_Minion_Scream_Hell\OBJ_Minion_Scream_Heaven_Heavy\SFX_Obj_Minion_Death_Hell_03		892896
+	78496703	SFX_Obj_Minion_Set_Heaven-001	.cache\4A\{4A323194-22A6-DF03-E6B0-FA6E13FB6F59}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Med\SFX_Obj_Minion_Set_Heaven-001		531296
+	246321530	SFX_Obj_Minion_Death_Hell_02	.cache\66\{6607E235-A50E-1FE1-65E9-357938A565B7}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Die\OBJ_Minion_Scream\OBJ_Minion_Scream_Hell\OBJ_Minion_Scream_Heaven_Heavy\SFX_Obj_Minion_Death_Hell_02		947296
+	310673553	UI_Select	.cache\84\{84E138C1-7EAC-D5DB-C6EE-9E0361243DB2}.wem		\Containers\UI\UI\UI_Highlight\UI_Highlight\UI_Select		176576
+	502375207	SFX_COLL_Ball	.cache\77\{779F19EE-3586-11D2-EF13-F53E7CB31D68}.wem		\Containers\Ingame\Ingame\Collisions\COLL_Minions\COLL_Minion_Type\COLL_Minion_Heaven\COLL_Minion_Heaven_Small\SFX_COLL_Ball		67296
+	559494333	UI_Confirm_Generic	.cache\78\{781A3F8A-9F1F-1B7E-A110-5B39030623D3}.wem		\Containers\UI\UI\UI_Confirm_Generic\UI_Confirm_Generic\UI_Confirm_Generic		237572
+	656919707	SFX_Obj_Minion_Death_Hell_01	.cache\10\{101C150F-A08D-7FAA-B14C-D6C865FE819C}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Die\OBJ_Minion_Scream\OBJ_Minion_Scream_Hell\OBJ_Minion_Scream_Heaven_Med\SFX_Obj_Minion_Death_Hell_01		912096
+	694912507	SFX_Obj_Minion_Set_Heaven-003	.cache\6C\{6C06C707-A035-0FDD-6FBF-068AA2833351}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Med\SFX_Obj_Minion_Set_Heaven-003		605296
+	803433348	SFX_Obj_Minion_Set_Hell-002	.cache\5F\{5F7F10E4-0079-8435-5D2B-D31868A63682}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Hell\OBJ_Minion_Laugh_Hell_Med\SFX_Obj_Minion_Set_Hell-002		540176
+	917880804	SFX_Obj_Minion_Set_Hell-001	.cache\7B\{7BD124C5-444C-902D-61D2-7BA95C9926E2}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Hell\OBJ_Minion_Laugh_Hell_Heavy\SFX_Obj_Minion_Set_Hell-001		537696
+	944739144	SFX_Obj_Minion_Set_Heaven-002	.cache\B9\{B96B233F-4D22-B3BE-8272-32F065737409}.wem		\Containers\Ingame\Ingame\Minions\OBJ_Minion_Set\OBJ_Minion_Set\OBJ_Minion_Laugh\OBJ_Minion_Laugh_Heaven\OBJ_Minion_Laugh_Heaven_Heavy\SFX_Obj_Minion_Set_Heaven-002		563296
+	1046153367	UI_Confirm_Play	.cache\DA\{DAE875D6-34B2-575B-F3AB-4AAE3DF4EAE8}.wem		\Containers\UI\UI\UI_Confirm_Play\UI_Confirm_Play\UI_Confirm_Play		469596
+

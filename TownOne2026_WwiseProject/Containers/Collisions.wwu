@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+<WwiseDocument Type="WorkUnit" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" SchemaVersion="133" RootDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}" ParentDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}">
 	<Containers>
 		<WorkUnit Name="Collisions" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
@@ -40,6 +40,9 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
 								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 								</Reference>
@@ -49,9 +52,20 @@
 							</ReferenceList>
 							<ChildrenList>
 								<SwitchContainer Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" ShortID="791985215">
+									<PropertyList>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
