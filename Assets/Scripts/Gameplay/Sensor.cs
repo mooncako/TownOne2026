@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Sensor : MonoBehaviour
+public class Sensor : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
@@ -10,5 +10,5 @@ public abstract class Sensor : MonoBehaviour
         }
     }
 
-    protected virtual void OnSensorTriggered(){ }
+    private void OnSensorTriggered(){ }
 }
