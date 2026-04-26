@@ -3205,13 +3205,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001757117}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.90825456, y: 0.31445116, z: 0.08412073, w: 0.2629027}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.70697385, y: 0.013710305, z: -0.013710305, w: 0.70697385}
+  m_LocalPosition: {x: 0, y: 10.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 25.129, y: 159.427, z: 137.174}
+  m_LocalEulerAnglesHint: {x: 90, y: 155.378, z: 153.156}
 --- !u!43 &1015274681
 Mesh:
   m_ObjectHideFlags: 0
@@ -4199,6 +4199,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1184202959}
+    - target: {fileID: 9125946730753319939, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.273693
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125946730753319939, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.72757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125946730753319939, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000041653402
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6176,7 +6188,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 86119930e4f4efe448aee888a8596747, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8114,6 +8126,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 922762571}
+    - target: {fileID: 9125946730753319939, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.273693
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125946730753319939, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.72757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125946730753319939, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000010011718
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8209651672928871168, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
