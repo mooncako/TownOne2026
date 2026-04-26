@@ -32,8 +32,7 @@ public class GameplayUI : MonoBehaviour,
 
     private void Update()
     {
-
-        UpdateTimer();
+        //UpdateTimer();
     }
 
     private void UpdateTimer()
