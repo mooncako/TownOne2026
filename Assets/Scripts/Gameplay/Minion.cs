@@ -30,9 +30,8 @@ public class Minion : MonoBehaviour, IInteract
         health = MaxHealth;
     }
 
-    public void Init(MinionData d)
+    public void Init()
     {
-        data = d;
         switch (data.Faction)
         {
             case Faction.Heaven:
@@ -48,9 +47,10 @@ public class Minion : MonoBehaviour, IInteract
     {
         if ((_pinBallLayerMask.value & (1 << collision.gameObject.layer)) != 0)
         {
-            health -= 1;
-            if (health <= 0) DestroyMinion();
+            
         }
+
+        
     }
 
     private void DestroyMinion()
@@ -62,18 +62,42 @@ public class Minion : MonoBehaviour, IInteract
 
     public bool Interact(GameObject Instigator, string Action = "")
     {
+        if(Instigator.TryGetComponent(out Team instigatorTeam) && health == 1)
+        {
+            if(instigatorTeam.OwnerId != _team.OwnerId)
+            {
+                PlayerInfo info = GameStateManager.Instance.GetPlayerInfo(instigatorTeam.OwnerId);
+                if(info != null)
+                {
+                    info.Score.UpdateScore(Cost);
+                }
+            }
+        }
+
+        if(Instigator.TryGetComponent<IPhysics>(out IPhysics comp))
+        {
+            Vector3 normal = Instigator.GetComponent<Collider>().ClosestPoint(transform.position) - transform.position;
+            normal = Vector3.ProjectOnPlane(normal, Vector3.up);
+            comp.AddImpulse(normal * 20f);
+        }
+        health -= 1;
+
+        if(health <= 0)
+        {
+            DestroyMinion();
+        }
 
         return true;
     }
 
     public List<string> GetInteractOptions(GameObject Instigator = null)
     {
-        throw new System.NotImplementedException();
+        return new List<string>() { "" };
     }
 
     public bool Interact(GameObject Instigator, Action callback = null)
     {
-        throw new NotImplementedException();
+        return true;
     }
 
     public void SetSpawnPoint(MinionSpawnPoint spawnPoint)

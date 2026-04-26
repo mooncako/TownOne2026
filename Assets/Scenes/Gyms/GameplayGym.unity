@@ -3568,99 +3568,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &1105123762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1105123763}
-  - component: {fileID: 1105123764}
-  - component: {fileID: 1105123765}
-  m_Layer: 0
-  m_Name: GameplayInputManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1105123763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105123762}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7958, y: 0, z: -22.98782}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1105123764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105123762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
-  m_NotificationBehavior: 0
-  m_MaxPlayerCount: 2
-  m_AllowJoining: 1
-  m_JoinBehavior: 2
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Join
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c028605b-dfa6-4bce-b20c-9f0f7121099f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 0}
-  m_SplitScreen: 1
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: 2
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!114 &1105123765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105123762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa18a5b1de01f6e40be614703ef0b5f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameplayInputManager
-  _playerPrefab: {fileID: 5903098457447053162, guid: 23ef312959ff85541b21af33d41c586a, type: 3}
-  _heavenSpawnPoint: {fileID: 1538111718}
-  _hellSpawnPoint: {fileID: 1883047254}
-  _disablePlayerInputManager: 1
 --- !u!1 &1107221671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3875,6 +3782,71 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1001 &1432610470
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98063
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19731
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.12781
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889873809935090384, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143585184102677581, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: m_Name
+      value: GameplayInputManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421269104681799794, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: _hellSpawnPoint
+      value: 
+      objectReference: {fileID: 1883047254}
+    - target: {fileID: 5421269104681799794, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
+      propertyPath: _heavenSpawnPoint
+      value: 
+      objectReference: {fileID: 1538111718}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff3fa2235dde97f43be8479230608ddc, type: 3}
 --- !u!1001 &1449724741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7710,7 +7682,7 @@ SceneRoots:
   - {fileID: 220636881}
   - {fileID: 1107221672}
   - {fileID: 452533540930490535}
-  - {fileID: 1105123763}
   - {fileID: 1477464598}
   - {fileID: 15054355}
   - {fileID: 1790668253}
+  - {fileID: 1432610470}

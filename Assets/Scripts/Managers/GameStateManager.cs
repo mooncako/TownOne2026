@@ -299,4 +299,36 @@ public class GameStateManager : MMSingleton<GameStateManager>,
             }
         }
     }
+
+    public PlayerInfo GetPlayerInfo(PlayerId playerId)
+    {
+        if(playerId == HeavenPlayerId)
+        {
+            return HeavenPlayerInfo;
+        }
+        else if(playerId == HellPlayerId)
+        {
+            return HellPlayerInfo;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public PlayerInfo GetOpposedPlayerInfo(PlayerId playerId)
+    {
+        if(playerId == HeavenPlayerId)
+        {
+            return HellPlayerInfo;
+        }
+        else if(playerId == HellPlayerId)
+        {
+            return HeavenPlayerInfo;
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

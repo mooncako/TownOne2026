@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class GameplayInputManager : MonoBehaviour
 {
-    [SerializeField, BoxGroup("References")] private GameObject _playerPrefab;
+    [SerializeField, BoxGroup("References")] private GameObject _heavenPlayerPrefab;
+    [SerializeField, BoxGroup("References")] private GameObject _hellPlayerPrefab;
     [SerializeField, BoxGroup("References")] private Transform _heavenSpawnPoint;
     [SerializeField, BoxGroup("References")] private Transform _hellSpawnPoint;
     [SerializeField, BoxGroup("Settings")] private bool _disablePlayerInputManager = true;
@@ -27,10 +28,10 @@ public class GameplayInputManager : MonoBehaviour
 
         gameState.NormalizeDeviceAssignments();
 
-        PlayerController heavenController = Instantiate(_playerPrefab, _heavenSpawnPoint.position, _heavenSpawnPoint.rotation).GetComponent<PlayerController>();
+        PlayerController heavenController = Instantiate(_heavenPlayerPrefab, _heavenSpawnPoint.position, _heavenSpawnPoint.rotation).GetComponent<PlayerController>();
         heavenController.AssignDevicesFromGameState(GameStateManager.Instance.HeavenPlayerId);
         heavenController.SetTeam(GameStateManager.Instance.HeavenPlayerId);
-        PlayerController hellController = Instantiate(_playerPrefab, _hellSpawnPoint.position, _hellSpawnPoint.rotation).GetComponent<PlayerController>();
+        PlayerController hellController = Instantiate(_hellPlayerPrefab, _hellSpawnPoint.position, _hellSpawnPoint.rotation).GetComponent<PlayerController>();
         hellController.AssignDevicesFromGameState(GameStateManager.Instance.HellPlayerId);
         hellController.SetTeam(GameStateManager.Instance.HellPlayerId);
 

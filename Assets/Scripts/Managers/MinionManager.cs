@@ -125,6 +125,7 @@ public class MinionManager : MonoBehaviour
     public Minion SpawnMinion(Minion m, Vector3 position, Quaternion rotation)
     {
         Minion mInstance = Instantiate(m, position, rotation);
+        mInstance.Init();
         return mInstance;
     }
 
