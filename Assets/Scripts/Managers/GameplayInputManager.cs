@@ -29,9 +29,11 @@ public class GameplayInputManager : MonoBehaviour
 
         PlayerController heavenController = Instantiate(_playerPrefab, _heavenSpawnPoint.position, _heavenSpawnPoint.rotation).GetComponent<PlayerController>();
         heavenController.AssignDevicesFromGameState(GameStateManager.Instance.HeavenPlayerId);
+        Debug.Log(GameStateManager.Instance.HeavenPlayerId);
         heavenController.SetTeam(GameStateManager.Instance.HeavenPlayerId);
         PlayerController hellController = Instantiate(_playerPrefab, _hellSpawnPoint.position, _hellSpawnPoint.rotation).GetComponent<PlayerController>();
         hellController.AssignDevicesFromGameState(GameStateManager.Instance.HellPlayerId);
+        Debug.Log(GameStateManager.Instance.HellPlayerId);
         hellController.SetTeam(GameStateManager.Instance.HellPlayerId);
 
 
