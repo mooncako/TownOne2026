@@ -465,7 +465,7 @@ MonoBehaviour:
   _selection: {fileID: 8881753057211512935}
   _icon: {fileID: 4682450761383994145}
   _costText: {fileID: 4676542602803454054}
-  _shopPowerUp: {fileID: 11400000, guid: b3b99b325ef1975409d771630603b824, type: 2}
+  _shopPowerUp: {fileID: 11400000, guid: f9d5d40bc4a5b8843a64d08bed5d4cc5, type: 2}
 --- !u!1 &4427040224829855859
 GameObject:
   m_ObjectHideFlags: 0
