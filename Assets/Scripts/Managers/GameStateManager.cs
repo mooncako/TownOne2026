@@ -49,6 +49,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             _roundManager.OnRoundStarted += OnRoundStarted;
             _roundManager.OnRoundEnd += OnRoundEnded;
+            _roundManager.OnPreparationEnded += OnPreparationEnded;
         }
 
         if(_gameSettingsSO != null)
@@ -60,24 +61,41 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         this.MMEventStartListening<PlayerSetupCompleteEvent>();
     }
 
+    
+
     void OnDisable()
     {
         if (_roundManager != null)
         {
             _roundManager.OnRoundStarted -= OnRoundStarted;
             _roundManager.OnRoundEnd -= OnRoundEnded;
+            _roundManager.OnPreparationEnded -= OnPreparationEnded;
         }
 
         this.MMEventStopListening<PlayerConnectionEvent>();
         this.MMEventStopListening<PlayerSetupCompleteEvent>();
     }
 
+    public void NewGame()
+    {
+        // CurrentRound++;
+        HeavenPlayerInfo.Initialize(_gameSettings.StartingScore);
+
+        HellPlayerInfo.Initialize(_gameSettings.StartingScore);
+        _gameSettings.Reset(_gameSettingsSO);
+        _roundManager.StartPreparation(3f);
+
+        // _roundManager.StartRound(_gameSettings.RoundDuration);
+    }
+
+    private void OnPreparationEnded()
+    {
+        PreparationEndedEvent.Trigger();
+    }
+
     public void NewRound()
     {
         CurrentRound++;
-        HeavenPlayerInfo.Initialize();
-        HellPlayerInfo.Initialize();
-        _gameSettings.Reset(_gameSettingsSO);
         _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
@@ -300,7 +318,55 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
     public void OnMMEvent(PlayerSetupCompleteEvent e)
     {
-       SetState(GameState.Preparation);
+        HeavenPlayerInfo = e.HeavenPlayerInfo;
+        HellPlayerInfo = e.HellPlayerInfo;
+        HeavenPlayerInfo.OnReadyStateChanged += OnReadyStateChanged;
+        HellPlayerInfo.OnReadyStateChanged += OnReadyStateChanged;
+        SetState(GameState.Preparation);
+        NewGame();
+    }
+
+    private void OnReadyStateChanged(ReadyState state)
+    {
+        if (state == ReadyState.Ready)
+        {
+            if (HeavenPlayerInfo.ReadyState == ReadyState.Ready && HellPlayerInfo.ReadyState == ReadyState.Ready)
+            {
+                NewRound();
+            }
+        }
+    }
+
+    public PlayerInfo GetPlayerInfo(PlayerId playerId)
+    {
+        if(playerId == HeavenPlayerId)
+        {
+            return HeavenPlayerInfo;
+        }
+        else if(playerId == HellPlayerId)
+        {
+            return HellPlayerInfo;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public PlayerInfo GetOpposedPlayerInfo(PlayerId playerId)
+    {
+        if(playerId == HeavenPlayerId)
+        {
+            return HellPlayerInfo;
+        }
+        else if(playerId == HellPlayerId)
+        {
+            return HeavenPlayerInfo;
+        }
+        else
+        {
+            return null;
+        }
     }
 
 }

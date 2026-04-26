@@ -49,11 +49,13 @@ MonoBehaviour:
   _roundManager: {fileID: 4397962489820782125}
   _gameSettingsSO: {fileID: 11400000, guid: a94dc1f46818c7145879a4464aad48ea, type: 2}
   GameState: 0
-  CurrentRound: 1
+  CurrentRound: 0
   HeavenPlayerInfo: {fileID: 0}
   HeavenPlayerId: 0
   HellPlayerInfo: {fileID: 0}
   HellPlayerId: 0
+  PlayerOneDeviceIds: 
+  PlayerTwoDeviceIds: 
   _gameSettings:
     TotalRounds: 0
     RoundDuration: 0
@@ -71,10 +73,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoundManager
   RoundResults:
-  - {}
-  - {}
-  - {}
-  _roundTimer: {fileID: 8389520870944027245}
+  - HeavenPlayerScore:
+      Value: 0
+    HellPlayerScore:
+      Value: 0
+  - HeavenPlayerScore:
+      Value: 0
+    HellPlayerScore:
+      Value: 0
+  - HeavenPlayerScore:
+      Value: 0
+    HellPlayerScore:
+      Value: 0
+  RoundTimer: {fileID: 8389520870944027245}
 --- !u!114 &8389520870944027245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,3 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d246748789ee439419cf7b400dc71421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
+  Duration: 0
+  ElapsedTime: 0
+  IsRunning: 0
