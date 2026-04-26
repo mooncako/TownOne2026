@@ -16,6 +16,7 @@ public class Minion : MonoBehaviour, IInteract
     public float MaxHealth => data.Value;
     public string Name => data.Name;
     public Faction Faction => data.Faction;
+    public float Cost => data.Cost;
 
     void OnValidate()
     {

@@ -1042,64 +1042,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
+      propertyPath: _minionPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
+      propertyPath: '_minionPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3933625717031997218, guid: 66ca2f35ecaa55a46ba9a8d0185eecbb, type: 3}
+    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
+      propertyPath: '_minionPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3933625717031997218, guid: 22ac077a47b122340aeda3960afa5a09, type: 3}
+    - target: {fileID: 3318853566799641743, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
+      propertyPath: '_minionPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3933625717031997218, guid: c5fc5e159ced87d458a3322f8c577aa0, type: 3}
     - target: {fileID: 6308171017389418947, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
       propertyPath: m_Name
-      value: MinionManager (1)
+      value: MinionManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aacadc3b46f913d40878b6382ad6cc8b, type: 3}
---- !u!1 &1762137705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762137707}
-  - component: {fileID: 1762137706}
-  m_Layer: 0
-  m_Name: MinionManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1762137706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762137705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559b7d5c363d882488448eca72bc0821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MinionManager
-  minionTypes:
-  - {fileID: 11400000, guid: b8489642cf7f9da44a880a85dd97f27a, type: 2}
-  - {fileID: 11400000, guid: d1af2fe01dc0c2c4d8d29a61928e1bee, type: 2}
-  - {fileID: 11400000, guid: 91ad68559a3011c43bb9605f9fe3f292, type: 2}
-  minionPrefab: {fileID: 0}
---- !u!4 &1762137707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762137705}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44579, y: 0, z: -6.52687}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098224298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1260,6 @@ SceneRoots:
   - {fileID: 1192096081}
   - {fileID: 690133666}
   - {fileID: 1485297834684450820}
-  - {fileID: 1762137707}
   - {fileID: 1110976194}
   - {fileID: 481767534}
   - {fileID: 1337797095}

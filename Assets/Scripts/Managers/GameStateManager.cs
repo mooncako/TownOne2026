@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
-    MMEventListener<PlayerConnectionEvent>
+    MMEventListener<PlayerConnectionEvent>,
+    MMEventListener<PlayerSetupCompleteEvent>
 {
     [SerializeField, BoxGroup("References")] private RoundManager _roundManager;
     [SerializeField, BoxGroup("References")] private GameSettingsSO _gameSettingsSO;
@@ -25,7 +26,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [ShowInInspector, BoxGroup("Debug"), ReadOnly] public bool IsSceneTransitioning { get; private set; } = false;
 
 
-    private void Awake()
+    protected override void Awake()
     {
         if (_instance != null && _instance != this)
         {
@@ -34,7 +35,6 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         _instance = this;
-        Debug.Log("GameStateManager Awake: instance set and persisted");
         DontDestroyOnLoad(gameObject);
     }
 
@@ -57,6 +57,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         this.MMEventStartListening<PlayerConnectionEvent>();
+        this.MMEventStartListening<PlayerSetupCompleteEvent>();
     }
 
     void OnDisable()
@@ -68,6 +69,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
 
         this.MMEventStopListening<PlayerConnectionEvent>();
+        this.MMEventStopListening<PlayerSetupCompleteEvent>();
     }
 
     public void NewRound()
@@ -101,6 +103,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     private void SetState(GameState state)
     {
         GameState = state;
+        GameStateChangeEvent.Trigger(state);
     }
 
     public void OnMMEvent(PlayerConnectionEvent e)
@@ -294,4 +297,10 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
     public PlayerId GetOpponentID(PlayerId playerId) =>
     playerId == HeavenPlayerId ? HellPlayerId : HeavenPlayerId;
+
+    public void OnMMEvent(PlayerSetupCompleteEvent e)
+    {
+       SetState(GameState.Preparation);
+    }
+
 }

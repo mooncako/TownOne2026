@@ -15,3 +15,4 @@ MonoBehaviour:
   mValue: 1
   mName: Cherub
   mFaction: 0
+  mCost: 300
