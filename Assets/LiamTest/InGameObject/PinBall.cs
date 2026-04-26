@@ -11,6 +11,8 @@ using UnityEngine.VFX;
 public class PinBall : MonoBehaviour, IPhysics, IInteract
 {
     public VisualEffect vfx;
+    [SerializeField] private GameObject ClashVfx;
+    [SerializeField] private GameObject ChargingVfx;
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
     [SerializeField, BoxGroup("References")] private Team _team;
     [SerializeField, BoxGroup("Settings")] private LayerMask _interactableLayerMask;
@@ -55,6 +57,20 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
                 AkUnitySoundEngine.PostEvent("COLL_Ball", gameObject);
             }
         }
+<<<<<<< HEAD
+=======
+
+        if(other.gameObject.TryGetComponent<PinBall>(out PinBall ball) && ClashVfx)
+        {
+            
+        }
+
+        if(ClashVfx)
+        {
+            GameObject effect = Instantiate(ClashVfx, other.contacts[0].point, Quaternion.identity);
+            Destroy(effect, 0.8f);
+        }
+>>>>>>> dev
         
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -127,6 +143,12 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     {
         if (isSpiking) return;
         StartCoroutine(SpikeRoutine(shootDirection, force, freezeSecond));
+        if(ChargingVfx)
+        {
+            GameObject effect = Instantiate(ChargingVfx, this.gameObject.transform.position, Quaternion.identity);
+            Destroy(effect, 0.8f);  
+        }
+
     }
     private bool isSpiking = false;
     public float SpikingCD = 1.0f;
