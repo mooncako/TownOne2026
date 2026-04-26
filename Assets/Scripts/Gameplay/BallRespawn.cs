@@ -15,6 +15,7 @@ public class BallRespawn : MonoBehaviour
             {
              RD.linearVelocity = Vector3.zero;   
             }
+            ball.SpeedMultiplierOverTime = 0.0f;
             Vector3 RandomDir = Vector3.ProjectOnPlane(Random.onUnitSphere, Vector3.up).normalized;
             ball.AddImpulse(RandomDir * 20.0f);
         }

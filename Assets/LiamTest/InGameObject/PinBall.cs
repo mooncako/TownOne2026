@@ -13,6 +13,10 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     [SerializeField, BoxGroup("Settings")] private LayerMask _interactableLayerMask;
     [SerializeField, BoxGroup("Settings")] private LayerMask _paddleLayerMask;
 
+    public float SpeedMultiplierOverTime = 0.0f;
+    protected Vector2 SpeedMultiplierClamp = new Vector2(0.0f, 15.0f);
+    protected Vector2 SpeedMultiplierRemap = new Vector2(1.0f, 5.0f);
+
 
     private void OnValidate()
     {
@@ -23,7 +27,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     public bool AddImpulse(Vector3 Impulse, bool ChangeVel = true)
     {
         //Impulse
-        
+        Impulse = Mathf.Lerp(SpeedMultiplierClamp.y , SpeedMultiplierRemap.y, Mathf.InverseLerp(SpeedMultiplierClamp.x, SpeedMultiplierRemap.x, Impulse.magnitude)) * Impulse.normalized;
         _rigidBody.AddForce(Impulse, ChangeVel? ForceMode.VelocityChange : ForceMode.Impulse);
         return true;
     }
@@ -53,7 +57,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     // Update is called once per frame
     void Update()
     {
-        
+        SpeedMultiplierOverTime = Mathf.Clamp(SpeedMultiplierOverTime + Time.deltaTime, SpeedMultiplierClamp.x, SpeedMultiplierClamp.y);   
     }
 
         [SerializeField] private float sphereRadius = 0.5f;
@@ -63,6 +67,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
 
         void FixedUpdate()
         {
+            SpeedMultiplierOverTime = Mathf.Clamp(SpeedMultiplierOverTime + Time.fixedDeltaTime, SpeedMultiplierClamp.x, SpeedMultiplierClamp.y); 
             Vector3 origin = transform.position + Vector3.up * 0.1f;
 
             if (Physics.SphereCast(origin, sphereRadius, Vector3.down, out RaycastHit hit, castDistance, groundLayer))
