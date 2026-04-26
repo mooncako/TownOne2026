@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+//using System.Numerics;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,6 +14,10 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     [SerializeField, BoxGroup("Settings")] private LayerMask _interactableLayerMask;
     [SerializeField, BoxGroup("Settings")] private LayerMask _paddleLayerMask;
 
+    public float HitTimes = 0.0f;
+    protected Vector2 SpeedMultiplierClamp = new Vector2(0.0f, 25.0f);
+    protected Vector2 SpeedMultiplierRemap = new Vector2(1.0f, 3.0f);
+
 
     private void OnValidate()
     {
@@ -23,8 +28,12 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     public bool AddImpulse(Vector3 Impulse, bool ChangeVel = true)
     {
         //Impulse
-        
+        Impulse = Mathf.Lerp(SpeedMultiplierClamp.y , SpeedMultiplierRemap.y, Mathf.InverseLerp(SpeedMultiplierClamp.x, SpeedMultiplierRemap.x, HitTimes)) * Impulse;
+        Debug.Log(Impulse.ToString());
+        Impulse *= 0.45f;
         _rigidBody.AddForce(Impulse, ChangeVel? ForceMode.VelocityChange : ForceMode.Impulse);
+        HitTimes = Mathf.Clamp(HitTimes+1.0f, SpeedMultiplierClamp.x, SpeedMultiplierClamp.y);
+        //_rigidBody.AddForce(Impulse, ForceMode.VelocityChange);
         return true;
     }
 
@@ -61,6 +70,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
         [SerializeField] private LayerMask groundLayer;
         [SerializeField] private float hoverHeight = 0.5f;
 
+        private Vector3 UpDir = new Vector3(0,1,0);
         void FixedUpdate()
         {
             Vector3 origin = transform.position + Vector3.up * 0.1f;
@@ -77,6 +87,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
                         rb.position = targetWorldPos;
 
                         Vector3 horizontalVel = Vector3.ProjectOnPlane(rb.linearVelocity, hit.normal);
+                        UpDir = hit.normal;
                         rb.linearVelocity = horizontalVel;
                     }
                 }
@@ -87,7 +98,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     {
         if(Action == "Spike")
         {
-            TryExecuteSpike(_rigidBody.linearVelocity, _rigidBody.linearVelocity.magnitude * 5, 0.5f);
+            TryExecuteSpike(_rigidBody.linearVelocity, _rigidBody.linearVelocity.magnitude * 5, 0.2f);
             return true;
         }
         return false;
@@ -127,7 +138,9 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     
         while (elapsed < freezeSecond) 
         {
-            transform.position = originalLocalPos + UnityEngine.Random.insideUnitSphere * 0.05f;
+            Vector3 horizontalVel = Vector3.ProjectOnPlane(dir.normalized, UpDir);
+            //originalLocalPos +=elapsed * dir.normalized * force * 0.01f;
+            transform.position = originalLocalPos + UnityEngine.Random.insideUnitSphere * 0.1f;
             elapsed += Time.deltaTime;
             yield return null;
         }

@@ -5,7 +5,21 @@ using UnityEditor;
 
 public class MinionSpawnPoint : MonoBehaviour
 {
+    public GameObject MinionToSpawn;
     public bool IsOccupied = false;
+
+    public Minion SpawnMinion()
+    {
+        if (IsOccupied)
+        {
+            return null;
+        }
+
+        Minion m = Instantiate(MinionToSpawn, transform.position, transform.rotation).GetComponent<Minion>();
+        m.SetSpawnPoint(this);
+        IsOccupied = true;
+        return m;
+    }
 
 #if UNITY_EDITOR
     void OnDrawGizmos()
