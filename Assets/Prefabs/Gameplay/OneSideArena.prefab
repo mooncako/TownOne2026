@@ -473,6 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &2912692626068907317
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,9 +557,11 @@ GameObject:
   - component: {fileID: 2781860132465243146}
   - component: {fileID: 7847280803151644317}
   - component: {fileID: 3153751522130827290}
+  - component: {fileID: 8017587967376081760}
   - component: {fileID: 532800934809969087}
   - component: {fileID: 2240247349866924712}
   - component: {fileID: 5300065857988073606}
+  - component: {fileID: 8990857026978190189}
   m_Layer: 0
   m_Name: Arch
   m_TagString: Untagged
@@ -1667,6 +1670,20 @@ MonoBehaviour:
         m_ArchDegrees: 180
         m_EndCaps: 1
         m_Smooth: 1
+--- !u!114 &8017587967376081760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6494346868636921897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161335f87904e384eb699bf0e93c60a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bouncer
+  force: 4
+  EnlargeOnHit: 1
 --- !u!23 &532800934809969087
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1746,6 +1763,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!54 &8990857026978190189
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6494346868636921897}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &6622593060440712278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5778,6 +5822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &7982103456283632904
 GameObject:
   m_ObjectHideFlags: 0
@@ -6135,6 +6180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 8
+  EnlargeOnHit: 1
 --- !u!1 &8122853339923229160
 GameObject:
   m_ObjectHideFlags: 0
@@ -8787,6 +8833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 10
+  EnlargeOnHit: 0
 --- !u!1 &4184776005243281991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4853005557866156059, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -8832,6 +8879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 10
+  EnlargeOnHit: 0
 --- !u!1 &4457981665045385228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4942691765162173010, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -8877,6 +8925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 10
+  EnlargeOnHit: 0
 --- !u!1 &7652076799155272375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7819451805830936341, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -8922,6 +8971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1001 &2088012616254994022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9035,6 +9085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1001 &2125602789421848935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9161,6 +9212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &1942477526977543820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -9211,6 +9263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &2744838967144940745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4942691765162173010, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -9256,6 +9309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &8213419502634233458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7819451805830936341, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -9301,6 +9355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1001 &2578110494851052653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9409,6 +9464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &2616011565399331718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d70013e28bde214d915137753280cf2, type: 3}
@@ -9429,6 +9485,10 @@ PrefabInstance:
     - target: {fileID: 6169486074844500294, guid: 14285de8a82345845b6a1c694afec52b, type: 3}
       propertyPath: force
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169486074844500294, guid: 14285de8a82345845b6a1c694afec52b, type: 3}
+      propertyPath: EnlargeOnHit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7924596180174208352, guid: 14285de8a82345845b6a1c694afec52b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9499,6 +9559,10 @@ PrefabInstance:
     - target: {fileID: 6169486074844500294, guid: 14285de8a82345845b6a1c694afec52b, type: 3}
       propertyPath: force
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169486074844500294, guid: 14285de8a82345845b6a1c694afec52b, type: 3}
+      propertyPath: EnlargeOnHit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7924596180174208352, guid: 14285de8a82345845b6a1c694afec52b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9674,6 +9738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &4876163161230510901 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9141215568520393755, guid: 7d70013e28bde214d915137753280cf2, type: 3}
@@ -9719,6 +9784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &4972753737686886203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d70013e28bde214d915137753280cf2, type: 3}
@@ -9769,6 +9835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1001 &5508234354074589273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9895,6 +9962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 10
+  EnlargeOnHit: 0
 --- !u!4 &5475133098608132018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -9945,6 +10013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &8131113742338111420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4853005557866156059, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -9990,6 +10059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &8581932281436472823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4942691765162173010, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -10035,6 +10105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1001 &5908998264116976083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10143,6 +10214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &6163813670731841080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
@@ -10256,6 +10328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &6638705029549646350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
@@ -10387,6 +10460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &6010002793976602089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4942691765162173010, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -10432,6 +10506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1 &6100530986694619042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4853005557866156059, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -10477,6 +10552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &8035935528462018476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
@@ -10527,6 +10603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!1001 &8212853344288582775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10635,6 +10712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 4
+  EnlargeOnHit: 0
 --- !u!4 &8535257970870471580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
