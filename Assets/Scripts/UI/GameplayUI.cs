@@ -10,16 +10,13 @@ using UnityEngine.UI;
 public class GameplayUI : MonoBehaviour,
     MMEventListener<ScoreChangeEvent>
 {
-    [SerializeField, BoxGroup("FillDisplay")] private Image _heavenDisplay;
-    [SerializeField, BoxGroup("FillDisplay")] private Image _hellDisplay;
-
-    [SerializeField, BoxGroup("FillDisplay")] private TMP_Text _heavenLabel;
-    [SerializeField, BoxGroup("FillDisplay")] private TMP_Text _hellLabel;
+    [SerializeField, BoxGroup("FillDisplay")] private Image _p1Display;
+    [SerializeField, BoxGroup("FillDisplay")] private Image _p2Display;
 
     [SerializeField, BoxGroup("Timer")] private TMP_Text _timer;
 
-    private float heavenTotal;
-    private float hellTotal;
+    private float p1total;
+    private float p2total;
 
     private void OnEnable()
     {
@@ -32,14 +29,14 @@ public class GameplayUI : MonoBehaviour,
 
     private void Update()
     {
-        //UpdateTimer();
+        UpdateTimer();
     }
 
     private void UpdateTimer()
     {
         if(GameStateManager.Instance != null)
         {
-            float timeInSeconds = GameStateManager.Instance.RoundManager.RoundTimer.ElapsedTime;
+            float timeInSeconds = GameStateManager.Instance.RoundManager.RoundTimer.Countdown;
             int minutes = Mathf.FloorToInt(timeInSeconds / 60);
             int seconds = Mathf.FloorToInt(timeInSeconds % 60);
             string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
@@ -51,13 +48,13 @@ public class GameplayUI : MonoBehaviour,
     public void OnMMEvent(ScoreChangeEvent e)
     {
         
-        if (e.Owner == GameStateManager.Instance.HeavenPlayerInfo)
+        if (GameStateManager.Instance.GetPlayerIDFromInfo(e.Owner) == PlayerId.PlayerOne)
         {
-            e.NewScore = heavenTotal;
+            e.NewScore = p1total;
         }
         else
         {
-            e.NewScore = hellTotal;
+            e.NewScore = p2total;
         }
 
         UpdateScoreDisplay();
@@ -66,25 +63,18 @@ public class GameplayUI : MonoBehaviour,
 
     private void UpdateScoreDisplay()
     {
-        float combinedTotal = heavenTotal + hellTotal;
+        float combinedTotal = p1total + p2total;
 
         if (combinedTotal == 0f)
         {
-            _heavenDisplay.fillAmount = 0.5f;
-            _hellDisplay.fillAmount = 0.5f;
-            _heavenLabel.text = "0";
-            _hellLabel.text = "0";
+            _p1Display.fillAmount = 0.5f;
+            _p2Display.fillAmount = 0.5f;
             return;
         }
 
         // Fill
-        _heavenDisplay.fillAmount = heavenTotal / combinedTotal;
-        _hellDisplay.fillAmount = hellTotal / combinedTotal;
-
-        // Label
-
-        _heavenLabel.text = heavenTotal.ToString();
-        _hellLabel.text = hellTotal.ToString();
+        _p1Display.fillAmount = p1total / combinedTotal;
+        _p2Display.fillAmount = p2total / combinedTotal;
     }
 
 }

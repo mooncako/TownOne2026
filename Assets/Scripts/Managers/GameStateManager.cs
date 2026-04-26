@@ -1,10 +1,11 @@
-using System;
-using System.Collections.Generic;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MMSingleton<GameStateManager>,
     MMEventListener<PlayerConnectionEvent>,
@@ -23,6 +24,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerOneDeviceIds = new List<int>();
     [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerTwoDeviceIds = new List<int>();
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
+    private string _gameOverSceneName = "EndScreen";
+
     [ShowInInspector, BoxGroup("Debug"), ReadOnly] public bool IsSceneTransitioning { get; private set; } = false;
 
 
@@ -114,6 +117,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             // Game End
             SetState(GameState.GameEnd);
+            SceneManager.LoadScene(_gameOverSceneName);
         }
     }
 
