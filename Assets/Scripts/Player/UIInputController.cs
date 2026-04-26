@@ -33,7 +33,7 @@ public class UIInputController : MonoBehaviour,
         {
             if (MoveCursorRight(_playerOneCursor, _playerTwoCursor))
             {
-                PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Hell, ConnectionType.Connect);
+                PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Heaven, ConnectionType.Connect);
             }
             else
             {
@@ -45,7 +45,7 @@ public class UIInputController : MonoBehaviour,
         {
             if (MoveCursorLeft(_playerOneCursor, _playerTwoCursor))
             {
-                PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Heaven, ConnectionType.Connect);
+                PlayerConnectionEvent.Trigger(PlayerId.PlayerOne, Faction.Hell, ConnectionType.Connect);
             }
             else
             {
@@ -62,7 +62,7 @@ public class UIInputController : MonoBehaviour,
         {
             if (MoveCursorRight(_playerTwoCursor, _playerOneCursor))
             {
-                PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Hell, ConnectionType.Connect);
+                PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Heaven, ConnectionType.Connect);
             }else{
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Hell, ConnectionType.Disconnect);
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Heaven, ConnectionType.Disconnect);
@@ -72,7 +72,7 @@ public class UIInputController : MonoBehaviour,
         {
             if (MoveCursorLeft(_playerTwoCursor, _playerOneCursor))
             {
-                PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Heaven, ConnectionType.Connect);
+                PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Hell, ConnectionType.Connect);
             }else{
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Hell, ConnectionType.Disconnect);
                 PlayerConnectionEvent.Trigger(PlayerId.PlayerTwo, Faction.Heaven, ConnectionType.Disconnect);
