@@ -135,12 +135,14 @@ MonoBehaviour:
   _paddleLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  SpeedMultiplierOverTime: 0
   sphereRadius: 0.5
   castDistance: 4
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
   hoverHeight: 0.5
+  SpikingCD: 1
 --- !u!54 &3630448059594018733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3960820101879804104}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

@@ -150,6 +150,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Navigate",
+                    "type": "Value",
+                    "id": "f4014a43-9832-452a-8f0a-5a8d192f6d70",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "64831ebc-de3c-4d61-aa55-36c353894fa0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -317,74 +335,10 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Preparation",
-            "id": "ec8ae12a-a13f-4188-8c20-fcc71347ee75",
-            "actions": [
-                {
-                    "name": "Navigation",
-                    "type": "Value",
-                    "id": "e6cc5fab-b266-4167-99ce-377c9f62ad85",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Confirm",
-                    "type": "Button",
-                    "id": "fafd79e5-6150-471a-b6eb-6168d87a1845",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "CycleRight",
-                    "type": "Button",
-                    "id": "7e29f27e-f30a-474e-acb2-4a5ec4f084f6",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "CycleLeft",
-                    "type": "Button",
-                    "id": "c7cd4b1b-429c-4766-bbac-5e6f5738c3aa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Ready",
-                    "type": "Button",
-                    "id": "d2ceeffc-fa15-4c5b-8862-bdf19d925926",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "5056e680-7311-4f10-b653-c99c2bc85a56",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Confirm",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "82f982ba-e224-47c4-afdc-d4308b48bf02",
+                    "id": "a175038e-16ab-4429-b3b8-0e1daddc210c",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
@@ -395,170 +349,88 @@
                 },
                 {
                     "name": "",
-                    "id": "0a64b837-74b9-43cc-a975-4dd74c675aef",
-                    "path": "<Gamepad>/rightShoulder",
+                    "id": "828a7287-486b-4ab0-b2e9-4ec14293b313",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CycleRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7c6557bf-e71b-4398-b296-7ef147010b89",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CycleRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "79fc2890-3db9-4106-96ae-a1004c731899",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CycleLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "984b2576-e4a1-4252-9425-c3a9cde847ac",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CycleLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "39e65c9c-825c-4f4c-8798-3cdff03cbe91",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Ready",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0384114d-9b4d-4311-a079-cda3b1a75b93",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Ready",
+                    "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "1D Axis",
-                    "id": "ad4fa119-ae7e-4188-9644-e765840b0711",
+                    "id": "765befb3-d5a8-4571-b4c0-4bdee1b03623",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Navigation",
+                    "action": "Navigate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
-                    "id": "9bff7327-d68f-441d-9c20-6bec1395634c",
-                    "path": "<Keyboard>/leftArrow",
+                    "id": "be74e66c-4ba5-4a8f-a0c9-9c8d1d23ccfa",
+                    "path": "<Gamepad>/rightStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Navigation",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "447e175b-1f8d-4b3f-8a56-72eeb5baac81",
-                    "path": "<Keyboard>/rightArrow",
+                    "id": "1e9330fc-a571-4b5c-ab27-97ea3bc877c1",
+                    "path": "<Gamepad>/rightStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Navigation",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "1D Axis",
-                    "id": "005d4dbf-de87-4b40-8df6-bf41980b4ada",
+                    "id": "f2bf3c80-66fd-4245-b549-6c2eb2f7b01e",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Navigation",
+                    "action": "Navigate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
-                    "id": "0dbaf2d8-8d58-4050-af69-cfc83d3ea5d5",
-                    "path": "<Gamepad>/leftStick/right",
+                    "id": "026fe142-f09c-43ca-8235-8d851a51a2c9",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Navigation",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "0f8210bc-59d5-494c-af2f-7eb768d8002e",
-                    "path": "<Gamepad>/leftStick/left",
+                    "id": "fad30cbf-bcde-4e08-b3ee-6cf91af4f9b5",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Navigation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "9d7464e0-3324-4f9a-a3d8-394e38158edd",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigation",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "05a16e33-4c10-4be3-bf4f-e029e3168bf1",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "c920344c-0c48-4bf7-bab2-22469be88d97",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigation",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Preparation",
+            "id": "ec8ae12a-a13f-4188-8c20-fcc71347ee75",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []
