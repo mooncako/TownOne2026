@@ -1,9 +1,12 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class PinBall : MonoBehaviour, IPhysics
+public class PinBall : MonoBehaviour, IPhysics, IInteract
 {
     [SerializeField, BoxGroup("References")] private Rigidbody _rigidBody;
     [SerializeField, BoxGroup("References")] private Team _team;
@@ -66,7 +69,7 @@ public class PinBall : MonoBehaviour, IPhysics
             {
                 float dot = Vector3.Dot(Vector3.up, hit.normal);
 
-                if (dot >= 0.866f) 
+                if (dot >= 0.25f) 
                 {
                     Vector3 targetWorldPos = hit.point + hit.normal * hoverHeight;
                     if (TryGetComponent(out Rigidbody rb))
@@ -79,4 +82,67 @@ public class PinBall : MonoBehaviour, IPhysics
                 }
             }
         }
+
+    public bool Interact(GameObject Instigator, string Action = "")
+    {
+        if(Action == "Spike")
+        {
+            TryExecuteSpike(_rigidBody.linearVelocity, _rigidBody.linearVelocity.magnitude * 5, 0.5f);
+            return true;
+        }
+        return false;
+    }
+
+    public bool Interact(GameObject Instigator, Action callback = null)
+    {
+        return false;
+    }
+
+    public List<string> GetInteractOptions(GameObject Instigator = null)
+    {
+        return new List<string>{"Spike"};
+    }
+
+    public void TryExecuteSpike(Vector3 shootDirection, float force, float freezeSecond)
+    {
+        if (isSpiking) return;
+        StartCoroutine(SpikeRoutine(shootDirection, force, freezeSecond));
+    }
+    private bool isSpiking = false;
+    public float SpikingCD = 1.0f;
+    IEnumerator SpikeRoutine(Vector3 dir, float force, float freezeSecond)
+    {
+        isSpiking = true;
+
+        bool useGravity = _rigidBody.useGravity;
+        _rigidBody.useGravity = false;
+        
+        _rigidBody.linearVelocity = Vector3.zero;
+        _rigidBody.angularVelocity = Vector3.zero;
+        
+        //Jitter
+        float elapsed = 0;
+
+        Vector3 originalLocalPos = transform.position; 
+    
+        while (elapsed < freezeSecond) 
+        {
+            transform.position = originalLocalPos + UnityEngine.Random.insideUnitSphere * 0.05f;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = originalLocalPos;
+
+        //End of Jitter
+
+        _rigidBody.useGravity = useGravity;
+
+        Vector3 launchDir = dir.normalized;
+
+        _rigidBody.AddForce(launchDir * force, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(SpikingCD);
+
+        isSpiking = false;
+    }
 }
