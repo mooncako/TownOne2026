@@ -53,6 +53,7 @@ MonoBehaviour:
     m_Bits: 64
   health: 0
   data: {fileID: 11400000, guid: d1af2fe01dc0c2c4d8d29a61928e1bee, type: 2}
+  mSpawnPoint: {fileID: 0}
 --- !u!114 &1428239234367923588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +182,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1806680513116206669, guid: b223c2c30a1843b4cbe97b371a577c21, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 43697fd042c60cd449e14c4f43a418da, type: 2}
     - target: {fileID: -1806680513116206669, guid: b223c2c30a1843b4cbe97b371a577c21, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 

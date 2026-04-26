@@ -25,8 +25,9 @@ public class PlayerInfo : MonoBehaviour
         Score.Value = value;
     }
 
-    public void Initialize()
+    public void Initialize(float initialScore)
     {
+        InitializeScore(initialScore);
         ToggleReadyState(ReadyState.Preparing);
     }
 

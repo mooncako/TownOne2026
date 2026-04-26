@@ -72,12 +72,19 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         this.MMEventStopListening<PlayerSetupCompleteEvent>();
     }
 
+    public void NewGame()
+    {
+        // CurrentRound++;
+        HeavenPlayerInfo.Initialize(_gameSettings.StartingScore);
+
+        HellPlayerInfo.Initialize(_gameSettings.StartingScore);
+        _gameSettings.Reset(_gameSettingsSO);
+        // _roundManager.StartRound(_gameSettings.RoundDuration);
+    }
+
     public void NewRound()
     {
         CurrentRound++;
-        HeavenPlayerInfo.Initialize();
-        HellPlayerInfo.Initialize();
-        _gameSettings.Reset(_gameSettingsSO);
         _roundManager.StartRound(_gameSettings.RoundDuration);
     }
 
@@ -300,7 +307,55 @@ public class GameStateManager : MMSingleton<GameStateManager>,
 
     public void OnMMEvent(PlayerSetupCompleteEvent e)
     {
-       SetState(GameState.Preparation);
+        HeavenPlayerInfo = e.HeavenPlayerInfo;
+        HellPlayerInfo = e.HellPlayerInfo;
+        HeavenPlayerInfo.OnReadyStateChanged += OnReadyStateChanged;
+        HellPlayerInfo.OnReadyStateChanged += OnReadyStateChanged;
+        SetState(GameState.Preparation);
+        NewGame();
+    }
+
+    private void OnReadyStateChanged(ReadyState state)
+    {
+        if (state == ReadyState.Ready)
+        {
+            if (HeavenPlayerInfo.ReadyState == ReadyState.Ready && HellPlayerInfo.ReadyState == ReadyState.Ready)
+            {
+                NewRound();
+            }
+        }
+    }
+
+    public PlayerInfo GetPlayerInfo(PlayerId playerId)
+    {
+        if(playerId == HeavenPlayerId)
+        {
+            return HeavenPlayerInfo;
+        }
+        else if(playerId == HellPlayerId)
+        {
+            return HellPlayerInfo;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public PlayerInfo GetOpposedPlayerInfo(PlayerId playerId)
+    {
+        if(playerId == HeavenPlayerId)
+        {
+            return HellPlayerInfo;
+        }
+        else if(playerId == HellPlayerId)
+        {
+            return HeavenPlayerInfo;
+        }
+        else
+        {
+            return null;
+        }
     }
 
 }

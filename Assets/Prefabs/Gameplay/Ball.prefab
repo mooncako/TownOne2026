@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3960820101879804104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54647, y: 0.5, z: 2.50082}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -101,7 +101,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3960820101879804104}
-  m_Material: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -135,6 +135,12 @@ MonoBehaviour:
   _paddleLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  sphereRadius: 0.5
+  castDistance: 4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  hoverHeight: 0.5
 --- !u!54 &3630448059594018733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,7 +167,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5497839850423969049
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,11 +15,10 @@ public class MinionData : ScriptableObject
     [SerializeField]
     private float mCost;
 
-    private MinionSpawnPoint mSpawnPoint;
+    
 
     public int Value => mValue;
     public string Name => mName;
     public Faction Faction => mFaction;
     public float Cost => mCost;
-    public MinionSpawnPoint MinionSpawnPoint => mSpawnPoint;
 }
