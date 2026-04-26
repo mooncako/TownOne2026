@@ -13,6 +13,9 @@ public class GameplayUI : MonoBehaviour,
     [SerializeField, BoxGroup("FillDisplay")] private Image _p1Display;
     [SerializeField, BoxGroup("FillDisplay")] private Image _p2Display;
 
+    [SerializeField, BoxGroup("Score")] private TMP_Text _p1Score;
+    [SerializeField, BoxGroup("Score")] private TMP_Text _p2Score;
+
     [SerializeField, BoxGroup("Timer")] private TMP_Text _timer;
 
     private float p1total;
@@ -25,6 +28,14 @@ public class GameplayUI : MonoBehaviour,
     private void OnDisable()
     {
         this.MMEventStopListening<ScoreChangeEvent>();
+    }
+
+    void Start()
+    {
+        // HARDCODED CAUSE THE GAME SETTINGS IS PRIVATE...
+        _p1Score.text = "1000";
+        _p2Score.text = "1000";
+        UpdateScoreDisplay();
     }
 
     private void Update()
@@ -65,11 +76,11 @@ public class GameplayUI : MonoBehaviour,
         
         if (GameStateManager.Instance.GetPlayerIDFromInfo(e.Owner) == PlayerId.PlayerOne)
         {
-            e.NewScore = p1total;
+            p1total = e.Owner.Score.Value;
         }
         else
         {
-            e.NewScore = p2total;
+            p2total = e.Owner.Score.Value;
         }
 
         UpdateScoreDisplay();
@@ -90,6 +101,10 @@ public class GameplayUI : MonoBehaviour,
         // Fill
         _p1Display.fillAmount = p1total / combinedTotal;
         _p2Display.fillAmount = p2total / combinedTotal;
+
+        //Text
+        _p1Score.text = p1total.ToString();
+        _p2Score.text = p2total.ToString();
     }
 
 }

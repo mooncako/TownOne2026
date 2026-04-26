@@ -11,6 +11,7 @@ public class Sensor : MonoBehaviour
     {
         if (other.TryGetComponent<PinBall>(out var pinBall))
         {
+            powerup.ApplyEffect(pinBall.Team.OwnerId); // temporary?
             SensorHitEvent.Trigger(pinBall.Team.OwnerId, powerup);
         }
     }

@@ -7,5 +7,6 @@ public class PointBonus : Powerup
     public override void ApplyEffect(PlayerInfo playerInfo)
     {
         playerInfo.Score.UpdateScore(amt);
+        GameStateManager.Instance.GetOpponentInfo(playerInfo).Score.UpdateScore(-amt);
     }
 }
