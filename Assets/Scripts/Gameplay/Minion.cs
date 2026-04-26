@@ -55,24 +55,23 @@ public class Minion : MonoBehaviour, IInteract
 
     private void DestroyMinion()
     {
-        Debug.Log("Destroyed");
         mSpawnPoint.IsOccupied = false;
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     public bool Interact(GameObject Instigator, string Action = "")
     {
-        if(Instigator.TryGetComponent(out Team instigatorTeam) && health == 1)
-        {
-            if(instigatorTeam.OwnerId != _team.OwnerId)
-            {
-                PlayerInfo info = GameStateManager.Instance.GetPlayerInfo(instigatorTeam.OwnerId);
-                if(info != null)
-                {
-                    info.Score.UpdateScore(Cost/2);
-                }
-            }
-        }
+        // if(Instigator.TryGetComponent(out Team instigatorTeam) && health == 1)
+        // {
+        //     if(instigatorTeam.OwnerId != _team.OwnerId)
+        //     {
+        //         PlayerInfo info = GameStateManager.Instance.GetPlayerInfo(instigatorTeam.OwnerId);
+        //         if(info != null)
+        //         {
+        //             info.Score.UpdateScore(Cost/2);
+        //         }
+        //     }
+        // }
 
         if(Instigator.TryGetComponent<IPhysics>(out IPhysics comp))
         {

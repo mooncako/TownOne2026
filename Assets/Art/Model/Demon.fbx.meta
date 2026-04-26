@@ -22,8 +22,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: eye.yellow.001
+    second: {fileID: 2100000, guid: 20ad520baedcb184fb3234f90ad7f21f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: red
     second: {fileID: 2100000, guid: f1e9ec7635f9feb49bbefa779e2114f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red.001
+    second: {fileID: 2100000, guid: 0062b0aebed5f614e8ed67e016e6384c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

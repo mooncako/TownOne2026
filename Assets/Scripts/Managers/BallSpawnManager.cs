@@ -14,6 +14,8 @@ public class BallSpawnManager : MonoBehaviour,
     public GameObject prefabToSpawn;
     public float spawnInterval = 2f;
 
+    public float force = 2.0f;
+
     void OnEnable()
     {
         this.MMEventStartListening<GameStateChangeEvent>();
@@ -38,7 +40,7 @@ public class BallSpawnManager : MonoBehaviour,
                 if(newBall.gameObject.TryGetComponent<PinBall>(out PinBall ball))
                 {
                     Vector3 RandomDir = Vector3.ProjectOnPlane(Random.onUnitSphere, Vector3.up).normalized;
-                    ball.AddImpulse(RandomDir * 20.0f);
+                    ball.AddImpulse(RandomDir * force);
                 }
             }
 
