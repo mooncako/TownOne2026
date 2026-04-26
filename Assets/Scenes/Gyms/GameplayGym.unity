@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970604993239177060, guid: 1d9da404a0f5c74458ec9294fafbb870, type: 3}
       propertyPath: maxNumBalls
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6702190581551194394, guid: 1d9da404a0f5c74458ec9294fafbb870, type: 3}
       propertyPath: m_LocalPosition.x
