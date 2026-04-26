@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMB_PLAY = 2381502256U;
         static const AkUniqueID COLL_BALL = 1627453353U;
         static const AkUniqueID COLL_MINION = 773862064U;
         static const AkUniqueID EMIT_POWERUP = 2031107581U;

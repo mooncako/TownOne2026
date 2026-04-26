@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2381502256",
+    "Type": "Event",
+    "GUID": "{D30926B5-0E03-46DD-8149-BF370DE00A22}",
+    "Language": "SFX",
+    "Hash": "{0BCB0C1F-51FB-B227-FD39-12F6634EE439}",
+    "ObjectPath": "AMB_Play",
+    "ShortName": "AMB_Play",
+    "Path": "Event/AMB_Play.bnk",
+    "Events": [
+     {
+      "Id": "2381502256",
+      "Name": "AMB_Play",
+      "ObjectPath": "\\Events\\Ambience\\AMB_Play",
+      "GUID": "{D30926B5-0E03-46DD-8149-BF370DE00A22}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F17E41A2-3852-C34F-F2DA-042201A3E701}"
+ }
+}
