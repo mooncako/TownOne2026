@@ -66,7 +66,7 @@ public class PinBall : MonoBehaviour, IPhysics
             {
                 float dot = Vector3.Dot(Vector3.up, hit.normal);
 
-                if (dot >= 0.866f) 
+                if (dot >= 0.25f) 
                 {
                     Vector3 targetWorldPos = hit.point + hit.normal * hoverHeight;
                     if (TryGetComponent(out Rigidbody rb))

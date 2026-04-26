@@ -135,6 +135,12 @@ MonoBehaviour:
   _paddleLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  sphereRadius: 0.5
+  castDistance: 4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  hoverHeight: 0.5
 --- !u!54 &3630448059594018733
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -2757,7 +2757,7 @@ GameObject:
   - component: {fileID: 4071418280095190398}
   - component: {fileID: 5175900323452183493}
   - component: {fileID: 8116635913673610955}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arch (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5949,7 +5949,7 @@ GameObject:
   - component: {fileID: 7043224876227753812}
   - component: {fileID: 580202727539743210}
   - component: {fileID: 1580461583442689489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
