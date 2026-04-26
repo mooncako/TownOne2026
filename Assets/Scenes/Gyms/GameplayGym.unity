@@ -925,6 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncer
   force: 3
+  EnlargeOnHit: 0
 --- !u!43 &756504420
 Mesh:
   m_ObjectHideFlags: 0
@@ -2061,7 +2062,7 @@ PrefabInstance:
       objectReference: {fileID: 32604467}
     - target: {fileID: 285537026633166998, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_VersionIndex
-      value: 9445
+      value: 9448
       objectReference: {fileID: 0}
     - target: {fileID: 532800934809969087, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2141,7 +2142,7 @@ PrefabInstance:
       objectReference: {fileID: 555435115}
     - target: {fileID: 2228375148295978042, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_VersionIndex
-      value: 2615
+      value: 2618
       objectReference: {fileID: 0}
     - target: {fileID: 2240247349866924712, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_Mesh
@@ -2169,7 +2170,7 @@ PrefabInstance:
       objectReference: {fileID: 1891055456}
     - target: {fileID: 4000476849260411173, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_VersionIndex
-      value: 9445
+      value: 9448
       objectReference: {fileID: 0}
     - target: {fileID: 4071418280095190398, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2185,7 +2186,7 @@ PrefabInstance:
       objectReference: {fileID: 1070194634}
     - target: {fileID: 4506697894855233480, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_VersionIndex
-      value: 7259
+      value: 7262
       objectReference: {fileID: 0}
     - target: {fileID: 4708606829992962242, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_Mesh
@@ -2233,7 +2234,7 @@ PrefabInstance:
       objectReference: {fileID: 220234930}
     - target: {fileID: 7847280803151644317, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_VersionIndex
-      value: 3745
+      value: 3748
       objectReference: {fileID: 0}
     - target: {fileID: 7934896072504724508, guid: a92482af03af2354ea7f07a2dd07cddf, type: 3}
       propertyPath: m_Mesh
@@ -4579,7 +4580,7 @@ PrefabInstance:
       objectReference: {fileID: 932079839}
     - target: {fileID: 765381538386058438, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_VersionIndex
-      value: 2618
+      value: 2639
       objectReference: {fileID: 0}
     - target: {fileID: 1158360095453990167, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_Mesh
@@ -4611,7 +4612,7 @@ PrefabInstance:
       objectReference: {fileID: 1587286239}
     - target: {fileID: 3053908426541183463, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_VersionIndex
-      value: 9448
+      value: 9469
       objectReference: {fileID: 0}
     - target: {fileID: 3281402391908318865, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_Mesh
@@ -4619,7 +4620,7 @@ PrefabInstance:
       objectReference: {fileID: 989564586}
     - target: {fileID: 3281402391908318865, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_VersionIndex
-      value: 7262
+      value: 7283
       objectReference: {fileID: 0}
     - target: {fileID: 3648399091376341125, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_Mesh
@@ -4627,7 +4628,7 @@ PrefabInstance:
       objectReference: {fileID: 955538296}
     - target: {fileID: 3648399091376341125, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_VersionIndex
-      value: 9448
+      value: 9469
       objectReference: {fileID: 0}
     - target: {fileID: 4170889218864768677, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_Mesh
@@ -4639,7 +4640,7 @@ PrefabInstance:
       objectReference: {fileID: 1492652577}
     - target: {fileID: 4191827825956891636, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_VersionIndex
-      value: 3748
+      value: 3769
       objectReference: {fileID: 0}
     - target: {fileID: 4968702558959023978, guid: 0838e2899b73f34458bd057125a2aa3e, type: 3}
       propertyPath: m_Mesh

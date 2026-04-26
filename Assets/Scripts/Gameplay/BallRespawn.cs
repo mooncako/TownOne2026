@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class BallRespawn : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class BallRespawn : MonoBehaviour
     {
         if(other.gameObject.TryGetComponent<PinBall>(out PinBall ball))
         {
+            ball.vfx.Reinit();
             other.gameObject.transform.position = respawnLocation;
             if(ball.TryGetComponent<Rigidbody>(out Rigidbody RD))
             {
              RD.linearVelocity = Vector3.zero;   
             }
+            
+            ball.vfx.Play();
             ball.HitTimes = 0.0f;
             Vector3 RandomDir = Vector3.ProjectOnPlane(Random.onUnitSphere, Vector3.up).normalized;
             ball.AddImpulse(RandomDir * force);
