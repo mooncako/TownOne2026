@@ -4,7 +4,8 @@ using UnityEngine;
 public class BallRespawn : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    Vector3 respawnLocation = new Vector3(0,1.5f,0);
+    Vector3 respawnLocation = new Vector3(0,2.0f,0);
+    public float force = 2.0f;
 
     private void OnTriggerExit(Collider other)
     {
@@ -15,9 +16,9 @@ public class BallRespawn : MonoBehaviour
             {
              RD.linearVelocity = Vector3.zero;   
             }
-            ball.SpeedMultiplierOverTime = 0.0f;
+            ball.HitTimes = 0.0f;
             Vector3 RandomDir = Vector3.ProjectOnPlane(Random.onUnitSphere, Vector3.up).normalized;
-            ball.AddImpulse(RandomDir * 20.0f);
+            ball.AddImpulse(RandomDir * force);
         }
     }
 
