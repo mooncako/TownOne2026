@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{F50FBE01-9BC3-4887-B265-066EE9E10A7A}",
     "Language": "SFX",
-    "Hash": "{4B25125C-2010-FB03-00A2-481C8F361496}",
+    "Hash": "{5CB3BA7A-D99C-BA5C-46C1-74408386E454}",
     "ObjectPath": "\\SoundBanks\\TownOne2026\\TO26_SB",
     "ShortName": "TO26_SB",
     "Path": "TO26_SB.bnk",
@@ -104,12 +104,36 @@
       "CachePath": "4C/{4CEE7B1B-8DC5-80FD-1D8B-F6C2C157E38A}.wem"
      },
      {
+      "Id": "191685986",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Loop\\game_pad.wav",
+      "CachePath": "D8/{D8D95A3B-BAAB-A56A-A1E1-059ED1FA6524}.wem"
+     },
+     {
       "Id": "210230542",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Screams_02.wav",
       "CachePath": "5D/{5D7E6559-DA22-0880-4513-5834395D1A3F}.wem"
+     },
+     {
+      "Id": "218109280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Intro\\game_Str Bus.wav",
+      "CachePath": "A0/{A0AFC0AA-9E56-A604-253D-28F901AC9303}.wem"
+     },
+     {
+      "Id": "228702999",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\AMB_Hell_Bed_St_01.wav",
+      "CachePath": "AC/{AC543254-B4FE-3619-45D3-32B6CC1DEA5A}.wem"
      },
      {
       "Id": "230114657",
@@ -208,6 +232,14 @@
       "CachePath": "5B/{5B0BF091-0373-7906-C807-586598A6D381}.wem"
      },
      {
+      "Id": "440641274",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Intro\\game_Guitar Bus.wav",
+      "CachePath": "EE/{EEC12319-0D97-88EE-3206-A063C3AABF9C}.wem"
+     },
+     {
       "Id": "464643614",
       "Language": "SFX",
       "Streaming": "false",
@@ -230,6 +262,22 @@
       "Location": "Memory",
       "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Cries_01.wav",
       "CachePath": "69/{698458A9-A626-1C1B-9EA7-4F45C13B10FD}.wem"
+     },
+     {
+      "Id": "511049852",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Intro\\game_Drum Bus.wav",
+      "CachePath": "4B/{4BB269B6-2CF1-18A2-9E04-E4D43495CDE6}.wem"
+     },
+     {
+      "Id": "517920514",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Loop\\game_Guitar Bus.wav",
+      "CachePath": "86/{86B78C7C-8C6A-D50B-90F6-6EA48D941339}.wem"
      },
      {
       "Id": "527780068",
@@ -262,6 +310,14 @@
       "Location": "Memory",
       "ShortName": "Renders_0426\\SFX_Coll_Min_Hell_Scream_03.wav",
       "CachePath": "FE/{FEDEB98E-CA36-8EC2-AD69-8B6832C3A850}.wem"
+     },
+     {
+      "Id": "579661693",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Loop\\game_Str Bus.wav",
+      "CachePath": "A5/{A5EED5A0-71E3-B382-B2ED-90F759D50FC2}.wem"
      },
      {
       "Id": "581046367",
@@ -334,6 +390,14 @@
       "Location": "Memory",
       "ShortName": "Renders_0426\\SFX_Coll_Min_Impt_03.wav",
       "CachePath": "DF/{DF6707C8-BF2E-D5BF-2951-FA30ED0DFA06}.wem"
+     },
+     {
+      "Id": "655903789",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\Music\\Loop\\game_Drum Bus.wav",
+      "CachePath": "B8/{B8688E00-1BA5-E36E-EDF1-7B0C51A869C2}.wem"
      },
      {
       "Id": "673104915",
@@ -505,6 +569,20 @@
      }
     ],
     "Events": [
+     {
+      "Id": "2381502256",
+      "Name": "AMB_Play",
+      "ObjectPath": "\\Events\\Ambience\\AMB_Play",
+      "GUID": "{D30926B5-0E03-46DD-8149-BF370DE00A22}",
+      "DurationType": "OneShot",
+      "DurationMin": "90.73025",
+      "DurationMax": "90.73025",
+      "MediaRefs": [
+       {
+        "Id": "228702999"
+       }
+      ]
+     },
      {
       "Id": "1627453353",
       "Name": "COLL_Ball",
@@ -836,6 +914,36 @@
       ]
      },
      {
+      "Id": "1280297747",
+      "Name": "MUS_Play",
+      "ObjectPath": "\\Events\\Music\\MUS_Play",
+      "GUID": "{6EC1D2E5-D584-4226-8F5C-3E05EC26BC6F}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "191685986"
+       },
+       {
+        "Id": "218109280"
+       },
+       {
+        "Id": "440641274"
+       },
+       {
+        "Id": "511049852"
+       },
+       {
+        "Id": "517920514"
+       },
+       {
+        "Id": "579661693"
+       },
+       {
+        "Id": "655903789"
+       }
+      ]
+     },
+     {
       "Id": "2792663994",
       "Name": "OBJ_Minion_Die",
       "ObjectPath": "\\Events\\Minion\\OBJ_Minion_Die",
@@ -1121,6 +1229,6 @@
     ]
    }
   ],
-  "FileHash": "{7DFA8B9D-B828-8217-237B-D0B88080E76E}"
+  "FileHash": "{0FF6801E-28A7-D655-E6C2-CBE871FF5593}"
  }
 }
