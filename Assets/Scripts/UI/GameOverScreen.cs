@@ -49,7 +49,7 @@ public class GameOverScreen : MonoBehaviour
     private void Start()
     {
 
-        StartCoroutine(CalculateScoreTestRoutine());
+        StartCoroutine(CalculateScoreRoutine());
     }
 
     private IEnumerator CalculateScoreRoutine()
