@@ -1,3 +1,4 @@
+using PrimeTween;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Armament", menuName = "PowerUps/Armament")]

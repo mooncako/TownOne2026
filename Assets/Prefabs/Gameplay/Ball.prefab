@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PinBall
   vfx: {fileID: 7529980042263078355}
+  ClashVfx: {fileID: 3209803822649809334, guid: 1097990816e372d4f98ebea1f58e2f5a, type: 3}
+  ChargingVfx: {fileID: 6861843108340409717, guid: d6263e2296f932f4eb49a6fe508962d9, type: 3}
   _rigidBody: {fileID: 3630448059594018733}
   _team: {fileID: 5497839850423969049}
   _interactableLayerMask:

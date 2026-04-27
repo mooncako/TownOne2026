@@ -41,6 +41,9 @@ public class Minion : MonoBehaviour, IInteract
                 _team.OwnerId = GameStateManager.Instance.HellPlayerId;
                 break;
         }
+
+        SetSoundSwitch();
+        AkUnitySoundEngine.PostEvent("OBJ_Minion_Set", gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,6 +59,8 @@ public class Minion : MonoBehaviour, IInteract
     private void DestroyMinion()
     {
         mSpawnPoint.IsOccupied = false;
+        SetSoundSwitch();
+        AkUnitySoundEngine.PostEvent("OBJ_Minion_Die", gameObject);
         Destroy(gameObject);
     }
 
@@ -78,6 +83,8 @@ public class Minion : MonoBehaviour, IInteract
             Vector3 normal = Instigator.GetComponent<Collider>().ClosestPoint(transform.position) - transform.position;
             normal = Vector3.ProjectOnPlane(normal, Vector3.up);
             comp.AddImpulse(normal * 20f);
+            PostSound();
+            
         }
         health -= 1;
 
@@ -102,5 +109,38 @@ public class Minion : MonoBehaviour, IInteract
     public void SetSpawnPoint(MinionSpawnPoint spawnPoint)
     {
         mSpawnPoint = spawnPoint;
+    }
+
+    private void PostSound()
+    {   
+        SetSoundSwitch();
+
+        AkUnitySoundEngine.PostEvent("COLL_Minion", gameObject);
+    }
+
+    private void SetSoundSwitch()
+    {
+        switch(data.Faction)
+        {
+            case Faction.Heaven:
+                AkUnitySoundEngine.SetSwitch("MinionType", "Heaven", gameObject);
+                break;
+            case Faction.Hell:
+                AkUnitySoundEngine.SetSwitch("MinionType", "Hell", gameObject);
+                break;
+        }
+
+        switch(data.Size)
+        {
+            case Size.Small:
+                AkUnitySoundEngine.SetSwitch("MinionSize", "Small", gameObject);
+                break;
+            case Size.Med:
+                AkUnitySoundEngine.SetSwitch("MinionSize", "Med", gameObject);
+                break;
+            case Size.Heavy:
+                AkUnitySoundEngine.SetSwitch("MinionSize", "Heavy", gameObject);
+                break;
+        }
     }
 }

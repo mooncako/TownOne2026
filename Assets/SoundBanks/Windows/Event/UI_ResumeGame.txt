@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3020718913	UI_ResumeGame			\UI\UI_ResumeGame	
-

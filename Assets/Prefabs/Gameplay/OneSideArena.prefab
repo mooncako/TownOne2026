@@ -8750,10 +8750,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4420300763936190058, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     - target: {fileID: 919132149155446097, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
       propertyPath: m_Name
       value: HeavenWallAndPillar (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5451243304809185677, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 5492388607022085380, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 9107309168961568636, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8819,7 +8835,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &284118636294096936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8865,7 +8881,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5417509625750579701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8911,7 +8927,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2028461352387283050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8957,7 +8973,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8965033954107726882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9024,6 +9040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeavenWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8658824473193787452, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9071,7 +9091,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5739076374825782411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9134,10 +9154,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4420300763936190058, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     - target: {fileID: 919132149155446097, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
       propertyPath: m_Name
       value: HeavenWallAndPillar (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5451243304809185677, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 5492388607022085380, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 9107309168961568636, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9198,7 +9234,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6404740079309087118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9249,7 +9285,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4333885502469032602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9295,7 +9331,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1602848253715073209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9341,7 +9377,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2688781504154944016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9404,10 +9440,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -4544865292291862912, guid: 7d70013e28bde214d915137753280cf2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 855623863727076841, guid: 7d70013e28bde214d915137753280cf2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     - target: {fileID: 919132149155446097, guid: 7d70013e28bde214d915137753280cf2, type: 3}
       propertyPath: m_Name
       value: HeavenPillar
       objectReference: {fileID: 0}
+    - target: {fileID: 7258471703827393959, guid: 7d70013e28bde214d915137753280cf2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9666,10 +9714,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -4544865292291862912, guid: 7d70013e28bde214d915137753280cf2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 855623863727076841, guid: 7d70013e28bde214d915137753280cf2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     - target: {fileID: 919132149155446097, guid: 7d70013e28bde214d915137753280cf2, type: 3}
       propertyPath: m_Name
       value: HeavenPillar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7258471703827393959, guid: 7d70013e28bde214d915137753280cf2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9724,7 +9784,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2862007537334111325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9770,7 +9830,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5457694129721449067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9821,7 +9881,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8250693343934046563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9884,10 +9944,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4420300763936190058, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     - target: {fileID: 919132149155446097, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
       propertyPath: m_Name
       value: HeavenWallAndPillar
       objectReference: {fileID: 0}
+    - target: {fileID: 5451243304809185677, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 5492388607022085380, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 9107309168961568636, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9948,7 +10024,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5574799755167032056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9999,7 +10075,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &126102350863208019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10045,7 +10121,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1306907728611295282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10091,7 +10167,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1407265840834857409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10158,6 +10234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeavenWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8658824473193787452, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10200,7 +10280,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8488128416763594492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10272,6 +10352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeavenWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8658824473193787452, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10314,7 +10398,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6156274931377885645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10382,10 +10466,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4420300763936190058, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     - target: {fileID: 919132149155446097, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
       propertyPath: m_Name
       value: HeavenWallAndPillar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5451243304809185677, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 5492388607022085380, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
+    - target: {fileID: 9107309168961568636, guid: db2cbe4e66f38d1459df5cc1f258fc9f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10446,7 +10546,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7384301826308480427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10492,7 +10592,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5998570020267988521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10538,7 +10638,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3885063378214821896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10589,7 +10689,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &61062627527687886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10656,6 +10756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeavenWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8658824473193787452, guid: 2851e4d2f2bfe234d8b38432cbffa0d8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 47156465ec77da14da6c98ea43374771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10698,7 +10802,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &204499609384637900
 MonoBehaviour:
   m_ObjectHideFlags: 0

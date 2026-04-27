@@ -1,0 +1,1367 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3575583478",
+    "Type": "User",
+    "GUID": "{F50FBE01-9BC3-4887-B265-066EE9E10A7A}",
+    "Language": "SFX",
+    "Hash": "{E7DE8639-2819-4CBA-3C85-83F6719E7AAD}",
+    "ObjectPath": "\\SoundBanks\\TownOne2026\\TO26_SB",
+    "ShortName": "TO26_SB",
+    "Path": "TO26_SB.bnk",
+    "Media": [
+     {
+      "Id": "16487730",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Set_Heaven_Scream_01.wav",
+      "CachePath": "FE/{FECAA5BA-47F2-3E94-D6C8-3BE11019AF09}.wem"
+     },
+     {
+      "Id": "30548152",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\UI_Select.wav",
+      "CachePath": "0C/{0C058CAB-9E49-93AD-7810-0A004F9ED06E}.wem"
+     },
+     {
+      "Id": "39793514",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Fire_04.wav",
+      "CachePath": "6B/{6B0E3D0B-271A-3D34-ACE2-9FDC2581CEED}.wem"
+     },
+     {
+      "Id": "40292256",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Set_Heaven_Scream_03.wav",
+      "CachePath": "89/{89724F8E-DFE3-FC47-23E0-45E4F646E2FE}.wem"
+     },
+     {
+      "Id": "44531392",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Growls_01.wav",
+      "CachePath": "A0/{A0CF3A92-5328-F7FF-82CA-FBE464A7C9AE}.wem"
+     },
+     {
+      "Id": "67106732",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Impt_01.wav",
+      "CachePath": "CD/{CDBA7E5C-CA79-F590-3466-ADEF4A22AA8E}.wem"
+     },
+     {
+      "Id": "82817418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Hell_Laugh_03.wav",
+      "CachePath": "6D/{6D88134A-B448-DA6D-74D9-4091E180E70E}.wem"
+     },
+     {
+      "Id": "117797525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Explosion_03.wav",
+      "CachePath": "51/{51269A12-9549-4ABD-382B-832480646260}.wem"
+     },
+     {
+      "Id": "130778159",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Paddle_Move_01.wav",
+      "CachePath": "AD/{AD8D362B-D001-AD25-D067-141BE41B459C}.wem"
+     },
+     {
+      "Id": "138002598",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Paddle_Move_05.wav",
+      "CachePath": "31/{31AEBBDA-6EEF-A8F6-F2C1-605DBC9DDD90}.wem"
+     },
+     {
+      "Id": "139311002",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Explosion_02.wav",
+      "CachePath": "5E/{5EB7C3D2-14D7-27E7-A447-01B3EF440F90}.wem"
+     },
+     {
+      "Id": "180062318",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Hammer_01.wav",
+      "CachePath": "87/{8786B45D-AC1D-0AFC-ACF5-7A13A5188065}.wem"
+     },
+     {
+      "Id": "190435377",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Fire_03.wav",
+      "CachePath": "4C/{4CEE7B1B-8DC5-80FD-1D8B-F6C2C157E38A}.wem"
+     },
+     {
+      "Id": "210230542",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Screams_02.wav",
+      "CachePath": "5D/{5D7E6559-DA22-0880-4513-5834395D1A3F}.wem"
+     },
+     {
+      "Id": "230114657",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Coll_Min_Heaven_Scream_01.wav",
+      "CachePath": "4D/{4DEBD552-2FAB-10E0-337E-5A3CD7E3B9AE}.wem"
+     },
+     {
+      "Id": "235806516",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Hell_Scream_01.wav",
+      "CachePath": "14/{14306AC2-E22C-7684-BB89-091CE620A93E}.wem"
+     },
+     {
+      "Id": "244000149",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Minion_Set_Heaven_Sword_01.wav",
+      "CachePath": "E4/{E48DA341-13A2-9B24-F191-E7BB08C3E7E0}.wem"
+     },
+     {
+      "Id": "266587728",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Explosion_02.wav",
+      "CachePath": "2A/{2A28871B-4AC0-FFA3-2C10-D97198552868}.wem"
+     },
+     {
+      "Id": "271309381",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Hell_Chord_01.wav",
+      "CachePath": "5D/{5DE065D5-1747-6F89-1575-1421B106629E}.wem"
+     },
+     {
+      "Id": "277543536",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Fire_02.wav",
+      "CachePath": "C8/{C856A637-3518-AC0E-401C-E000F423C8F9}.wem"
+     },
+     {
+      "Id": "292003887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Paddle_Move_02.wav",
+      "CachePath": "B4/{B4CA3504-9A1B-71CD-4624-050D0DB8E82A}.wem"
+     },
+     {
+      "Id": "297621944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Cries_02.wav",
+      "CachePath": "43/{4359E088-CF46-196C-F387-EEBF19E0A736}.wem"
+     },
+     {
+      "Id": "305175673",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Screams_03.wav",
+      "CachePath": "FC/{FC41768E-222A-5A67-0270-C286A7E6F8C9}.wem"
+     },
+     {
+      "Id": "317344889",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\UI_Confirm_Generic.wav",
+      "CachePath": "8C/{8C656FD2-685F-DCE3-30FD-B4228DB1861B}.wem"
+     },
+     {
+      "Id": "355017554",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Min_Set_Fire_01.wav",
+      "CachePath": "27/{27A94622-33AB-E1A8-C689-C5D8CF1FA4A0}.wem"
+     },
+     {
+      "Id": "360401364",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Hell_Chord_03.wav",
+      "CachePath": "17/{177A558C-2022-A98D-2D23-41CF4887D55E}.wem"
+     },
+     {
+      "Id": "361097862",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Minion_Set_Heaven_Sword_02.wav",
+      "CachePath": "2C/{2CF826ED-76CF-2A33-53DD-05E020D8216B}.wem"
+     },
+     {
+      "Id": "361970373",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Explosion_01.wav",
+      "CachePath": "81/{81979751-BA1F-E5FE-1C7F-604FA223618C}.wem"
+     },
+     {
+      "Id": "418080204",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Paddle_Move_03.wav",
+      "CachePath": "BB/{BB71341C-B8F3-95C5-5C42-923C75D097A5}.wem"
+     },
+     {
+      "Id": "425865739",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Hell_Scream_02.wav",
+      "CachePath": "5B/{5B0BF091-0373-7906-C807-586598A6D381}.wem"
+     },
+     {
+      "Id": "448127734",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Minion_Set_Heaven_Sword_03.wav",
+      "CachePath": "E5/{E5C4BCF4-9EB9-1764-653F-13CA44509741}.wem"
+     },
+     {
+      "Id": "464643614",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Hammer_02.wav",
+      "CachePath": "4D/{4DA9ED27-779C-4B27-C806-E8913D4CBCF6}.wem"
+     },
+     {
+      "Id": "473456762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Minion_Set_Heaven_Impt_01.wav",
+      "CachePath": "40/{4087C1AC-AEDF-B49F-2C33-0F7FCAC0A13F}.wem"
+     },
+     {
+      "Id": "477671849",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Min_Set_Fire_03.wav",
+      "CachePath": "C1/{C14FB8EC-29CB-B61E-A853-FB7F458B53BA}.wem"
+     },
+     {
+      "Id": "489903442",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Screams_03.wav",
+      "CachePath": "96/{96250B5E-28BA-E65B-EC30-6110E608F5CD}.wem"
+     },
+     {
+      "Id": "491395643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Cries_01.wav",
+      "CachePath": "69/{698458A9-A626-1C1B-9EA7-4F45C13B10FD}.wem"
+     },
+     {
+      "Id": "527780068",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Emit_Powereup_01.wav",
+      "CachePath": "A8/{A8D414C5-DABD-DBAA-1E0E-1C4D481260C4}.wem"
+     },
+     {
+      "Id": "534373619",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_EMIT_Score_01.wav",
+      "CachePath": "B8/{B83F2A74-29D6-C5A6-5580-21828D42D65F}.wem"
+     },
+     {
+      "Id": "543808969",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Set_Heaven_Scream_02.wav",
+      "CachePath": "91/{919B360B-26E1-33AF-3BF0-AC5FCD8A8D6F}.wem"
+     },
+     {
+      "Id": "551719624",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Impt_02.wav",
+      "CachePath": "75/{7583C0FF-9FDC-D630-8E61-4B45FDAAAA37}.wem"
+     },
+     {
+      "Id": "556219952",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Hell_Scream_03.wav",
+      "CachePath": "FE/{FEDEB98E-CA36-8EC2-AD69-8B6832C3A850}.wem"
+     },
+     {
+      "Id": "581046367",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Whispers_02.wav",
+      "CachePath": "F0/{F0DBB000-6371-0BC3-CB1C-04A53D9E1756}.wem"
+     },
+     {
+      "Id": "597061638",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Heaven_Chord_03.wav",
+      "CachePath": "F2/{F2E535F7-E7B7-B157-B7F2-E19B013AE40E}.wem"
+     },
+     {
+      "Id": "597273672",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Heaven_Chord_01.wav",
+      "CachePath": "2C/{2C67DC0E-FBF6-1844-9355-32F2FD2D32E9}.wem"
+     },
+     {
+      "Id": "599914716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_COLL_Ball.wav",
+      "CachePath": "77/{779F19EE-3586-11D2-EF13-F53E7CB31D68}.wem"
+     },
+     {
+      "Id": "620306174",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\UI_Confirm_Play.wav",
+      "CachePath": "AF/{AF101C38-29ED-4596-28E4-2FAB5EEBB14F}.wem"
+     },
+     {
+      "Id": "622503895",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Screams_04.wav",
+      "CachePath": "CF/{CF692F4C-A63B-235B-18F9-411EF5149D97}.wem"
+     },
+     {
+      "Id": "622778585",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Explosion_03.wav",
+      "CachePath": "46/{46CBE673-C374-442D-1E27-D5F8A8688247}.wem"
+     },
+     {
+      "Id": "624084264",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Min_Set_Fire_02.wav",
+      "CachePath": "83/{8342E5EF-2DA9-B03B-683E-AA48A9966869}.wem"
+     },
+     {
+      "Id": "642652476",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Whispers_01.wav",
+      "CachePath": "08/{0849AF3B-AFCE-46C0-DC58-CCD7BB0346CF}.wem"
+     },
+     {
+      "Id": "648849620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Screams_01.wav",
+      "CachePath": "CE/{CECFEBAC-20E3-6581-F959-F370DBA92E2F}.wem"
+     },
+     {
+      "Id": "653671294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Paddle_Move_04.wav",
+      "CachePath": "D3/{D3371FE3-1613-DC7E-9038-F44CE35DFED1}.wem"
+     },
+     {
+      "Id": "654235208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Impt_03.wav",
+      "CachePath": "DF/{DF6707C8-BF2E-D5BF-2951-FA30ED0DFA06}.wem"
+     },
+     {
+      "Id": "660132557",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Impt_01.wav",
+      "CachePath": "08/{08BFD628-2B0D-B767-7E3E-D7BA89E6936E}.wem"
+     },
+     {
+      "Id": "673104915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Sword_01.wav",
+      "CachePath": "AE/{AE14E3AC-545C-1826-55BF-0A9C61892B0F}.wem"
+     },
+     {
+      "Id": "706633051",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Paddle_Move_06.wav",
+      "CachePath": "FB/{FB2E2DFA-2611-C999-FDEC-C4A00DC02573}.wem"
+     },
+     {
+      "Id": "720213286",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Minion_Set_Heaven_Impt_02.wav",
+      "CachePath": "51/{510BE5B5-53B4-BF3D-CB56-C5C0FB1BD78B}.wem"
+     },
+     {
+      "Id": "723028727",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Hell_Laugh_01.wav",
+      "CachePath": "EE/{EEC3C983-99C6-F70F-8C30-18D620835177}.wem"
+     },
+     {
+      "Id": "780195375",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Rise_01.wav",
+      "CachePath": "BA/{BA2040B3-3974-136C-26ED-58914CD8F0A5}.wem"
+     },
+     {
+      "Id": "785936770",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Explosion_01.wav",
+      "CachePath": "E5/{E5C30A15-7BA2-EFE8-E546-1BBF310C83C6}.wem"
+     },
+     {
+      "Id": "805562555",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Explosion_04.wav",
+      "CachePath": "B6/{B6F5F6EF-B78D-670B-97A4-1BCF4D30A3FE}.wem"
+     },
+     {
+      "Id": "845031703",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Coll_Min_Heaven_Scream_03.wav",
+      "CachePath": "F9/{F9639667-D232-0577-434C-74FC32901CFF}.wem"
+     },
+     {
+      "Id": "865568709",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Screams_01.wav",
+      "CachePath": "B0/{B083EF55-7B81-C54B-022F-D94DD403BE36}.wem"
+     },
+     {
+      "Id": "876658794",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Obj_Minion_Set_Heaven_Impt_03.wav",
+      "CachePath": "C2/{C22AAECA-9865-BFB8-4A04-FF8A1FC51C3F}.wem"
+     },
+     {
+      "Id": "902662763",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Hell_Laugh_02.wav",
+      "CachePath": "F3/{F3FBD968-ECFC-8B1C-A425-067A10523832}.wem"
+     },
+     {
+      "Id": "936940907",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Heaven_Chord_02.wav",
+      "CachePath": "8E/{8E1B9632-D772-7569-4C74-51E7EC1B5383}.wem"
+     },
+     {
+      "Id": "947087605",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Coll_Min_Heaven_Scream_02.wav",
+      "CachePath": "C0/{C019B45C-AFE8-08AD-FC7D-94BDD69AE6F6}.wem"
+     },
+     {
+      "Id": "950030815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Impt_03.wav",
+      "CachePath": "FB/{FB948978-CE75-5C6C-24E8-453955755936}.wem"
+     },
+     {
+      "Id": "955246401",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Shop_Souls_Growls_02.wav",
+      "CachePath": "20/{20850D8B-B3A3-BF58-C62E-CC4341951D25}.wem"
+     },
+     {
+      "Id": "961158113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Sword_03.wav",
+      "CachePath": "46/{46152260-CE18-DB58-5661-796675A7F27B}.wem"
+     },
+     {
+      "Id": "979810852",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Heaven_Fire_01.wav",
+      "CachePath": "9F/{9F0A83D8-1E1E-27DD-D4C7-11ED975D371D}.wem"
+     },
+     {
+      "Id": "987342207",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Sword_02.wav",
+      "CachePath": "F6/{F6E508A2-F990-B9B0-5147-C6D075FACE97}.wem"
+     },
+     {
+      "Id": "1001303815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Min_Hammer_03.wav",
+      "CachePath": "00/{0083C313-628D-744D-5187-BEAB5DF2353C}.wem"
+     },
+     {
+      "Id": "1005780438",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Emit_Powereup_02.wav",
+      "CachePath": "58/{58444C56-6EC5-73D7-A284-04E8CFF947AB}.wem"
+     },
+     {
+      "Id": "1020016451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\UI_Confirm_Back.wav",
+      "CachePath": "86/{86425B4D-92C1-C4C1-138F-9D8666FAD35E}.wem"
+     },
+     {
+      "Id": "1021117964",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Coll_Ball_01.wav",
+      "CachePath": "C9/{C9BE7CB4-110E-9FC5-FA98-4E54A3D4671C}.wem"
+     },
+     {
+      "Id": "1022602190",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Screams_02.wav",
+      "CachePath": "46/{46E640B1-9E8A-1CF1-EC9D-1C0FC2DFD02A}.wem"
+     },
+     {
+      "Id": "1033083893",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Rise_02.wav",
+      "CachePath": "94/{94379B33-1738-6194-C5CA-4A28762CCF44}.wem"
+     },
+     {
+      "Id": "1053845861",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Hell_Chord_02.wav",
+      "CachePath": "0D/{0DD802AB-7148-98F1-0427-7AD29231AB5B}.wem"
+     },
+     {
+      "Id": "1068498527",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Minion_Death_Hell_Rise_03.wav",
+      "CachePath": "F9/{F9F58DBF-79F0-7B91-87CB-B37861C9D458}.wem"
+     },
+     {
+      "Id": "1069254028",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Renders_0426\\SFX_Obj_Min_Set_Impt_02.wav",
+      "CachePath": "98/{9877799C-0EC8-2B0A-7627-239E6B35064D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1627453353",
+      "Name": "COLL_Ball",
+      "ObjectPath": "\\Events\\Collisions\\COLL_Ball",
+      "GUID": "{66D72F1F-0713-4E28-BB9E-73889601DB6F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.29431376",
+      "DurationMax": "0.38722935",
+      "MediaRefs": [
+       {
+        "Id": "599914716"
+       },
+       {
+        "Id": "1021117964"
+       }
+      ]
+     },
+     {
+      "Id": "2883100974",
+      "Name": "COLL_Bumpers",
+      "ObjectPath": "\\Events\\Collisions\\COLL_Bumpers",
+      "GUID": "{DD866089-4845-4EB1-BBF0-9B79CC1A418B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "773862064",
+      "Name": "COLL_Minion",
+      "ObjectPath": "\\Events\\Collisions\\COLL_Minion",
+      "GUID": "{9B91807E-75B3-4130-BAD4-130318532BF6}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.81425",
+      "DurationMax": "3.441253",
+      "MediaRefs": [
+       {
+        "Id": "67106732"
+       },
+       {
+        "Id": "551719624"
+       },
+       {
+        "Id": "654235208"
+       }
+      ],
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4233847531",
+         "Id": "3460057008",
+         "GUID": "{F1061EC0-9804-4FFD-8FF8-FC812B83479C}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "180062318"
+         },
+         {
+          "Id": "464643614"
+         },
+         {
+          "Id": "1001303815"
+         }
+        ],
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3068666232",
+           "Id": "1846755610",
+           "GUID": "{5970B058-EEAD-4693-A2E8-008A4CD2744D}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "230114657"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3068666232",
+           "Id": "981339021",
+           "GUID": "{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "947087605"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3068666232",
+           "Id": "2732489590",
+           "GUID": "{A641D999-DC36-4070-99C9-A5E780602207}",
+           "Default": "true"
+          },
+          "MediaRefs": [
+           {
+            "Id": "845031703"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4233847531",
+         "Id": "3632828376",
+         "GUID": "{EF11EED1-0876-43FD-975C-1B2B6CA33007}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "673104915"
+         },
+         {
+          "Id": "961158113"
+         },
+         {
+          "Id": "987342207"
+         }
+        ],
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3068666232",
+           "Id": "1846755610",
+           "GUID": "{5970B058-EEAD-4693-A2E8-008A4CD2744D}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "556219952"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3068666232",
+           "Id": "981339021",
+           "GUID": "{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "425865739"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3068666232",
+           "Id": "2732489590",
+           "GUID": "{A641D999-DC36-4070-99C9-A5E780602207}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "235806516"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2031107581",
+      "Name": "EMIT_Powerup",
+      "ObjectPath": "\\Events\\Emitters\\EMIT_Powerup",
+      "GUID": "{99CE156F-BEFC-44C5-A0B7-1F2097B1F050}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4722291",
+      "DurationMax": "1.5870625",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2600048462",
+         "Id": "1635194255",
+         "GUID": "{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1005780438"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2600048462",
+         "Id": "1635194252",
+         "GUID": "{155B8958-F0E7-417F-9F5E-734EE27437EB}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "527780068"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2401631563",
+      "Name": "EMIT_Score",
+      "ObjectPath": "\\Events\\Emitters\\EMIT_Score",
+      "GUID": "{4765E5A1-C223-4CAD-A15D-AF40B55AF7A3}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.284625",
+      "DurationMax": "3.284625",
+      "MediaRefs": [
+       {
+        "Id": "534373619"
+       }
+      ]
+     },
+     {
+      "Id": "2436315639",
+      "Name": "EMIT_Shop",
+      "ObjectPath": "\\Events\\Emitters\\EMIT_Shop",
+      "GUID": "{9F5F95FD-7745-445E-92A3-8CE633CFB24E}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.423842",
+      "DurationMax": "4.4144297",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2600048462",
+         "Id": "1635194255",
+         "GUID": "{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1005780438"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2600048462",
+         "Id": "1635194252",
+         "GUID": "{155B8958-F0E7-417F-9F5E-734EE27437EB}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "527780068"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2600048462",
+         "Id": "1635194255",
+         "GUID": "{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "44531392"
+         },
+         {
+          "Id": "297621944"
+         },
+         {
+          "Id": "491395643"
+         },
+         {
+          "Id": "581046367"
+         },
+         {
+          "Id": "642652476"
+         },
+         {
+          "Id": "955246401"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2600048462",
+         "Id": "1635194252",
+         "GUID": "{155B8958-F0E7-417F-9F5E-734EE27437EB}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "44531392"
+         },
+         {
+          "Id": "297621944"
+         },
+         {
+          "Id": "491395643"
+         },
+         {
+          "Id": "581046367"
+         },
+         {
+          "Id": "642652476"
+         },
+         {
+          "Id": "955246401"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2792663994",
+      "Name": "OBJ_Minion_Die",
+      "ObjectPath": "\\Events\\Minion\\OBJ_Minion_Die",
+      "GUID": "{F5B6DE7A-B91C-4608-99D4-1A99E0D793A0}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.8999999",
+      "DurationMax": "4.2498126",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4233847531",
+         "Id": "3460057008",
+         "GUID": "{F1061EC0-9804-4FFD-8FF8-FC812B83479C}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "39793514"
+         },
+         {
+          "Id": "117797525"
+         },
+         {
+          "Id": "190435377"
+         },
+         {
+          "Id": "210230542"
+         },
+         {
+          "Id": "266587728"
+         },
+         {
+          "Id": "277543536"
+         },
+         {
+          "Id": "489903442"
+         },
+         {
+          "Id": "622503895"
+         },
+         {
+          "Id": "785936770"
+         },
+         {
+          "Id": "805562555"
+         },
+         {
+          "Id": "865568709"
+         },
+         {
+          "Id": "979810852"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4233847531",
+         "Id": "3632828376",
+         "GUID": "{EF11EED1-0876-43FD-975C-1B2B6CA33007}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "139311002"
+         },
+         {
+          "Id": "305175673"
+         },
+         {
+          "Id": "361970373"
+         },
+         {
+          "Id": "622778585"
+         },
+         {
+          "Id": "648849620"
+         },
+         {
+          "Id": "780195375"
+         },
+         {
+          "Id": "1022602190"
+         },
+         {
+          "Id": "1033083893"
+         },
+         {
+          "Id": "1068498527"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2862290544",
+      "Name": "OBJ_Minion_Set",
+      "ObjectPath": "\\Events\\Minion\\OBJ_Minion_Set",
+      "GUID": "{B0EABF68-4739-40B2-84C0-E3ECE88D2B4E}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6739792",
+      "DurationMax": "3.9666667",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4233847531",
+         "Id": "3460057008",
+         "GUID": "{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "16487730"
+         },
+         {
+          "Id": "40292256"
+         },
+         {
+          "Id": "244000149"
+         },
+         {
+          "Id": "361097862"
+         },
+         {
+          "Id": "448127734"
+         },
+         {
+          "Id": "473456762"
+         },
+         {
+          "Id": "543808969"
+         },
+         {
+          "Id": "597061638"
+         },
+         {
+          "Id": "597273672"
+         },
+         {
+          "Id": "720213286"
+         },
+         {
+          "Id": "876658794"
+         },
+         {
+          "Id": "936940907"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "4233847531",
+         "Id": "3632828376",
+         "GUID": "{EF11EED1-0876-43FD-975C-1B2B6CA33007}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "82817418"
+         },
+         {
+          "Id": "271309381"
+         },
+         {
+          "Id": "355017554"
+         },
+         {
+          "Id": "360401364"
+         },
+         {
+          "Id": "477671849"
+         },
+         {
+          "Id": "624084264"
+         },
+         {
+          "Id": "660132557"
+         },
+         {
+          "Id": "723028727"
+         },
+         {
+          "Id": "902662763"
+         },
+         {
+          "Id": "950030815"
+         },
+         {
+          "Id": "1053845861"
+         },
+         {
+          "Id": "1069254028"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "3258129853",
+      "Name": "PLYR_Paddle_Move",
+      "ObjectPath": "\\Events\\Player\\PLYR_Paddle_Move",
+      "GUID": "{3C514036-6CAF-4EEE-B630-E35001BF3A7E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.41766667",
+      "DurationMax": "0.41766667",
+      "MediaRefs": [
+       {
+        "Id": "130778159"
+       },
+       {
+        "Id": "138002598"
+       },
+       {
+        "Id": "292003887"
+       },
+       {
+        "Id": "418080204"
+       },
+       {
+        "Id": "653671294"
+       },
+       {
+        "Id": "706633051"
+       }
+      ]
+     },
+     {
+      "Id": "4060032068",
+      "Name": "UI_Confirm_Generic",
+      "ObjectPath": "\\Events\\UI\\UI_Confirm_Generic",
+      "GUID": "{F3BFB0E8-483E-4B51-9247-4FAC33496544}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2368542",
+      "DurationMax": "1.2368542",
+      "MediaRefs": [
+       {
+        "Id": "317344889"
+       }
+      ]
+     },
+     {
+      "Id": "2428166787",
+      "Name": "UI_Confirm_Play",
+      "ObjectPath": "\\Events\\UI\\UI_Confirm_Play",
+      "GUID": "{F18B3BCE-BB08-4677-99F5-D38987E3B27E}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4453125",
+      "DurationMax": "2.4453125",
+      "MediaRefs": [
+       {
+        "Id": "620306174"
+       }
+      ]
+     },
+     {
+      "Id": "2912873858",
+      "Name": "UI_Confirm_QuitGame",
+      "ObjectPath": "\\Events\\UI\\UI_Confirm_QuitGame",
+      "GUID": "{67033A41-BA86-4CA1-845A-C5D254A98EB1}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6581458",
+      "DurationMax": "1.6581458",
+      "MediaRefs": [
+       {
+        "Id": "1020016451"
+       }
+      ]
+     },
+     {
+      "Id": "1402340918",
+      "Name": "UI_HIghlight",
+      "ObjectPath": "\\Events\\UI\\UI_HIghlight",
+      "GUID": "{D8B3B900-C206-46A8-A79F-DE99BE4BE002}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9191667",
+      "DurationMax": "0.9191667",
+      "MediaRefs": [
+       {
+        "Id": "30548152"
+       }
+      ]
+     },
+     {
+      "Id": "3783962382",
+      "Name": "UI_PauseGame",
+      "ObjectPath": "\\Events\\UI\\UI_PauseGame",
+      "GUID": "{C3C6F7AF-8E9B-429F-A7CF-1BDFBD2A9C70}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3020718913",
+      "Name": "UI_ResumeGame",
+      "ObjectPath": "\\Events\\UI\\UI_ResumeGame",
+      "GUID": "{30183105-F5A9-4A44-9CF3-1085216CBD0E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2600048462",
+      "Name": "Powerups",
+      "ObjectPath": "\\Switches\\Powerups\\Powerups",
+      "GUID": "{76B7024C-32ED-410A-9FD7-AC2DBBEE94BE}",
+      "Switches": [
+       {
+        "Id": "1635194252",
+        "Name": "P1",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P1",
+        "GUID": "{155B8958-F0E7-417F-9F5E-734EE27437EB}"
+       },
+       {
+        "Id": "1635194254",
+        "Name": "P3",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P3",
+        "GUID": "{7F85A161-C5AC-47FE-B9FD-E4CDF589798F}"
+       },
+       {
+        "Id": "1635194255",
+        "Name": "P2",
+        "ObjectPath": "\\Switches\\Powerups\\Powerups\\P2",
+        "GUID": "{A2DEF803-8BE9-4267-BA18-E5BEDFF5349E}"
+       }
+      ]
+     },
+     {
+      "Id": "3068666232",
+      "Name": "MinionSize",
+      "ObjectPath": "\\Switches\\Minions\\MinionSize",
+      "GUID": "{C20D7473-ED3B-45C3-828D-CD10877BEF44}",
+      "Switches": [
+       {
+        "Id": "981339021",
+        "Name": "Med",
+        "ObjectPath": "\\Switches\\Minions\\MinionSize\\Med",
+        "GUID": "{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"
+       },
+       {
+        "Id": "1846755610",
+        "Name": "Small",
+        "ObjectPath": "\\Switches\\Minions\\MinionSize\\Small",
+        "GUID": "{5970B058-EEAD-4693-A2E8-008A4CD2744D}"
+       },
+       {
+        "Id": "2732489590",
+        "Name": "Heavy",
+        "ObjectPath": "\\Switches\\Minions\\MinionSize\\Heavy",
+        "GUID": "{A641D999-DC36-4070-99C9-A5E780602207}"
+       }
+      ]
+     },
+     {
+      "Id": "4233847531",
+      "Name": "MinionType",
+      "ObjectPath": "\\Switches\\Minions\\MinionType",
+      "GUID": "{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}",
+      "Switches": [
+       {
+        "Id": "3460057008",
+        "Name": "Heaven",
+        "ObjectPath": "\\Switches\\Minions\\MinionType\\Heaven",
+        "GUID": "{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"
+       },
+       {
+        "Id": "3632828376",
+        "Name": "Hell",
+        "ObjectPath": "\\Switches\\Minions\\MinionType\\Hell",
+        "GUID": "{EF11EED1-0876-43FD-975C-1B2B6CA33007}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7902D2F4-10A6-356A-79C8-66822F8B04B9}"
+ }
+}

@@ -14,7 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UI_Confirm_QuitGame" ID="{67033A41-BA86-4CA1-845A-C5D254A98EB1}"/>
+				<Event Name="UI_Confirm_QuitGame" ID="{67033A41-BA86-4CA1-845A-C5D254A98EB1}">
+					<ChildrenList>
+						<Action Name="" ID="{4F1A68BC-9613-4E9E-AAF4-2CB27E77A27D}" ShortID="1056621584">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Confirm_QuitGame" ID="{A4A6E217-1C2A-4442-B37C-DB2EFDFDF669}" WorkUnitID="{142F632C-66A7-4DB2-8F08-D6F2544AABFD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="UI_Confirm_Generic" ID="{F3BFB0E8-483E-4B51-9247-4FAC33496544}">
 					<ChildrenList>
 						<Action Name="" ID="{B1728626-918D-45FD-956B-AF04D13D27AE}" ShortID="990038878">

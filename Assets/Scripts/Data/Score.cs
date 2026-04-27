@@ -21,5 +21,10 @@ public class Score
     {
         Value += amount;
         OnScoreChanged?.Invoke(Value);
+
+        if(amount < 0)
+        {
+            // AkUnitySoundEngine.PostEvent("EMIT_Shop", GameStateManager.Instance.gameObject);
+        }
     }
 }

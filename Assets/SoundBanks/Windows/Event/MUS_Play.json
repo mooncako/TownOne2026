@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1280297747",
+    "Type": "Event",
+    "GUID": "{6EC1D2E5-D584-4226-8F5C-3E05EC26BC6F}",
+    "Language": "SFX",
+    "Hash": "{BAA286AF-9A31-27AA-39FC-6CCB888BFC09}",
+    "ObjectPath": "MUS_Play",
+    "ShortName": "MUS_Play",
+    "Path": "Event/MUS_Play.bnk",
+    "Events": [
+     {
+      "Id": "1280297747",
+      "Name": "MUS_Play",
+      "ObjectPath": "\\Events\\Music_01\\MUS_Play",
+      "GUID": "{6EC1D2E5-D584-4226-8F5C-3E05EC26BC6F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{607CC763-9ED8-1023-B9AE-DFFD022FB361}"
+ }
+}

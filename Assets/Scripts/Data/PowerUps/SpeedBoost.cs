@@ -1,3 +1,4 @@
+using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -12,5 +13,7 @@ public class SpeedBoost : ShopPowerUpSO
         base.ApplyPowerUp(playerController, playerInfo);
 
         playerController.ApplySpeedBoost(_speedMultiplier, _duration);
+
+        
     }
 }

@@ -19,7 +19,7 @@
 						<Action Name="" ID="{0A6E4A21-EE17-48F7-9F37-FE3C0F41E4ED}" ShortID="931221979">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="OBJ_Minion_Scream_Hell" ID="{DF430762-0285-4E38-8EE5-10797C4E47DE}" WorkUnitID="{6B084A74-5F57-463A-8EA0-85B559386AFE}"/>
+									<ObjectRef Name="OBJ_Minion_Die" ID="{B3151409-D9A3-4E8F-B0A4-AABDBCE04BA9}" WorkUnitID="{6B084A74-5F57-463A-8EA0-85B559386AFE}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

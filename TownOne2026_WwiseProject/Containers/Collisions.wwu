@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" SchemaVersion="133" RootDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}" ParentDocumentID="{62E88CA1-FFA4-4F19-8F2F-1965B364F474}">
+<WwiseDocument Type="WorkUnit" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" SchemaVersion="133" RootDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}" ParentDocumentID="{DB84DBD5-B0EA-425F-9807-D8F9B1D132C7}">
 	<Containers>
 		<WorkUnit Name="Collisions" ID="{BA42C95D-3796-4A17-A57D-2330132A6587}" OwnerID="{674FFCE4-16D0-42A7-A4F6-1A8BD3110BAC}" PersistMode="Nested">
 			<ChildrenList>
-				<PropertyContainer Name="COLL_Board" ID="{139AE580-D8A9-42D0-8816-70381DB39581}" ShortID="600777365">
+				<PropertyContainer Name="COLL_Ball" ID="{139AE580-D8A9-42D0-8816-70381DB39581}" ShortID="600777365">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -13,7 +13,22 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="OBJ_Wall" ID="{A21D0D32-5ADC-455E-ABA3-1A72054026C3}" ShortID="83226974">
+						<BlendContainer Name="COLL_Ball" ID="{A209ED5A-29AE-49E2-B3CF-BC8E80046873}" ShortID="43454121">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D6C28E34-4140-4D85-A7B7-3D5F29497139}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+													<Property Name="Min" Type="Real64" Value="-175"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -22,7 +37,67 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 								</Reference>
 							</ReferenceList>
-						</RandomSequenceContainer>
+							<ChildrenList>
+								<Sound Name="SFX_Coll_Ball_01" ID="{2BA56CE2-ECBA-4B57-8098-94AFA0E62786}" ShortID="545086127">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Coll_Ball_01" ID="{D6185DB7-1930-419C-BA09-1E9EE39E743C}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Coll_Ball_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1021117964"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Coll_Ball_01" ID="{D6185DB7-1930-419C-BA09-1E9EE39E743C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_COLL_Ball" ID="{D8B39747-7C2A-4A34-9C1D-2A1FD84E56FB}" ShortID="906751102">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_COLL_Ball" ID="{9A2AE8F8-A45D-4265-98E3-1DCD53A0FC85}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_COLL_Ball.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="599914716"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_COLL_Ball" ID="{9A2AE8F8-A45D-4265-98E3-1DCD53A0FC85}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</PropertyContainer>
 				<PropertyContainer Name="COLL_Minions" ID="{1FE7EC07-ECBD-4CC6-A193-3984624DCB01}" ShortID="245080680">
@@ -35,7 +110,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<SwitchContainer Name="COLL_Minion_Type" ID="{9C6A397B-7DF5-48BC-9984-4389A466A5B2}" ShortID="101612620">
+						<BlendContainer Name="COLL_Minion" ID="{5E9AB654-0964-42EA-BE7E-5255C73829DB}" ShortID="39419315">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -43,12 +118,746 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="COLL_Min_Type" ID="{9C6A397B-7DF5-48BC-9984-4389A466A5B2}" ShortID="101612620">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1EE20CE6-4598-41EB-B6DC-6E4FC4AEA337}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MinionType" ID="{E32CEF38-79F3-4A89-9EC7-07C6DC90DA4C}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="COLL_Minion_Hell" ID="{8A26FE27-3D2D-411F-B55A-C8B6FAEE208F}" ShortID="941554607">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SwitchContainer Name="COLL_Minion_Hell_Scream" ID="{7079AEF3-B672-4D22-853A-A366E3F9C826}" ShortID="164530539">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+														<Reference Name="SwitchGroupOrStateGroup">
+															<ObjectRef Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="COLL_Minion_Hell_Heavy" ID="{20D8FAA9-9178-4634-88AF-DBF3D5F943D8}" ShortID="857505566">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="SFX_Coll_Min_Hell_Scream_01" ID="{D2679873-9284-4CC4-8C22-A36CCC33127C}" ShortID="209133370">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="SFX_Coll_Min_Hell_Scream_01" ID="{B41481A1-1F7E-4D60-B062-5C87DB9AE45B}">
+																			<Language>SFX</Language>
+																			<AudioFile>Renders_0426\SFX_Coll_Min_Hell_Scream_01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="235806516"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="SFX_Coll_Min_Hell_Scream_01" ID="{B41481A1-1F7E-4D60-B062-5C87DB9AE45B}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="COLL_Minion_Hell_Med" ID="{4F78C1D9-35B4-443C-9656-8F86A8C64C87}" ShortID="993145754">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="SFX_Coll_Min_Hell_Scream_02" ID="{092088C6-96E7-4763-B20B-35019EF2F7CE}" ShortID="547918752">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="SFX_Coll_Min_Hell_Scream_02" ID="{6B09AADB-D2C6-429C-817D-E342C84885DF}">
+																			<Language>SFX</Language>
+																			<AudioFile>Renders_0426\SFX_Coll_Min_Hell_Scream_02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="425865739"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="SFX_Coll_Min_Hell_Scream_02" ID="{6B09AADB-D2C6-429C-817D-E342C84885DF}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="COLL_Minion_Hell_Small" ID="{D8615899-0A86-4D8B-8FB1-32C32C63AB55}" ShortID="642249070">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="SFX_Coll_Min_Hell_Scream_03" ID="{745435DE-9196-4B54-BF0D-2F683C097636}" ShortID="426869869">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="SFX_Coll_Min_Hell_Scream_03" ID="{DE166BEF-FCBB-4522-9119-01798F8D5DDC}">
+																			<Language>SFX</Language>
+																			<AudioFile>Renders_0426\SFX_Coll_Min_Hell_Scream_03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="556219952"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="SFX_Coll_Min_Hell_Scream_03" ID="{DE166BEF-FCBB-4522-9119-01798F8D5DDC}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+													</ChildrenList>
+													<GroupingInfo>
+														<GroupingBehaviorList>
+															<GroupingBehavior>
+																<ItemRef Name="COLL_Minion_Hell_Small" ID="{D8615899-0A86-4D8B-8FB1-32C32C63AB55}"/>
+															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="COLL_Minion_Hell_Heavy" ID="{20D8FAA9-9178-4634-88AF-DBF3D5F943D8}"/>
+															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="COLL_Minion_Hell_Med" ID="{4F78C1D9-35B4-443C-9656-8F86A8C64C87}"/>
+															</GroupingBehavior>
+														</GroupingBehaviorList>
+														<GroupingList>
+															<Grouping>
+																<SwitchRef Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
+																<ItemList>
+																	<ItemRef Name="COLL_Minion_Hell_Small" ID="{D8615899-0A86-4D8B-8FB1-32C32C63AB55}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
+																<ItemList>
+																	<ItemRef Name="COLL_Minion_Hell_Med" ID="{4F78C1D9-35B4-443C-9656-8F86A8C64C87}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
+																<ItemList>
+																	<ItemRef Name="COLL_Minion_Hell_Heavy" ID="{20D8FAA9-9178-4634-88AF-DBF3D5F943D8}"/>
+																</ItemList>
+															</Grouping>
+														</GroupingList>
+													</GroupingInfo>
+												</SwitchContainer>
+												<RandomSequenceContainer Name="COLL_Min_Heaven_Sword" ID="{411505D8-D785-4169-8D2D-CE577DC9BEE9}" ShortID="955369200">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SFX_Coll_Min_Sword_01" ID="{02C861A4-C3DA-41F3-BCE0-8EA60588A47A}" ShortID="1063335167">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_Coll_Min_Sword_01" ID="{5F10E8C4-7154-43DF-8796-1E1FB29B59CA}">
+																	<Language>SFX</Language>
+																	<AudioFile>Renders_0426\SFX_Coll_Min_Sword_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="673104915"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_Coll_Min_Sword_01" ID="{5F10E8C4-7154-43DF-8796-1E1FB29B59CA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Coll_Min_Sword_02" ID="{5C2C742D-18AC-4845-A611-51B0EC423DCE}" ShortID="545016299">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_Coll_Min_Sword_02" ID="{BA6FAC21-47C0-4FCA-9D62-48AA4043342C}">
+																	<Language>SFX</Language>
+																	<AudioFile>Renders_0426\SFX_Coll_Min_Sword_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="987342207"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_Coll_Min_Sword_02" ID="{BA6FAC21-47C0-4FCA-9D62-48AA4043342C}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Coll_Min_Sword_03" ID="{B418364D-EC23-423C-9B40-E4A2895FA2BE}" ShortID="903556704">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_Coll_Min_Sword_03" ID="{181B4BA0-C751-4618-B007-ED6BDE1188F6}">
+																	<Language>SFX</Language>
+																	<AudioFile>Renders_0426\SFX_Coll_Min_Sword_03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="961158113"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_Coll_Min_Sword_03" ID="{181B4BA0-C751-4618-B007-ED6BDE1188F6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="COLL_Minion_Heaven" ID="{87357FD4-9296-46DE-9CA5-F5A8CBE53AE3}" ShortID="498794848">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SwitchContainer Name="COLL_Minion_Heaven_Screams" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" ShortID="791985215">
+													<PropertyList>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{65F3F456-DE96-4F51-BC51-C1B55A7F72DE}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="300"/>
+																			<Property Name="Min" Type="Real64" Value="-375"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="DefaultSwitchOrState">
+															<ObjectRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+														<Reference Name="SwitchGroupOrStateGroup">
+															<ObjectRef Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="COLL_Minion_Heaven_Small" ID="{017BFBD0-4A62-4373-AFDF-EF3777F9DFA3}" ShortID="127443591">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>250</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="SFX_Coll_Min_Heaven_Scream_01" ID="{7D91A5C4-2135-4D2F-89B3-4C7D286E06BC}" ShortID="22635868">
+																	<PropertyList>
+																		<Property Name="CenterPercentage" Type="int32">
+																			<ValueList>
+																				<Value>100</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="SFX_Coll_Min_Heaven_Scream_01" ID="{FAEB5E82-6053-445A-ACDF-441FF99C6A56}">
+																			<Language>SFX</Language>
+																			<AudioFile>SFX_Coll_Min_Heaven_Scream_01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="230114657"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="SFX_Coll_Min_Heaven_Scream_01" ID="{FAEB5E82-6053-445A-ACDF-441FF99C6A56}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="COLL_Minion_Heaven_Med" ID="{66D44481-8A9F-43A2-BDC8-D53E516E6C9B}" ShortID="1052461924">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{97C476AE-1485-4D00-928D-39764281CC06}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="250"/>
+																					<Property Name="Min" Type="Real64" Value="-225"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="SFX_Coll_Min_Heaven_Scream_02" ID="{F70D61FF-9A6D-49E9-845A-13D358E6AD62}" ShortID="785377673">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="SFX_Coll_Min_Heaven_Scream_02" ID="{743D78E6-3A5A-46D5-8D82-15C97F27A4A6}">
+																			<Language>SFX</Language>
+																			<AudioFile>SFX_Coll_Min_Heaven_Scream_02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="947087605"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="SFX_Coll_Min_Heaven_Scream_02" ID="{743D78E6-3A5A-46D5-8D82-15C97F27A4A6}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="COLL_Minion_Heaven_Heavy" ID="{BBC04D21-8006-4DE7-BBFE-3F32B345D6CA}" ShortID="801144629">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>3</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="SFX_Coll_Min_Heaven_Scream_03" ID="{F860B210-E8B7-44E8-A65C-D775CBDA7B61}" ShortID="29709283">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="SFX_Coll_Min_Heaven_Scream_03" ID="{76D51169-2392-488F-B523-2B182BA9BEB7}">
+																			<Language>SFX</Language>
+																			<AudioFile>SFX_Coll_Min_Heaven_Scream_03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="845031703"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="SFX_Coll_Min_Heaven_Scream_03" ID="{76D51169-2392-488F-B523-2B182BA9BEB7}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+													</ChildrenList>
+													<GroupingInfo>
+														<GroupingBehaviorList>
+															<GroupingBehavior>
+																<ItemRef Name="COLL_Minion_Heaven_Heavy" ID="{BBC04D21-8006-4DE7-BBFE-3F32B345D6CA}"/>
+															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="COLL_Minion_Heaven_Med" ID="{66D44481-8A9F-43A2-BDC8-D53E516E6C9B}"/>
+															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="COLL_Minion_Heaven_Small" ID="{017BFBD0-4A62-4373-AFDF-EF3777F9DFA3}"/>
+															</GroupingBehavior>
+														</GroupingBehaviorList>
+														<GroupingList>
+															<Grouping>
+																<SwitchRef Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
+																<ItemList>
+																	<ItemRef Name="COLL_Minion_Heaven_Small" ID="{017BFBD0-4A62-4373-AFDF-EF3777F9DFA3}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
+																<ItemList>
+																	<ItemRef Name="COLL_Minion_Heaven_Med" ID="{66D44481-8A9F-43A2-BDC8-D53E516E6C9B}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
+																<ItemList>
+																	<ItemRef Name="COLL_Minion_Heaven_Heavy" ID="{BBC04D21-8006-4DE7-BBFE-3F32B345D6CA}"/>
+																</ItemList>
+															</Grouping>
+														</GroupingList>
+													</GroupingInfo>
+												</SwitchContainer>
+												<RandomSequenceContainer Name="COLL_Min_Heaven_Hammer" ID="{FCBA6D2E-72A8-4E62-AF01-5B8A23C6D23F}" ShortID="368361781">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{E5EDBDEE-7C0D-42D1-88FA-08E68A2BDD85}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SFX_Coll_Min_Hammer_01" ID="{B4DF4683-C181-4448-B7B1-93D9DEF6E9C8}" ShortID="408090040">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_Coll_Min_Hammer_01" ID="{E60F595C-693E-40C6-B7B4-AA27852B5630}">
+																	<Language>SFX</Language>
+																	<AudioFile>Renders_0426\SFX_Coll_Min_Hammer_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="180062318"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_Coll_Min_Hammer_01" ID="{E60F595C-693E-40C6-B7B4-AA27852B5630}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Coll_Min_Hammer_02" ID="{0E33C76B-7980-4892-B0AD-06D32A204669}" ShortID="944342858">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_Coll_Min_Hammer_02" ID="{AD76E138-7A48-48A5-9D7A-DE997668BB56}">
+																	<Language>SFX</Language>
+																	<AudioFile>Renders_0426\SFX_Coll_Min_Hammer_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="464643614"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_Coll_Min_Hammer_02" ID="{AD76E138-7A48-48A5-9D7A-DE997668BB56}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFX_Coll_Min_Hammer_03" ID="{6056B749-E3C4-4ACB-BAAF-FCBF9B42C377}" ShortID="424956658">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SFX_Coll_Min_Hammer_03" ID="{026B2DD9-0D01-4A33-A4D6-FC7D20073823}">
+																	<Language>SFX</Language>
+																	<AudioFile>Renders_0426\SFX_Coll_Min_Hammer_03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1001303815"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SFX_Coll_Min_Hammer_03" ID="{026B2DD9-0D01-4A33-A4D6-FC7D20073823}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="COLL_Minion_Hell" ID="{8A26FE27-3D2D-411F-B55A-C8B6FAEE208F}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="COLL_Minion_Heaven" ID="{87357FD4-9296-46DE-9CA5-F5A8CBE53AE3}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Heaven" ID="{F1061EC0-9804-4FFD-8FF8-FC812B83479C}"/>
+												<ItemList>
+													<ItemRef Name="COLL_Minion_Heaven" ID="{87357FD4-9296-46DE-9CA5-F5A8CBE53AE3}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Hell" ID="{EF11EED1-0876-43FD-975C-1B2B6CA33007}"/>
+												<ItemList>
+													<ItemRef Name="COLL_Minion_Hell" ID="{8A26FE27-3D2D-411F-B55A-C8B6FAEE208F}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<RandomSequenceContainer Name="COLL_Min_Impt" ID="{7923F0C7-0C9C-45BD-B13D-32BB6C61E5E2}" ShortID="507427462">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E40A4D89-98E4-48E1-901E-1EB98C8A4A08}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Coll_Min_Impt_01" ID="{3486A3A1-5F28-4561-A5A4-4FCEB7D620E4}" ShortID="603608892">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Coll_Min_Impt_01" ID="{EEB10C50-1503-421B-8F3B-75B0A72DA25B}">
+													<Language>SFX</Language>
+													<AudioFile>Renders_0426\SFX_Coll_Min_Impt_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="67106732"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Coll_Min_Impt_01" ID="{EEB10C50-1503-421B-8F3B-75B0A72DA25B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Coll_Min_Impt_02" ID="{25D98BEE-1492-424E-9464-75E46C06C5D4}" ShortID="816542850">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Coll_Min_Impt_02" ID="{203A39F2-AA20-4094-81B1-5F5788FCC440}">
+													<Language>SFX</Language>
+													<AudioFile>Renders_0426\SFX_Coll_Min_Impt_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="551719624"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Coll_Min_Impt_02" ID="{203A39F2-AA20-4094-81B1-5F5788FCC440}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Coll_Min_Impt_03" ID="{AB71FA7A-1A95-442B-AF8E-63115C978748}" ShortID="890245964">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Coll_Min_Impt_03" ID="{6511E619-A492-4D5D-A474-48A0AA11AC28}">
+													<Language>SFX</Language>
+													<AudioFile>Renders_0426\SFX_Coll_Min_Impt_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="654235208"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Coll_Min_Impt_03" ID="{6511E619-A492-4D5D-A474-48A0AA11AC28}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="COLL_Bumpers" ID="{05E5F08A-3FF2-4A2C-9DDF-0A2BB648AA2A}" ShortID="536154833">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{41AA5067-AFB7-49C1-ABC0-F74EAE31ACF2}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="COLL_Bumpers" ID="{46551F73-25FE-4DFB-BD1D-85A73696400F}" ShortID="262679547">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SwitchContainer Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}" ShortID="791985215">
+								<Sound Name="SFX_Coll_Bumpers_01" ID="{DB5404DF-EBF7-4B64-ABC3-D8108096B8DA}" ShortID="669936797">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -56,149 +865,26 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
-										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="COLL_Minion_Heaven_Small" ID="{017BFBD0-4A62-4373-AFDF-EF3777F9DFA3}" ShortID="127443591">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="SFX_COLL_Ball" ID="{85197F3B-E315-4238-858E-38FE6B271A89}" ShortID="352041170">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SFX_COLL_Ball" ID="{0DADA3BB-B8D9-486B-8864-E01F9D44E2E1}">
-															<Language>SFX</Language>
-															<AudioFile>Renders\Renders\SFX_COLL_Ball.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="502375207"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="SFX_COLL_Ball" ID="{0DADA3BB-B8D9-486B-8864-E01F9D44E2E1}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="COLL_Minion_Heaven_Med" ID="{66D44481-8A9F-43A2-BDC8-D53E516E6C9B}" ShortID="1052461924">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="SFX_COLL_Ball" ID="{EC4CBEEE-9EB8-41B8-82C7-1E68705C703F}" ShortID="36188436">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SFX_COLL_Ball" ID="{10F05C5F-9C25-4E62-9E5E-9FFAD7BA5E5C}">
-															<Language>SFX</Language>
-															<AudioFile>Renders\Renders\SFX_COLL_Ball.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="502375207"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="SFX_COLL_Ball" ID="{10F05C5F-9C25-4E62-9E5E-9FFAD7BA5E5C}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="COLL_Minion_Heaven_Heavy" ID="{BBC04D21-8006-4DE7-BBFE-3F32B345D6CA}" ShortID="801144629">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="SFX_COLL_Ball" ID="{CB531A24-2A9D-416C-8998-C892D8FF30B7}" ShortID="52487302">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SFX_COLL_Ball" ID="{8CA6D79E-404A-4B6D-80AE-4C5C901AE392}">
-															<Language>SFX</Language>
-															<AudioFile>Renders\Renders\SFX_COLL_Ball.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="502375207"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="SFX_COLL_Ball" ID="{8CA6D79E-404A-4B6D-80AE-4C5C901AE392}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
+										<AudioFileSource Name="SFX_Coll_Bumpers_01" ID="{230FEF50-97F7-4603-95E8-1996645541B8}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.05689"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.05689"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Coll_Bumpers_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="128560638"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="COLL_Minion_Heaven_Heavy" ID="{BBC04D21-8006-4DE7-BBFE-3F32B345D6CA}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="COLL_Minion_Heaven_Med" ID="{66D44481-8A9F-43A2-BDC8-D53E516E6C9B}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="COLL_Minion_Heaven_Small" ID="{017BFBD0-4A62-4373-AFDF-EF3777F9DFA3}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
-												<ItemList>
-													<ItemRef Name="COLL_Minion_Heaven_Small" ID="{017BFBD0-4A62-4373-AFDF-EF3777F9DFA3}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
-												<ItemList>
-													<ItemRef Name="COLL_Minion_Heaven_Med" ID="{66D44481-8A9F-43A2-BDC8-D53E516E6C9B}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
-												<ItemList>
-													<ItemRef Name="COLL_Minion_Heaven_Heavy" ID="{BBC04D21-8006-4DE7-BBFE-3F32B345D6CA}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-								<SwitchContainer Name="COLL_Minion_Hell" ID="{7079AEF3-B672-4D22-853A-A366E3F9C826}" ShortID="164530539">
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Coll_Bumpers_01" ID="{230FEF50-97F7-4603-95E8-1996645541B8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Coll_Bumpers_02" ID="{EAFF1919-8AB6-45A8-B26C-EC3EB25F01C7}" ShortID="577182689">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -206,88 +892,66 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="MinionSize" ID="{C20D7473-ED3B-45C3-828D-CD10877BEF44}" WorkUnitID="{6D7B3D9C-7CC5-46CA-95BA-756D8CF5C3A3}"/>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Coll_Bumpers_02" ID="{DF48A6E0-1B17-43FC-B4F2-885DECBB5B46}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Coll_Bumpers_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1045757844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Coll_Bumpers_02" ID="{DF48A6E0-1B17-43FC-B4F2-885DECBB5B46}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Coll_Bumpers_03" ID="{B6AD56EF-107B-4961-BB60-EF9005E7BF4C}" ShortID="449826100">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="COLL_Minion_Hell_Heavy" ID="{20D8FAA9-9178-4634-88AF-DBF3D5F943D8}" ShortID="857505566">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="COLL_Minion_Hell_Med" ID="{4F78C1D9-35B4-443C-9656-8F86A8C64C87}" ShortID="993145754">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="COLL_Minion_Hell_Small" ID="{D8615899-0A86-4D8B-8FB1-32C32C63AB55}" ShortID="642249070">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
-												</Reference>
-											</ReferenceList>
-										</RandomSequenceContainer>
+										<AudioFileSource Name="SFX_Coll_Bumpers_03" ID="{E7732F73-DCD5-4F74-A5CA-8AAEC467AAC0}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Coll_Bumpers_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="966903165"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="COLL_Minion_Hell_Small" ID="{D8615899-0A86-4D8B-8FB1-32C32C63AB55}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="COLL_Minion_Hell_Heavy" ID="{20D8FAA9-9178-4634-88AF-DBF3D5F943D8}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="COLL_Minion_Hell_Med" ID="{4F78C1D9-35B4-443C-9656-8F86A8C64C87}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="Small" ID="{5970B058-EEAD-4693-A2E8-008A4CD2744D}"/>
-												<ItemList>
-													<ItemRef Name="COLL_Minion_Hell_Small" ID="{D8615899-0A86-4D8B-8FB1-32C32C63AB55}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="Med" ID="{7F680C7E-5B46-4BCC-9C80-11EAAA8E111E}"/>
-												<ItemList>
-													<ItemRef Name="COLL_Minion_Hell_Med" ID="{4F78C1D9-35B4-443C-9656-8F86A8C64C87}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="Heavy" ID="{A641D999-DC36-4070-99C9-A5E780602207}"/>
-												<ItemList>
-													<ItemRef Name="COLL_Minion_Hell_Heavy" ID="{20D8FAA9-9178-4634-88AF-DBF3D5F943D8}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Coll_Bumpers_03" ID="{E7732F73-DCD5-4F74-A5CA-8AAEC467AAC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Coll_Bumpers_04" ID="{371725E7-15D0-4D4F-B558-0397670C6913}" ShortID="520448401">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Coll_Bumpers_04" ID="{8B21A082-643D-4B44-85EF-63F23F7E4D32}">
+											<Language>SFX</Language>
+											<AudioFile>Renders_0426\SFX_Coll_Bumpers_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="332138771"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Coll_Bumpers_04" ID="{8B21A082-643D-4B44-85EF-63F23F7E4D32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="COLL_Minion_Heaven" ID="{77C1443A-0CE6-4E64-9794-850D617D84DA}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="COLL_Minion_Hell" ID="{7079AEF3-B672-4D22-853A-A366E3F9C826}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-							</GroupingInfo>
-						</SwitchContainer>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</PropertyContainer>
 			</ChildrenList>
