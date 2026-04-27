@@ -11,4 +11,12 @@ public class MenuPlayer : MonoBehaviour
         Vector2 navigation = value.Get<Vector2>();
         MenuPlayerInputEvent.Trigger(navigation, Id);
     }
+
+    private void OnSubmit(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            MenuPlayerSubmitEvent.Trigger();
+        }
+    }
 }

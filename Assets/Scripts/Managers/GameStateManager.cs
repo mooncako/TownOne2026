@@ -180,6 +180,11 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
     }
 
+    public bool IsBothPlayersConnected()
+    {
+        return HeavenPlayerId != PlayerId.None && HellPlayerId != PlayerId.None;
+    }
+
     public RoundManager GetRoundManager()
     {
         return _roundManager;
