@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: MUS_Play
   id: 1280297747
   guid: 6EC1D2E5-D584-4226-8F5C-3E05EC26BC6F
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1
