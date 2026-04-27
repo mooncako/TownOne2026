@@ -592,7 +592,7 @@ MonoBehaviour:
   _selection: {fileID: 7856735255627533139}
   _icon: {fileID: 3929863994202686463}
   _costText: {fileID: 8343610320236499788}
-  _shopPowerUp: {fileID: 11400000, guid: daf9c9685d0e39944b6c07b90a9a6003, type: 2}
+  _shopPowerUp: {fileID: 11400000, guid: fb604cde1dac70c498721c5f156ae08e, type: 2}
 --- !u!1 &4359689788538957400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1578,7 @@ MonoBehaviour:
   _selection: {fileID: 508940191438332650}
   _icon: {fileID: 8837510472359473865}
   _costText: {fileID: 2724283854060620638}
-  _shopPowerUp: {fileID: 11400000, guid: 35cc3b6f7a888a842b931d93ef9df1f8, type: 2}
+  _shopPowerUp: {fileID: 11400000, guid: c3cc9fa6f7960c94e94a62556a43fd40, type: 2}
 --- !u!1001 &852361940764810590
 PrefabInstance:
   m_ObjectHideFlags: 0
