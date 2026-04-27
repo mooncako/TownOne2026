@@ -86,10 +86,10 @@ public class ButtonPanel : MonoBehaviour,
     {
         if(isVisible)
         {
-            Tween.Alpha(_canvasGroup, 1, 0.5f);
+            Tween.Alpha(_canvasGroup, 1, 1.5f);
         }else
         {
-            Tween.Alpha(_canvasGroup, 0, 0.5f);
+            Tween.Alpha(_canvasGroup, 0, 1.5f);
         }
         _canvasGroup.interactable = isVisible;
         _canvasGroup.blocksRaycasts = isVisible;
