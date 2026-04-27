@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpeedBoost
   PowerUpId: Speed Boost
   Icon: {fileID: 21300000, guid: e6123fae7e8a05c43886c14a3757793b, type: 3}
-  Cost: 300
+  Cost: 100
   _speedMultiplier: 1.5
   _duration: 5

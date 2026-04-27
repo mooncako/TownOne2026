@@ -90,6 +90,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
             CurrentRound = 0;
             HeavenPlayerInfo = null;
             HellPlayerInfo = null;
+            HeavenPlayerId = PlayerId.None;
+            HellPlayerId = PlayerId.None;
         }
     }
 
