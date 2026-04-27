@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
@@ -24,6 +24,8 @@ public class GameStateManager : MMSingleton<GameStateManager>,
     [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerOneDeviceIds = new List<int>();
     [ShowInInspector, BoxGroup("Debug")] public List<int> PlayerTwoDeviceIds = new List<int>();
     [SerializeField, BoxGroup("Debug"), ReadOnly] private GameSettings _gameSettings;
+    private string _gameOverSceneName = "EndScreen";
+
     [ShowInInspector, BoxGroup("Debug"), ReadOnly] public bool IsSceneTransitioning { get; private set; } = false;
 
 
@@ -129,6 +131,7 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         {
             // Game End
             SetState(GameState.GameEnd);
+            SceneManager.LoadScene(_gameOverSceneName);
         }
     }
 
@@ -310,6 +313,32 @@ public class GameStateManager : MMSingleton<GameStateManager>,
         }
     }
 
+    public PlayerInfo GetPlayerInfoFromID(PlayerId playerId)
+    {
+        return playerId switch
+        {
+            _ when playerId == HeavenPlayerId => HeavenPlayerInfo,
+            _ when playerId == HellPlayerId => HellPlayerInfo,
+            _ => throw new ArgumentException($"Unknown PlayerId: {playerId}", nameof(playerId))
+        };
+    }
+
+    public PlayerInfo GetOpponentInfo(PlayerInfo playerInfo) =>
+    playerInfo == HeavenPlayerInfo ? HellPlayerInfo : HeavenPlayerInfo;
+
+    public PlayerId GetPlayerIDFromInfo(PlayerInfo playerInfo)
+    {
+        return playerInfo switch
+        {
+            _ when playerInfo == HeavenPlayerInfo => HeavenPlayerId,
+            _ when playerInfo == HellPlayerInfo => HellPlayerId,
+            _ => throw new ArgumentException($"Unknown PlayerInfo: {playerInfo}", nameof(playerInfo))
+        };
+    }
+
+    public PlayerId GetOpponentID(PlayerId playerId) =>
+    playerId == HeavenPlayerId ? HellPlayerId : HeavenPlayerId;
+
     public void OnMMEvent(PlayerSetupCompleteEvent e)
     {
         HeavenPlayerInfo = e.HeavenPlayerInfo;
@@ -362,4 +391,5 @@ public class GameStateManager : MMSingleton<GameStateManager>,
             return null;
         }
     }
+
 }

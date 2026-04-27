@@ -5,6 +5,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] public float Duration;
     [SerializeField] public float ElapsedTime;
+    public float Countdown => Duration - ElapsedTime;
     [SerializeField] public bool IsRunning;
 
     public event Action OnTimerComplete;

@@ -17,6 +17,7 @@ public class PinBall : MonoBehaviour, IPhysics, IInteract
     [SerializeField, BoxGroup("References")] private Team _team;
     [SerializeField, BoxGroup("Settings")] private LayerMask _interactableLayerMask;
     [SerializeField, BoxGroup("Settings")] private LayerMask _paddleLayerMask;
+    public Team Team => _team; 
 
     public float HitTimes = 0.0f;
     protected Vector2 SpeedMultiplierClamp = new Vector2(0.0f, 25.0f);
