@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{F50FBE01-9BC3-4887-B265-066EE9E10A7A}",
     "Language": "SFX",
-    "Hash": "{7C70C5E8-97DB-FEF8-7448-F041A1D8F947}",
+    "Hash": "{4B25125C-2010-FB03-00A2-481C8F361496}",
     "ObjectPath": "\\SoundBanks\\TownOne2026\\TO26_SB",
     "ShortName": "TO26_SB",
     "Path": "TO26_SB.bnk",
@@ -528,7 +528,7 @@
       "ObjectPath": "\\Events\\Collisions\\COLL_Bumpers",
       "GUID": "{DD866089-4845-4EB1-BBF0-9B79CC1A418B}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
+      "DurationMin": "0.23618881",
       "DurationMax": "0.584446",
       "MediaRefs": [
        {
@@ -1121,6 +1121,6 @@
     ]
    }
   ],
-  "FileHash": "{67E826B3-C501-FE94-6C36-B3B403FE36C6}"
+  "FileHash": "{7DFA8B9D-B828-8217-237B-D0B88080E76E}"
  }
 }

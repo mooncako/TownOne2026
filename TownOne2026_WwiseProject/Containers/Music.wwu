@@ -8,7 +8,7 @@
 						<Property Name="Tempo" Type="Real64" Value="138"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-1</Value>
+								<Value>-6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -68,6 +68,11 @@
 						<MusicSegment Name="Intro" ID="{AC42408C-248A-44D0-9CA5-A82663F60EA7}" ShortID="1055003993">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="31471.9166666667"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -79,6 +84,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicTrack Name="game_Guitar Bus" ID="{72E91943-BB78-4EA7-B763-58DB18B27E75}" ShortID="549186216">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -291,6 +303,13 @@
 									</ObjectLists>
 								</MusicTrack>
 								<MusicTrack Name="game_Str Bus" ID="{677F1C2E-189B-4C09-B67B-D2DCAFE03DEA}" ShortID="288425030">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -423,6 +442,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicTrack Name="game_Drum Bus" ID="{FD0B2529-332D-4833-8903-AFBFD361D33A}" ShortID="26275253">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>
@@ -467,6 +493,13 @@
 									</ObjectLists>
 								</MusicTrack>
 								<MusicTrack Name="game_Guitar Bus" ID="{268AD334-02C7-4B8E-B834-69BA2793EFB7}" ShortID="758116737">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6543217A-F844-4F80-8AC2-A2827D7447CD}"/>

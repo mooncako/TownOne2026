@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6EC1D2E5-D584-4226-8F5C-3E05EC26BC6F}",
     "Language": "SFX",
-    "Hash": "{DE41BE52-A044-F448-5223-2C2E33277E38}",
+    "Hash": "{956E67B4-9D29-7E33-ABC9-A87EA6A7B8E9}",
     "ObjectPath": "MUS_Play",
     "ShortName": "MUS_Play",
     "Path": "Event/MUS_Play.bnk",
@@ -113,6 +113,6 @@
     ]
    }
   ],
-  "FileHash": "{6B01F2F8-07DD-C1C8-BAC9-310B64EF9919}"
+  "FileHash": "{C9C40B6E-B2DB-1072-B7D3-D62183DDC0AC}"
  }
 }

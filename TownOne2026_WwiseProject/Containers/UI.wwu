@@ -45,9 +45,14 @@
 									<ChildrenList>
 										<Sound Name="UI_Confirm_Back" ID="{405836F4-42B6-4B20-9C09-C29590D580ED}" ShortID="562717171">
 											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>55</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-21</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
