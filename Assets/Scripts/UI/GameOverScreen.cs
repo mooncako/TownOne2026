@@ -49,7 +49,7 @@ public class GameOverScreen : MonoBehaviour
     private void Start()
     {
 
-        StartCoroutine(CalculateScoreTestRoutine());
+        StartCoroutine(CalculateScoreRoutine());
     }
 
     private IEnumerator CalculateScoreRoutine()
@@ -106,6 +106,15 @@ public class GameOverScreen : MonoBehaviour
     private void UpdateRatioFill(float heavenTotal, float hellTotal)
     {
         float combinedTotal = heavenTotal + hellTotal;
+
+        if (combinedTotal == 0f)
+        {
+            _heavenDisplay.fillAmount = 0.5f;
+            _hellDisplay.fillAmount = 0.5f;
+            _heavenLabel.text = "0";
+            _hellLabel.text = "0";
+            return;
+        }
 
         // Fill
         _heavenDisplay.fillAmount = heavenTotal / combinedTotal;
