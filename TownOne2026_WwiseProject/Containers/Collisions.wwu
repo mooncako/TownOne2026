@@ -111,6 +111,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="COLL_Minion" ID="{5E9AB654-0964-42EA-BE7E-5255C73829DB}" ShortID="39419315">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>
@@ -830,12 +837,28 @@
 				</PropertyContainer>
 				<PropertyContainer Name="COLL_Bumpers" ID="{05E5F08A-3FF2-4A2C-9DDF-0A2BB648AA2A}" ShortID="536154833">
 					<PropertyList>
+						<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{41AA5067-AFB7-49C1-ABC0-F74EAE31ACF2}"/>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -848,6 +871,31 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="COLL_Bumpers" ID="{46551F73-25FE-4DFB-BD1D-85A73696400F}" ShortID="262679547">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6474724C-CDED-450C-ACC9-DFEF5DD06299}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="525"/>
+													<Property Name="Min" Type="Real64" Value="-475"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23848494-5A05-45CA-9611-524247510FF4}"/>

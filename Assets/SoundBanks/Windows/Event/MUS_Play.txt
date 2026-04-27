@@ -1,3 +1,3 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1280297747	MUS_Play			\Music_01\MUS_Play	
+	1280297747	MUS_Play			\Music\MUS_Play	
 

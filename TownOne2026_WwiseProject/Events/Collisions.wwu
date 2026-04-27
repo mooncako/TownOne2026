@@ -28,12 +28,9 @@
 				<Event Name="COLL_Bumpers" ID="{DD866089-4845-4EB1-BBF0-9B79CC1A418B}">
 					<ChildrenList>
 						<Action Name="" ID="{AF9E8B98-C074-44AC-9BC8-2206746A3D72}" ShortID="341835320">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="COLL_Bumpers" ID="{05E5F08A-3FF2-4A2C-9DDF-0A2BB648AA2A}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
+									<ObjectRef Name="COLL_Bumpers" ID="{46551F73-25FE-4DFB-BD1D-85A73696400F}" WorkUnitID="{BA42C95D-3796-4A17-A57D-2330132A6587}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
