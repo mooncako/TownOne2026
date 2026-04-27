@@ -24,11 +24,6 @@
 					<ChildrenList>
 						<BlendContainer Name="OBJ_Minion_Set" ID="{4A48070E-280C-4725-9185-D19BD915DA87}" ShortID="537723280">
 							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-3</Value>

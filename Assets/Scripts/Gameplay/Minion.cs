@@ -43,7 +43,7 @@ public class Minion : MonoBehaviour, IInteract
         }
 
         SetSoundSwitch();
-        //AkUnitySoundEngine.PostEvent("OBJ_Minion_Set", gameObject);
+        AkUnitySoundEngine.PostEvent("OBJ_Minion_Set", gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
